@@ -18,6 +18,11 @@
     src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Lobster';
+    src: url('LobsterTwo-Regular.ttf') format('truetype');
+}
+
 /* BASE */
 body {
     margin: 0;
@@ -27,29 +32,28 @@ body {
         url('fondo 2.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* YA NO ES FIXED */
+    background-attachment: scroll;
     color: #f5f7fa;
     font-family: 'NotoEthiopic', serif;
 }
 
 /* HERO */
 .hero {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 60px 40px;
     flex-direction: column;
 }
 
 /* TÍTULO */
 .hero-title {
     font-family: 'Halja';
-    font-size: 56px;
+    font-size: 52px;
     margin-bottom: 15px;
     color: #f5f7fa;
-
     text-shadow:
         0 0 3px rgba(255,255,255,0.6),
         0 0 8px rgba(255,255,255,0.35),
@@ -63,24 +67,33 @@ body {
     text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 
-/* TEXTO */
-.hero-text {
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-shadow: 0 0 4px rgba(255,255,255,0.3);
+/* DIVISOR BONITO */
+.divider {
+    width: 180px;
+    height: 2px;
+    margin: 20px auto 30px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255,255,255,0.85),
+        transparent
+    );
+    box-shadow: 0 0 12px rgba(255,255,255,0.4);
 }
 
-/* DIVISOR */
-.divider {
-    width: 120px;
-    height: 2px;
-    background: rgba(255,255,255,0.5);
-    margin: 20px auto 30px auto;
+/* TEXTO EMOCIONAL */
+.hero-text {
+    font-family: 'Lobster';
+    font-size: 20px;
+    margin-bottom: 35px;
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.4),
+        0 0 8px rgba(255,255,255,0.2);
 }
 
 /* BOTÓN */
 .btn-agenda {
-    padding: 14px 32px;
+    padding: 14px 34px;
     font-size: 18px;
     border-radius: 30px;
     border: 1.5px solid rgba(255,255,255,0.8);
@@ -116,7 +129,7 @@ body {
     }
 
     .hero-text {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
