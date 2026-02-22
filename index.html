@@ -3,80 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 <title>Mariposa Azul</title>
 
 <style>
 
-/* FUENTES */
-@font-face {
-    font-family: 'Halja';
-    src: url('HALJA-Illuminated.otf');
-}
-
-@font-face {
-    font-family: 'NotoCustom';
-    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf');
-}
-
-/* FONDO */
 body {
     margin: 0;
-    padding: 0;
-    background: url("fondo%201.jpeg") no-repeat center center fixed;
+    font-family: 'Noto Sans', sans-serif;
+    background: url("fondo 1.jpeg") no-repeat center center fixed;
     background-size: cover;
-    font-family: 'NotoCustom', serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* CONTENEDOR PRINCIPAL */
 .wrapper {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: 90%;
-    max-width: 1100px;
 }
 
-/* FOTO */
 .profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
-.profile-img {
+.profile-section img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* TITULO */
-.title {
-    font-family: 'Halja';
-    font-size: 42px;
-    color: silver;
-    text-shadow:
-        0 0 5px rgba(255,255,255,0.7),
-        0 0 15px rgba(192,192,192,0.6),
-        0 0 25px rgba(255,255,255,0.5);
-    margin-bottom: 10px;
+h1 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 40px;
+    margin: 10px 0;
+    color: #9fa3a8;
+    text-shadow: 0 0 8px rgba(255,255,255,0.25);
 }
 
-/* SUBTITULO */
 .subtitle {
     font-size: 18px;
-    color: silver;
-    text-shadow: 0 0 5px rgba(255,255,255,0.4);
+    color: #8e9399;
     margin-bottom: 30px;
 }
 
-/* BOTONES */
 .buttons {
     display: flex;
     flex-direction: column;
@@ -84,38 +63,43 @@ body {
 }
 
 .button {
-    padding: 14px 25px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: 1px solid silver;
-    background: rgba(0, 0, 40, 0.35);
-    backdrop-filter: blur(8px);
-    color: silver;
-    font-family: 'NotoCustom';
+    width: 280px;
+    padding: 12px;
     text-align: center;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    background: rgba(20, 40, 80, 0.35);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #c4c7cc;
+    text-decoration: none;
+    font-size: 15px;
     transition: 0.3s ease;
-    text-shadow: 0 0 5px rgba(255,255,255,0.4);
 }
 
 .button:hover {
-    background: rgba(0, 0, 60, 0.45);
+    background: rgba(20, 40, 80, 0.55);
 }
 
-/* RESPONSIVE PC */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
+
     .wrapper {
         flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
+        height: 100vh;
     }
 
     .profile-section {
-        align-items: flex-start;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .buttons {
-        align-items: flex-end;
-        width: 40%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -127,8 +111,8 @@ body {
 <div class="wrapper">
 
     <div class="profile-section">
-        <img src="logo%20mariposa%20azul.jpeg" class="profile-img">
-        <div class="title">Mariposa Azul</div>
+        <img src="logo mariposa azul.jpeg" alt="Logo Mariposa Azul">
+        <h1>Mariposa Azul</h1>
         <div class="subtitle">Tarot evolutivo | Terapias Holísticas</div>
     </div>
 
@@ -136,9 +120,7 @@ body {
         <a class="button" href="#">Web Site | Catálogo</a>
         <a class="button" href="https://www.tiktok.com/@mariposaazul.__?_r=1&_t=ZS-948wj7l5CJL" target="_blank">TikTok</a>
         <a class="button" href="https://www.instagram.com/mariposaazul__?igsh=cTBycnJmdHpoNDlr" target="_blank">Instagram | Únete a mi Comunidad</a>
-        <a class="button" href="https://wa.me/56928055904?text=Hola%2C%20Scar%20%F0%9F%A6%8B%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio%21" target="_blank">
-            WhatsApp | Agenda Aquí
-        </a>
+        <a class="button" href="https://wa.me/56928055904?text=Hola,%20Scar%20🦋🌙.%20Quisiera%20agendar%20un%20servicio!" target="_blank">WhatsApp | Agenda Aquí</a>
     </div>
 
 </div>
