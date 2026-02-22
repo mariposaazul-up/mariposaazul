@@ -4,16 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FUENTES -->
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
-
 <title>Mariposa Azul</title>
 
 <style>
 
+/* IMPORTAR TUS FUENTES */
+@font-face {
+    font-family: 'Halja';
+    src: url('HALJA-Illuminated.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoEthiopic';
+    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+/* BASE */
 body {
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
     background: url("fondo 1.jpeg") no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -22,6 +30,7 @@ body {
     min-height: 100vh;
 }
 
+/* CONTENEDOR */
 .wrapper {
     width: 100%;
     max-width: 1200px;
@@ -30,6 +39,7 @@ body {
     align-items: center;
 }
 
+/* PERFIL */
 .profile-section {
     text-align: center;
 }
@@ -42,44 +52,53 @@ body {
     margin-bottom: 20px;
 }
 
+/* TITULO */
 h1 {
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 40px;
+    font-family: 'Halja';
+    font-size: 48px;
     margin: 10px 0;
-    color: #9fa3a8;
-    text-shadow: 0 0 8px rgba(255,255,255,0.25);
+    color: #f2f4f7;
+    text-shadow: 0 0 14px rgba(255,255,255,0.7);
 }
 
+/* SUBTITULO */
 .subtitle {
+    font-family: 'NotoEthiopic';
     font-size: 18px;
-    color: #8e9399;
+    color: #e6e9ed;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
     margin-bottom: 30px;
 }
 
+/* BOTONES */
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .button {
+    font-family: 'NotoEthiopic';
     width: 280px;
-    padding: 12px;
+    padding: 14px;
     text-align: center;
-    border-radius: 12px;
-    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
     background: rgba(20, 40, 80, 0.35);
-    border: 1px solid rgba(255,255,255,0.3);
-    color: #c4c7cc;
+    border: 1px solid rgba(255,255,255,0.8);
+    color: #f2f4f7;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
     transition: 0.3s ease;
 }
 
 .button:hover {
     background: rgba(20, 40, 80, 0.55);
+    box-shadow: 0 0 16px rgba(255,255,255,0.7);
 }
 
+/* VERSION PC */
 @media (min-width: 900px) {
 
     .wrapper {
@@ -120,7 +139,9 @@ h1 {
         <a class="button" href="#">Web Site | Catálogo</a>
         <a class="button" href="https://www.tiktok.com/@mariposaazul.__?_r=1&_t=ZS-948wj7l5CJL" target="_blank">TikTok</a>
         <a class="button" href="https://www.instagram.com/mariposaazul__?igsh=cTBycnJmdHpoNDlr" target="_blank">Instagram | Únete a mi Comunidad</a>
-        <a class="button" href="https://wa.me/56928055904?text=Hola,%20Scar%20🦋🌙.%20Quisiera%20agendar%20un%20servicio!" target="_blank">WhatsApp | Agenda Aquí</a>
+        <a class="button" href="https://wa.me/56928055904?text=Hola,%20Scar%20%F0%9F%A6%8B%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio!" target="_blank">
+            WhatsApp | Agenda Aquí
+        </a>
     </div>
 
 </div>
