@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | Mariposa Azul</title>
 
+<style>
+
+/* FUENTES */
+@font-face {
+    font-family: 'Halja';
+    src: url('HALJA-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoEthiopic';
+    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+/* BASE */
+body {
+    margin: 0;
+    padding: 0;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+        url('fondo 2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f5f7fa;
+    font-family: 'NotoEthiopic', serif;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-family: 'Halja';
+    font-size: 56px;
+    margin-bottom: 15px;
+    color: #f5f7fa;
+
+    text-shadow:
+        0 0 3px rgba(255,255,255,0.6),
+        0 0 8px rgba(255,255,255,0.35),
+        0 0 14px rgba(255,255,255,0.2);
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 4px rgba(255,255,255,0.3);
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 4px rgba(255,255,255,0.3);
+}
+
+/* DIVISOR */
+.divider {
+    width: 120px;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+    margin: 20px auto 30px auto;
+}
+
+/* BOTÓN */
+.btn-agenda {
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1.5px solid rgba(255,255,255,0.8);
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'NotoEthiopic', serif;
+
+    background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.3),
+        0 6px 15px rgba(0,0,0,0.4);
+
+    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-agenda:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.5),
+        0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <h1 class="hero-title">Mariposa Azul</h1>
+
+    <div class="hero-subtitle">
+        Terapias Holísticas, Tarot Evolutivo y Rituales
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="hero-text">
+        Espacio de Compañía, Amor & Sanación
+    </div>
+
+    <button class="btn-agenda" onclick="enviarWhatsApp()">
+        Agenda Aquí
+    </button>
+
+</section>
+
+<script>
+function enviarWhatsApp() {
+    const numero = "56928055904";
+    const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+    const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
