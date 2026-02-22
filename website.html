@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:
-        linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
+        linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)),
         url('fondo 2.jpeg');
     background-size: cover;
     background-position: center;
@@ -47,7 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 70px 40px;
+    padding: 60px 40px;
     flex-direction: column;
 }
 
@@ -55,8 +55,8 @@ body {
 
 .hero-title {
     font-family: 'Halja';
-    font-size: 50px;
-    margin-bottom: 18px;
+    font-size: 48px;
+    margin-bottom: 15px;
     color: #ffffff;
     text-shadow:
         0 0 4px rgba(255,255,255,0.7),
@@ -68,44 +68,22 @@ body {
 
 .hero-subtitle {
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* menos espacio */
     text-shadow:
         0 0 4px rgba(255,255,255,0.3);
 }
 
-/* ================= SEPARADOR CURVO ================= */
+/* ================= ORNAMENTO BRIDGERTON ================= */
 
 .divider {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 40px 0;
+    margin: 15px 0 20px 0; /* menos separación arriba y abajo */
 }
 
-.divider span {
-    width: 140px;
-    height: 20px;
-    position: relative;
-}
-
-.divider span::before,
-.divider span::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    border-top: 2px solid rgba(255,255,255,0.75);
-    border-radius: 50% 50% 0 0;
-}
-
-.divider span::before {
-    left: 0;
-    transform: rotate(2deg);
-}
-
-.divider span::after {
-    right: 0;
-    transform: rotate(-2deg);
+.divider svg {
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.35));
 }
 
 /* FRASE EMOCIONAL */
@@ -113,7 +91,7 @@ body {
 .hero-text {
     font-family: 'Lobster';
     font-size: 21px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     text-shadow:
         0 0 5px rgba(255,255,255,0.5),
         0 0 10px rgba(255,255,255,0.2);
@@ -177,7 +155,15 @@ body {
     </div>
 
     <div class="divider">
-        <span></span>
+        <svg width="280" height="40" viewBox="0 0 280 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20 
+                     C50 0, 90 0, 130 20 
+                     C170 40, 210 40, 250 20"
+                  stroke="rgba(255,255,255,0.9)"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"/>
+        </svg>
     </div>
 
     <div class="hero-text">
