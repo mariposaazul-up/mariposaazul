@@ -7,7 +7,7 @@
 
 <style>
 
-/* ---------- FUENTES ---------- */
+/* FUENTES */
 
 @font-face {
     font-family: 'Halja';
@@ -19,12 +19,14 @@
     src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-/* ---------- BASE ---------- */
+/* BASE */
 
 body {
     margin: 0;
     padding: 0;
-    background-image: url('fondo 1.jpeg');
+    background-image:
+        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+        url('fondo 1.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -32,14 +34,14 @@ body {
     font-family: 'NotoEthiopic', serif;
 }
 
-/* ---------- CONTENEDOR ---------- */
+/* CONTENEDOR PRINCIPAL */
 
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* ---------- IZQUIERDA ---------- */
+/* IZQUIERDA */
 
 .left {
     flex: 1;
@@ -58,7 +60,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ---------- TITULO ---------- */
+/* TITULO */
 
 h1 {
     font-family: 'Halja';
@@ -81,7 +83,7 @@ h1 {
     text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 
-/* ---------- DERECHA ---------- */
+/* DERECHA */
 
 .right {
     flex: 1;
@@ -110,8 +112,7 @@ h1 {
     background: rgba(0,0,0,0.18);
     transition: 0.3s;
 
-    text-shadow:
-        0 0 4px rgba(255,255,255,0.5);
+    text-shadow: 0 0 4px rgba(255,255,255,0.5);
 }
 
 .button:hover {
@@ -119,7 +120,7 @@ h1 {
     box-shadow: 0 0 12px rgba(255,255,255,0.4);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 
@@ -170,9 +171,7 @@ h1 {
                 Instagram | Únete a mi Comunidad
             </a>
 
-            <a class="button"
-            href="https://wa.me/56928055904?text=Hola%2C%20Scar%20%F0%9F%A6%8B%20%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio%21"
-            target="_blank">
+            <a class="button" href="#" onclick="enviarWhatsApp()">
                 WhatsApp | Agenda Aquí
             </a>
 
@@ -180,6 +179,15 @@ h1 {
     </div>
 
 </div>
+
+<script>
+function enviarWhatsApp() {
+    const numero = "56928055904";
+    const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio!";
+    const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
