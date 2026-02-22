@@ -7,7 +7,8 @@
 
 <style>
 
-/* FUENTES */
+/* ================= FUENTES ================= */
+
 @font-face {
     font-family: 'Halja';
     src: url('HALJA-Regular.otf') format('opentype');
@@ -23,12 +24,13 @@
     src: url('LobsterTwo-Regular.ttf') format('truetype');
 }
 
-/* BASE */
+/* ================= BASE ================= */
+
 body {
     margin: 0;
     padding: 0;
     background-image:
-        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+        linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
         url('fondo 2.jpeg');
     background-size: cover;
     background-position: center;
@@ -37,66 +39,70 @@ body {
     font-family: 'NotoEthiopic', serif;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
     min-height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 40px;
+    padding: 70px 40px;
     flex-direction: column;
 }
 
-/* TÍTULO */
+/* TÍTULO PRINCIPAL */
+
 .hero-title {
     font-family: 'Halja';
-    font-size: 52px;
-    margin-bottom: 15px;
-    color: #f5f7fa;
+    font-size: 50px;
+    margin-bottom: 18px;
+    color: #ffffff;
     text-shadow:
-        0 0 3px rgba(255,255,255,0.6),
-        0 0 8px rgba(255,255,255,0.35),
-        0 0 14px rgba(255,255,255,0.2);
+        0 0 4px rgba(255,255,255,0.7),
+        0 0 10px rgba(255,255,255,0.35),
+        0 0 18px rgba(255,255,255,0.2);
 }
 
 /* SUBTÍTULO */
+
 .hero-subtitle {
     font-size: 22px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 4px rgba(255,255,255,0.3);
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.3);
 }
 
-/* DIVISOR BONITO */
+/* SEPARADOR DELICADO */
+
 .divider {
-    width: 180px;
-    height: 2px;
-    margin: 20px auto 30px auto;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,0.85),
-        transparent
-    );
-    box-shadow: 0 0 12px rgba(255,255,255,0.4);
+    font-size: 18px;
+    margin: 20px 0 30px 0;
+    letter-spacing: 8px;
+    color: rgba(255,255,255,0.9);
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.6),
+        0 0 12px rgba(255,255,255,0.25);
 }
 
-/* TEXTO EMOCIONAL */
+/* FRASE EMOCIONAL */
+
 .hero-text {
     font-family: 'Lobster';
-    font-size: 20px;
-    margin-bottom: 35px;
+    font-size: 21px;
+    margin-bottom: 40px;
     text-shadow:
-        0 0 4px rgba(255,255,255,0.4),
-        0 0 8px rgba(255,255,255,0.2);
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 10px rgba(255,255,255,0.2);
 }
 
-/* BOTÓN */
+/* ================= BOTÓN ================= */
+
 .btn-agenda {
-    padding: 14px 34px;
+    padding: 14px 36px;
     font-size: 18px;
     border-radius: 30px;
-    border: 1.5px solid rgba(255,255,255,0.8);
+    border: 1.5px solid rgba(255,255,255,0.85);
     cursor: pointer;
     color: #ffffff;
     font-family: 'NotoEthiopic', serif;
@@ -104,24 +110,25 @@ body {
     background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
 
     box-shadow:
-        0 0 10px rgba(255,255,255,0.3),
-        0 6px 15px rgba(0,0,0,0.4);
+        0 0 12px rgba(255,255,255,0.35),
+        0 6px 18px rgba(0,0,0,0.45);
 
-    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+    text-shadow: 0 0 6px rgba(255,255,255,0.7);
     transition: all 0.3s ease;
 }
 
 .btn-agenda:hover {
     transform: translateY(-3px);
     box-shadow:
-        0 0 15px rgba(255,255,255,0.5),
-        0 10px 25px rgba(0,0,0,0.5);
+        0 0 18px rgba(255,255,255,0.55),
+        0 10px 28px rgba(0,0,0,0.55);
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
     .hero-title {
-        font-size: 42px;
+        font-size: 40px;
     }
 
     .hero-subtitle {
@@ -146,7 +153,9 @@ body {
         Terapias Holísticas, Tarot Evolutivo y Rituales
     </div>
 
-    <div class="divider"></div>
+    <div class="divider">
+        ✦ ✧ ✦
+    </div>
 
     <div class="hero-text">
         Espacio de Compañía, Amor & Sanación
