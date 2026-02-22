@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mariposa Azul</title>
 
 <style>
@@ -12,7 +11,7 @@
 
 @font-face {
     font-family: 'Halja';
-    src: url('HALJA-Illuminated.otf') format('opentype');
+    src: url('HALJA-Regular.otf') format('opentype');
 }
 
 @font-face {
@@ -20,7 +19,7 @@
     src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-/* ---------- ESTILO GENERAL ---------- */
+/* ---------- BASE ---------- */
 
 body {
     margin: 0;
@@ -33,14 +32,14 @@ body {
     font-family: 'NotoEthiopic', serif;
 }
 
-/* ---------- CONTENEDOR PRINCIPAL ---------- */
+/* ---------- CONTENEDOR ---------- */
 
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* ---------- COLUMNA IZQUIERDA ---------- */
+/* ---------- IZQUIERDA ---------- */
 
 .left {
     flex: 1;
@@ -49,8 +48,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    backdrop-filter: none;
 }
 
 .profile {
@@ -67,18 +64,24 @@ h1 {
     font-family: 'Halja';
     font-size: 52px;
     margin: 10px 0;
-    color: #f8f9fb;
-    text-shadow: 0 0 6px rgba(255,255,255,0.35);
+    color: #f5f7fa;
+
+    text-shadow:
+        0 0 3px rgba(255,255,255,0.6),
+        0 0 8px rgba(255,255,255,0.35),
+        0 0 14px rgba(255,255,255,0.2);
+
+    letter-spacing: 1px;
 }
 
 .subtitle {
     font-size: 20px;
     margin-top: 10px;
     color: #e8edf3;
-    text-shadow: 0 0 4px rgba(255,255,255,0.25);
+    text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 
-/* ---------- COLUMNA DERECHA ---------- */
+/* ---------- DERECHA ---------- */
 
 .right {
     flex: 1;
@@ -89,7 +92,7 @@ h1 {
 
 .buttons {
     width: 80%;
-    max-width: 350px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -99,19 +102,21 @@ h1 {
     text-align: center;
     padding: 14px;
     border-radius: 12px;
-    border: 1.5px solid rgba(255,255,255,0.7);
+    border: 1.5px solid rgba(255,255,255,0.8);
     text-decoration: none;
     color: #f8f9fb;
     font-size: 18px;
     backdrop-filter: blur(8px);
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.18);
     transition: 0.3s;
-    text-shadow: 0 0 4px rgba(255,255,255,0.35);
+
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.5);
 }
 
 .button:hover {
-    background: rgba(255,255,255,0.15);
-    box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 0 12px rgba(255,255,255,0.4);
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -120,7 +125,6 @@ h1 {
 
 .container {
     flex-direction: column;
-    text-align: center;
 }
 
 .left, .right {
@@ -166,8 +170,8 @@ h1 {
                 Instagram | Únete a mi Comunidad
             </a>
 
-            <a class="button" 
-            href="https://wa.me/56928055904?text=Hola%2C%20Scar%20%F0%9F%A6%8B%20%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio%21" 
+            <a class="button"
+            href="https://wa.me/56928055904?text=Hola%2C%20Scar%20%F0%9F%A6%8B%20%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio%21"
             target="_blank">
                 WhatsApp | Agenda Aquí
             </a>
