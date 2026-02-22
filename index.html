@@ -8,7 +8,8 @@
 
 <style>
 
-/* IMPORTAR TUS FUENTES */
+/* ---------- FUENTES ---------- */
+
 @font-face {
     font-family: 'Halja';
     src: url('HALJA-Illuminated.otf') format('opentype');
@@ -19,107 +20,118 @@
     src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-/* BASE */
+/* ---------- ESTILO GENERAL ---------- */
+
 body {
     margin: 0;
-    background: url("fondo 1.jpeg") no-repeat center center fixed;
+    padding: 0;
+    background-image: url('fondo 1.jpeg');
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f5f7fa;
+    font-family: 'NotoEthiopic', serif;
+}
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
 }
 
-/* CONTENEDOR */
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
+/* ---------- COLUMNA IZQUIERDA ---------- */
+
+.left {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-/* PERFIL */
-.profile-section {
     text-align: center;
+
+    backdrop-filter: none;
 }
 
-.profile-section img {
-    width: 180px;
-    height: 180px;
+.profile {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-/* TITULO */
+/* ---------- TITULO ---------- */
+
 h1 {
     font-family: 'Halja';
-    font-size: 48px;
+    font-size: 52px;
     margin: 10px 0;
-    color: #f2f4f7;
-    text-shadow: 0 0 14px rgba(255,255,255,0.7);
+    color: #f8f9fb;
+    text-shadow: 0 0 6px rgba(255,255,255,0.35);
 }
 
-/* SUBTITULO */
 .subtitle {
-    font-family: 'NotoEthiopic';
-    font-size: 18px;
-    color: #e6e9ed;
-    text-shadow: 0 0 8px rgba(255,255,255,0.5);
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #e8edf3;
+    text-shadow: 0 0 4px rgba(255,255,255,0.25);
 }
 
-/* BOTONES */
+/* ---------- COLUMNA DERECHA ---------- */
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttons {
+    width: 80%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
 .button {
-    font-family: 'NotoEthiopic';
-    width: 280px;
-    padding: 14px;
     text-align: center;
-    border-radius: 14px;
-    backdrop-filter: blur(8px);
-    background: rgba(20, 40, 80, 0.35);
-    border: 1px solid rgba(255,255,255,0.8);
-    color: #f2f4f7;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255,255,255,0.7);
     text-decoration: none;
-    font-size: 16px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.7);
-    transition: 0.3s ease;
+    color: #f8f9fb;
+    font-size: 18px;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.15);
+    transition: 0.3s;
+    text-shadow: 0 0 4px rgba(255,255,255,0.35);
 }
 
 .button:hover {
-    background: rgba(20, 40, 80, 0.55);
-    box-shadow: 0 0 16px rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
-/* VERSION PC */
-@media (min-width: 900px) {
+/* ---------- RESPONSIVE ---------- */
 
-    .wrapper {
-        flex-direction: row;
-        height: 100vh;
-    }
+@media (max-width: 900px) {
 
-    .profile-section {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.container {
+    flex-direction: column;
+    text-align: center;
+}
 
-    .buttons {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.left, .right {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.buttons {
+    width: 85%;
+}
+
 }
 
 </style>
@@ -127,21 +139,40 @@ h1 {
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <div class="profile-section">
-        <img src="logo mariposa azul.jpeg" alt="Logo Mariposa Azul">
+    <!-- IZQUIERDA -->
+    <div class="left">
+        <img src="logo mariposa azul.jpeg" class="profile">
         <h1>Mariposa Azul</h1>
-        <div class="subtitle">Tarot evolutivo | Terapias Holísticas</div>
+        <div class="subtitle">
+            Tarot evolutivo | Terapias Holísticas
+        </div>
     </div>
 
-    <div class="buttons">
-        <a class="button" href="#">Web Site | Catálogo</a>
-        <a class="button" href="https://www.tiktok.com/@mariposaazul.__?_r=1&_t=ZS-948wj7l5CJL" target="_blank">TikTok</a>
-        <a class="button" href="https://www.instagram.com/mariposaazul__?igsh=cTBycnJmdHpoNDlr" target="_blank">Instagram | Únete a mi Comunidad</a>
-        <a class="button" href="https://wa.me/56928055904?text=Hola,%20Scar%20%F0%9F%A6%8B%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio!" target="_blank">
-            WhatsApp | Agenda Aquí
-        </a>
+    <!-- DERECHA -->
+    <div class="right">
+        <div class="buttons">
+
+            <a class="button" href="#">
+                Web Site | Catálogo
+            </a>
+
+            <a class="button" href="https://www.tiktok.com/@mariposaazul.__?_r=1&_t=ZS-948wj7l5CJL" target="_blank">
+                TikTok
+            </a>
+
+            <a class="button" href="https://www.instagram.com/mariposaazul__?igsh=cTBycnJmdHpoNDlr" target="_blank">
+                Instagram | Únete a mi Comunidad
+            </a>
+
+            <a class="button" 
+            href="https://wa.me/56928055904?text=Hola%2C%20Scar%20%F0%9F%A6%8B%20%F0%9F%8C%99.%20Quisiera%20agendar%20un%20servicio%21" 
+            target="_blank">
+                WhatsApp | Agenda Aquí
+            </a>
+
+        </div>
     </div>
 
 </div>
