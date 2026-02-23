@@ -235,6 +235,28 @@ text-shadow:
 height:clamp(55px,6vw,85px);
 }
 
+/* ANIMACIÓN CORAZONES */
+
+@keyframes heartLeftMove{
+0%{ transform:rotate(-18deg) translateX(0); }
+50%{ transform:rotate(-18deg) translateX(-14px); }
+100%{ transform:rotate(-18deg) translateX(0); }
+}
+
+@keyframes heartRightMove{
+0%{ transform:rotate(18deg) translateX(0); }
+50%{ transform:rotate(18deg) translateX(14px); }
+100%{ transform:rotate(18deg) translateX(0); }
+}
+
+.heart-left{
+animation:heartLeftMove 1.4s ease-in-out infinite;
+}
+
+.heart-right{
+animation:heartRightMove 1.4s ease-in-out infinite;
+}
+
 /* ================= PAGOS & PROHIBIDOS ================= */
 
 .info-section{
@@ -268,7 +290,6 @@ font-family:'Lobster';
 font-size:38px;
 color:#1f376d;
 text-align:center;
-margin-top:0;
 margin-bottom:20px;
 text-shadow:
 1px 0 #1f376d,
@@ -285,7 +306,7 @@ border-radius:20px;
 color:white;
 text-align:center;
 line-height:1.6;
-box-shadow:-12px 18px 28px rgba(0,0,0,0.28);
+box-shadow:-14px 20px 32px rgba(0,0,0,0.28);
 }
 
 .info-box p{
@@ -296,15 +317,20 @@ margin-bottom:14px;
 
 @media(max-width:900px){
 
+.hero{
+padding:60px 20px;
+}
+
 .info-section{
 flex-direction:column;
 align-items:center;
-padding:0 18px;
+padding:0 20px;
 }
 
 .info-box{
 width:100%;
-max-width:100%;
+max-width:90%;
+margin:0 auto;
 }
 
 }
