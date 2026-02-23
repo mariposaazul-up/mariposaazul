@@ -42,203 +42,218 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
     padding: 50px 40px;
-    color: white;
 }
 
 .hero-title {
     font-family: 'Halja';
     font-size: 56px;
-    margin-bottom: 8px;
-    text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    color: white;
 }
 
 .hero-subtitle {
     font-size: 22px;
-    margin-bottom: 4px;
+    color: white;
 }
 
 .hero-emojis {
     font-size: 20px;
-    margin-bottom: 6px;
+    margin: 6px 0;
     letter-spacing: 4px;
 }
 
 .hero-text {
     font-family: 'Lobster';
     font-size: 21px;
-    margin-bottom: 28px;
+    color: white;
+    margin-bottom: 25px;
 }
 
 .btn-agenda {
     padding: 14px 36px;
     border-radius: 30px;
-    border: 1.5px solid white;
-    background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
-    color: white;
+    border: 1.5px solid rgba(255,255,255,0.85);
     font-family: 'NotoEthiopic';
     cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
 }
 
-/* ================= SECCIÓN AURA ================= */
+/* ================= SECCIÓN ================= */
 
 .fondo-celeste {
-    min-height: 120vh;
+    min-height: 100vh;
     background-image: url('fondo 3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 40px 40px 120px 40px;
+    padding: 20px 20px 100px 20px;
 }
 
 .contenido-celeste {
     max-width: 1200px;
-    margin: auto;
+    margin: -60px auto 0 auto; /* subido a la mitad visual */
     text-align: center;
 }
 
 .contenido-celeste h2 {
     font-family: 'Halja';
     font-weight: 300;
-    font-size: 38px;
-    color: #2f4a66;
-    text-shadow: -2px 2px 6px rgba(0,0,0,0.2);
-    margin-bottom: 45px;
+    font-size: 52px;
+    margin-bottom: 40px;
+    color: #3d4c63;
 }
 
 /* ================= CARRUSEL ================= */
 
-.slider-wrapper {
+.carousel-container {
     position: relative;
-    padding-bottom: 50px;
+    overflow: visible; /* para que no corte sombras */
+    padding: 60px 0;
+    border-radius: 40px;
+    background:
+        linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
+        url('aura.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
-.slider {
+.carousel {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    padding: 20px 60px;
 }
 
-.slider::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
     display: none;
 }
 
 /* ================= TARJETAS ================= */
 
 .card {
-    flex: 0 0 28%;
-    padding: 22px;
-    border-radius: 18px;
+    flex: 0 0 auto;
+    min-width: 260px;
+    max-width: 260px;
+    padding: 20px;
+    border-radius: 22px;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: -18px 25px 45px rgba(70,70,120,0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-
-    background:
-    radial-gradient(circle at 30% 30%, rgba(255, 220, 230, 0.55), transparent 65%),
-    radial-gradient(circle at 70% 40%, rgba(210, 230, 255, 0.45), transparent 70%),
-    radial-gradient(circle at 50% 80%, rgba(220, 210, 255, 0.45), transparent 75%),
-    rgba(255,255,255,0.35);
-
-    backdrop-filter: blur(25px);
-
-    border: 1px solid rgba(255,255,255,0.4);
-
-    box-shadow:
-        -20px 28px 50px rgba(60,60,90,0.28);
+    justify-content: space-between;
 }
 
-/* TITULO */
-
-.card-title {
+.card h3 {
     font-family: 'NotoEthiopic';
-    font-size: 17px;
-    color: #2f4a66;
+    font-size: 19px;
     text-align: center;
+    margin-bottom: 12px;
+    color: #3b4a60;
+    min-height: 52px; /* fuerza alineación móvil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* IMAGEN + MARCO */
 
 .image-frame {
     position: relative;
     width: 100%;
-    border-radius: 14px;
-    border: 2px solid #2f4a66;
-    padding: 6px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 12px;
+    border: 2px solid #3b4a60;
+    border-radius: 18px;
 }
 
-.card-img {
+.image-frame img:first-child {
     width: 100%;
-    aspect-ratio: 1/1;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
-/* ESTRELLAS EN MARCO ADAPTABLES */
+/* ESTRELLAS ADAPTATIVAS */
 
 .star {
     position: absolute;
-    width: clamp(24px, 3vw, 42px);
-    pointer-events: none;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+    width: clamp(20px, 3vw, 32px);
 }
 
-.star1 { top: -12px; left: -12px; }
-.star2 { bottom: -14px; right: -14px; }
-.star3 { top: 50%; right: -20px; }
+.star.top-left {
+    top: -14px;
+    left: -14px;
+}
 
-/* SUBTITULO */
+.star.top-right {
+    top: -14px;
+    right: -14px;
+}
 
-.card-sub {
+.star.bottom-right {
+    bottom: -14px;
+    right: -14px;
+}
+
+.card p {
     font-family: 'Lobster';
     font-size: 17px;
-    color: #2f4a66;
     text-align: center;
-    min-height: 52px;
+    margin-bottom: 16px;
+    color: #3b4a60;
+    min-height: 50px; /* alinea textos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* BOTON */
-
-.card-btn {
-    margin-top: auto;
-    padding: 8px 26px;
-    border-radius: 22px;
-    border: 1.5px solid #2f4a66;
+.card button {
+    padding: 9px 24px;
+    border-radius: 25px;
+    border: 1.5px solid #3b4a60;
     background: transparent;
-    color: #2f4a66;
     font-family: 'NotoEthiopic';
     cursor: pointer;
+    color: #3b4a60;
 }
 
-/* FLECHAS */
+/* ================= FLECHAS ================= */
 
 .arrow {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.4);
-    border: none;
-    font-size: 24px;
+    font-size: 34px;
     cursor: pointer;
-    padding: 10px 14px;
+    background: rgba(255,255,255,0.7);
     border-radius: 50%;
-    backdrop-filter: blur(10px);
+    padding: 6px 12px;
 }
 
-.left { left: -10px; }
-.right { right: -10px; }
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px) {
-    .card { flex: 0 0 45%; }
-    .arrow { display: none; }
+@media (min-width: 900px) {
+    .card {
+        min-width: calc((100% - 60px) / 3);
+        max-width: calc((100% - 60px) / 3);
+    }
+}
+
+@media (max-width: 899px) {
+    .card {
+        min-width: calc((100% - 30px) / 2);
+        max-width: calc((100% - 30px) / 2);
+    }
 }
 
 </style>
@@ -247,122 +262,76 @@ body {
 <body>
 
 <section class="hero">
-    <h1 class="hero-title">Mariposa Azul</h1>
-    <div class="hero-subtitle">
-        Terapias Holísticas, Tarot Evolutivo y Rituales
-    </div>
-    <div class="hero-emojis">🥀 🥀 🥀</div>
-    <div class="hero-text">
-        Espacio de Compañía, Amor & Sanación
-    </div>
-    <button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+<h1 class="hero-title">Mariposa Azul</h1>
+<div class="hero-subtitle">
+Terapias Holísticas, Tarot Evolutivo y Rituales
+</div>
+<div class="hero-emojis">🥀 🥀 🥀</div>
+<div class="hero-text">
+Espacio de Compañía, Amor & Sanación
+</div>
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
 
 <section class="fondo-celeste">
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
 
-<div class="slider-wrapper">
-<button class="arrow left" onclick="scrollSlider(-1)">❮</button>
+<div class="carousel-container">
 
-<div class="slider" id="slider">
+<div class="arrow left" onclick="scrollCarousel(-1)">‹</div>
+<div class="arrow right" onclick="scrollCarousel(1)">›</div>
+
+<div class="carousel" id="carousel">
 
 <!-- TARJETAS -->
 
+<script>
+const servicios = [
+["Lectura de Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
+["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
+["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
+["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
+["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],
+["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
+];
+
+const carousel = document.getElementById("carousel");
+
+servicios.forEach(servicio=>{
+carousel.innerHTML += `
 <div class="card">
-<h3 class="card-title">Lectura de Tarot Terapéutico</h3>
+<h3>${servicio[0]}</h3>
 <div class="image-frame">
-<img src="tarot.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
+<img src="${servicio[1]}">
+<img src="estrella.png" class="star top-left">
+<img src="estrella.png" class="star top-right">
+<img src="estrella.png" class="star bottom-right">
 </div>
-<div class="card-sub">Respuestas y guía para tu proceso.</div>
-<button class="card-btn">Ver Todo</button>
+<p>${servicio[2]}</p>
+<button>Ver Todo</button>
 </div>
-
-<div class="card">
-<h3 class="card-title">Lectura de Oráculo</h3>
-<div class="image-frame">
-<img src="oraculo.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
-</div>
-<div class="card-sub">Mensajes que tu alma necesita escuchar.</div>
-<button class="card-btn">Ver Todo</button>
-</div>
-
-<div class="card">
-<h3 class="card-title">Reiki</h3>
-<div class="image-frame">
-<img src="reiki.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
-</div>
-<div class="card-sub">Sanación energética para cuerpo, mente y espíritu.</div>
-<button class="card-btn">Ver Todo</button>
-</div>
-
-<div class="card">
-<h3 class="card-title">Radiestesia</h3>
-<div class="image-frame">
-<img src="radiestesia.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
-</div>
-<div class="card-sub">Dirección y equilibrio desde la vibración correcta.</div>
-<button class="card-btn">Ver Todo</button>
-</div>
-
-<div class="card">
-<h3 class="card-title">Limpiezas con Cruz de Ankh</h3>
-<div class="image-frame">
-<img src="cruzankh.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
-</div>
-<div class="card-sub">Protección y limpieza para tu alma y tu espacio.</div>
-<button class="card-btn">Ver Todo</button>
-</div>
-
-<div class="card">
-<h3 class="card-title">Rituales Energéticos</h3>
-<div class="image-frame">
-<img src="ritual.jpeg" class="card-img">
-<img src="estrella.png" class="star star1">
-<img src="estrella.png" class="star star2">
-<img src="estrella.png" class="star star3">
-</div>
-<div class="card-sub">Rituales guiados para acompañar tus procesos.</div>
-<button class="card-btn">Ver Todo</button>
-</div>
+`;
+});
+</script>
 
 </div>
-
-<button class="arrow right" onclick="scrollSlider(1)">❯</button>
 </div>
-
 </div>
 </section>
 
 <script>
-function enviarWhatsApp() {
-    const numero = "56928055904";
-    const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-    const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
-    window.open(url, "_blank");
+function scrollCarousel(direction) {
+const carousel = document.getElementById("carousel");
+const cardWidth = carousel.querySelector(".card").offsetWidth + 30;
+carousel.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
 }
 
-function scrollSlider(direction) {
-    const slider = document.getElementById("slider");
-    slider.scrollBy({
-        left: slider.clientWidth,
-        behavior: 'smooth'
-    });
+function enviarWhatsApp() {
+const numero = "56928055904";
+const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+window.open(url, "_blank");
 }
 </script>
 
