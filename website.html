@@ -93,6 +93,119 @@ box-shadow:
 0 6px 18px rgba(0,0,0,0.45);
 }
 
+/* ================= SERVICIOS ================= */
+
+.fondo-celeste{
+padding:40px 0 20px 0;
+}
+
+.contenido-celeste{
+max-width:1300px;
+margin:0 auto;
+text-align:center;
+}
+
+.contenido-celeste h2{
+font-family:'Halja';
+font-size:60px;
+font-weight:300;
+margin:20px 0 25px 0;
+color:#39548C;
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);
+}
+
+/* ================= CARRUSEL ================= */
+
+.carousel{
+display:flex;
+gap:40px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+padding:20px calc((100vw - 960px)/2);
+}
+
+.carousel::-webkit-scrollbar{
+display:none;
+}
+
+/* ================= TARJETAS ================= */
+
+.card{
+flex:0 0 300px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+scroll-snap-align:start;
+min-height:520px;
+}
+
+.card h3{
+font-size:20px;
+text-align:center;
+color:#39548C;
+margin-bottom:14px;
+text-shadow:0 3px 8px rgba(0,0,0,0.35);
+min-height:50px;
+}
+
+.image-frame{
+position:relative;
+width:85%;
+aspect-ratio:1/1;
+margin-bottom:16px;
+border:2px solid #9ea4b3;
+border-radius:22px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:
+0 0 10px #c5c9d3,
+0 0 25px #9ea4b3;
+}
+
+.image-frame img.main{
+width:88%;
+height:88%;
+object-fit:cover;
+border-radius:18px;
+}
+
+.star{
+position:absolute;
+width:28px;
+filter:
+drop-shadow(0 0 6px #ffffff)
+drop-shadow(0 0 14px #cfd3db);
+}
+
+.star.s1{ top:-14px; left:15%; }
+.star.s2{ bottom:-16px; right:18%; }
+.star.s3{ top:45%; left:-16px; }
+.star.s4{ bottom:30%; right:-14px; }
+
+.card p{
+font-family:'Lobster';
+font-size:17px;
+text-align:center;
+color:#39548C;
+margin-bottom:16px;
+text-shadow:0 2px 6px rgba(0,0,0,0.3);
+min-height:60px;
+}
+
+.card button{
+padding:8px 24px;
+border-radius:22px;
+border:1.5px solid #39548C;
+background:transparent;
+font-family:'NotoEthiopic';
+color:#39548C;
+cursor:pointer;
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
 /* ================= OJITO ================= */
 
 .ojito-section{
@@ -122,20 +235,27 @@ text-shadow:
 height:clamp(55px,6vw,85px);
 }
 
+/* ANIMACIÓN CORAZONES */
+
 @keyframes heartLeftMove{
 0%{ transform:rotate(-18deg) translateX(0); }
-50%{ transform:rotate(-18deg) translateX(-16px); }
+50%{ transform:rotate(-18deg) translateX(-14px); }
 100%{ transform:rotate(-18deg) translateX(0); }
 }
 
 @keyframes heartRightMove{
 0%{ transform:rotate(18deg) translateX(0); }
-50%{ transform:rotate(18deg) translateX(16px); }
+50%{ transform:rotate(18deg) translateX(14px); }
 100%{ transform:rotate(18deg) translateX(0); }
 }
 
-.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
-.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
+.heart-left{
+animation:heartLeftMove 1.4s ease-in-out infinite;
+}
+
+.heart-right{
+animation:heartRightMove 1.4s ease-in-out infinite;
+}
 
 /* ================= PAGOS & PROHIBIDOS ================= */
 
@@ -170,7 +290,7 @@ font-family:'Lobster';
 font-size:38px;
 color:#1f376d;
 text-align:center;
-margin:0 0 20px 0;
+margin-bottom:20px;
 text-shadow:
 1px 0 #1f376d,
 -1px 0 #1f376d,
@@ -186,25 +306,31 @@ border-radius:20px;
 color:white;
 text-align:center;
 line-height:1.6;
+box-shadow:-14px 20px 32px rgba(0,0,0,0.28);
 }
 
 .info-box p{
 margin-bottom:14px;
 }
 
-/* ===== SOLO EN MÓVIL ACHICAMOS EL WRAPPER ===== */
+/* ================= MÓVIL ================= */
 
 @media(max-width:900px){
+
+.hero{
+padding:60px 20px;
+}
 
 .info-section{
 flex-direction:column;
 align-items:center;
+padding:0 20px;
 }
 
 .info-box{
-width:90%;
-margin:0 auto 40px auto;
-box-shadow:-10px 10px 20px rgba(0,0,0,0.28);
+width:100%;
+max-width:90%;
+margin:0 auto;
 }
 
 }
@@ -219,7 +345,14 @@ box-shadow:-10px 10px 20px rgba(0,0,0,0.28);
 <div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
 <div class="hero-emojis">🥀 🥀 🥀</div>
 <div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
-<button class="btn-agenda">Agenda Aquí</button>
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+</section>
+
+<section class="fondo-celeste">
+<div class="contenido-celeste">
+<h2>¿Qué estás buscando?</h2>
+<div class="carousel" id="carousel"></div>
+</div>
 </section>
 
 <section class="ojito-section">
@@ -258,6 +391,42 @@ box-shadow:-10px 10px 20px rgba(0,0,0,0.28);
 </div>
 
 </section>
+
+<script>
+const servicios=[
+["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
+["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
+["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
+["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
+["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],
+["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
+];
+
+const carousel=document.getElementById("carousel");
+
+servicios.forEach(s=>{
+carousel.innerHTML+=`
+<div class="card">
+<h3>${s[0]}</h3>
+<div class="image-frame">
+<img src="${s[1]}" class="main">
+<img src="estrella.png" class="star s1">
+<img src="estrella.png" class="star s2">
+<img src="estrella.png" class="star s3">
+<img src="estrella.png" class="star s4">
+</div>
+<p>${s[2]}</p>
+<button>Ver Todo</button>
+</div>`;
+});
+
+function enviarWhatsApp(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+</script>
 
 </body>
 </html>
