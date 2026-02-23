@@ -9,19 +9,19 @@
 
 /* ================= FUENTES ================= */
 
-@font-face{
-font-family:'Halja';
-src:url('HALJA-Regular.otf') format('opentype');
+@font-face {
+    font-family: 'Halja';
+    src: url('HALJA-Regular.otf') format('opentype');
 }
 
-@font-face{
-font-family:'NotoEthiopic';
-src:url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
+@font-face {
+    font-family: 'NotoEthiopic';
+    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-@font-face{
-font-family:'Lobster';
-src:url('LobsterTwo-Regular.ttf') format('truetype');
+@font-face {
+    font-family: 'Lobster';
+    src: url('LobsterTwo-Regular.ttf') format('truetype');
 }
 
 body{
@@ -180,10 +180,10 @@ drop-shadow(0 0 6px #ffffff)
 drop-shadow(0 0 14px #cfd3db);
 }
 
-.star.s1{top:-14px;left:15%;}
-.star.s2{bottom:-16px;right:18%;}
-.star.s3{top:45%;left:-16px;}
-.star.s4{bottom:30%;right:-14px;}
+.star.s1{ top:-14px; left:15%; }
+.star.s2{ bottom:-16px; right:18%; }
+.star.s3{ top:45%; left:-16px; }
+.star.s4{ bottom:30%; right:-14px; }
 
 .card p{
 font-family:'Lobster';
@@ -236,19 +236,19 @@ height:clamp(55px,6vw,85px);
 }
 
 @keyframes heartLeftMove{
-0%{transform:rotate(-18deg) translateX(0);}
-50%{transform:rotate(-18deg) translateX(-16px);}
-100%{transform:rotate(-18deg) translateX(0);}
+0%{ transform:rotate(-18deg) translateX(0); }
+50%{ transform:rotate(-18deg) translateX(-16px); }
+100%{ transform:rotate(-18deg) translateX(0); }
 }
 
 @keyframes heartRightMove{
-0%{transform:rotate(18deg) translateX(0);}
-50%{transform:rotate(18deg) translateX(16px);}
-100%{transform:rotate(18deg) translateX(0);}
+0%{ transform:rotate(18deg) translateX(0); }
+50%{ transform:rotate(18deg) translateX(16px); }
+100%{ transform:rotate(18deg) translateX(0); }
 }
 
-.heart-left{animation:heartLeftMove 1.2s ease-in-out infinite;}
-.heart-right{animation:heartRightMove 1.2s ease-in-out infinite;}
+.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
+.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
 
 /* ================= PAGOS & PROHIBIDOS ================= */
 
@@ -277,6 +277,8 @@ margin-bottom:10px;
 .prohibido-img{
 width:195px;
 }
+
+/* SUBIMOS SOLO TÍTULO Y RECUADRO, NO LA IMAGEN */
 
 .prohibidos-wrapper .info-title{
 margin-top:-12px;
@@ -315,21 +317,10 @@ margin-bottom:14px;
 }
 
 @media(max-width:900px){
-
 .info-section{
 flex-direction:column;
 align-items:center;
 }
-
-/* AJUSTE SOLO PARA MÓVIL */
-
-.info-box{
-width:88%;
-max-width:420px;
-margin:0 auto;
-padding:35px 22px;
-}
-
 }
 
 </style>
@@ -337,7 +328,57 @@ padding:35px 22px;
 
 <body>
 
-<!-- Todo tu body original sigue igual -->
+<section class="hero">
+<h1 class="hero-title">Mariposa Azul</h1>
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
+<div class="hero-emojis">🥀 🥀 🥀</div>
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+</section>
+
+<section class="fondo-celeste">
+<div class="contenido-celeste">
+<h2>¿Qué estás buscando?</h2>
+<div class="carousel" id="carousel"></div>
+</div>
+</section>
+
+<section class="ojito-section">
+<div class="ojito-title">
+<img src="corazon.png" class="heart heart-left">
+<h2>Ojito</h2>
+<img src="corazon.png" class="heart heart-right">
+</div>
+</section>
+
+<section class="info-section">
+
+<div class="info-col">
+<img src="pago.png" class="info-img">
+<div class="info-title">Pagos</div>
+<div class="info-box">
+<p>Los pagos son exclusivamente por transferencia bancaria.</p>
+<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>
+<p><strong>Pagos Internacionales:</strong> PayPal</p>
+<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>
+<p>Una vez efectuado el pago, no hay reembolso.</p>
+<p>Servicio pagado es servicio asegurado.</p>
+</div>
+</div>
+
+<div class="info-col prohibidos-wrapper">
+<img src="prohibido.png" class="info-img prohibido-img">
+<div class="info-title">Prohibidos</div>
+<div class="info-box">
+<p>No realizo lecturas ni rituales a menores de 18 años.</p>
+<p>No leo salud (física o mental), ni embarazo.</p>
+<p>No realizo nada que transgreda el libre albedrío de nadie.</p>
+<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>
+<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>
+</div>
+</div>
+
+</section>
 
 <script>
 const servicios=[
