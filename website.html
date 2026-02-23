@@ -108,18 +108,13 @@ color:#3d4c63;
 
 /* ================= CARRUSEL ================= */
 
-.carousel-container{
-position:relative;
-overflow:visible;
-padding:30px 0 80px 0;
-}
-
 .carousel{
 display:flex;
-gap:24px;
+gap:50px;
 overflow-x:auto;
 scroll-behavior:smooth;
-padding:20px 20px;
+padding:40px 0;
+justify-content:center;
 }
 
 .carousel::-webkit-scrollbar{
@@ -131,88 +126,85 @@ display:none;
 .card{
 flex:0 0 auto;
 width:280px;
-padding:20px;
-border-radius:24px;
-background:
-linear-gradient(rgba(255,255,255,0.45),rgba(255,255,255,0.45)),
-url('aura.jpeg');
+padding:28px 22px;
+border-radius:28px;
+background-image:url('aura.jpeg');
 background-size:cover;
 background-position:center;
-backdrop-filter:blur(25px);
-border:1px solid rgba(255,255,255,0.7);
-box-shadow:-20px 30px 55px rgba(70,70,120,0.35);
+border:1px solid rgba(255,255,255,0.9);
+box-shadow:-25px 40px 70px rgba(60,60,110,0.35);
 display:flex;
 flex-direction:column;
 align-items:center;
 }
 
-/* TÍTULO */
+/* TÍTULO BLOQUE FIJO */
 
 .card h3{
 font-family:'NotoEthiopic';
-font-size:19px;
+font-size:20px;
 text-align:center;
-margin-bottom:12px;
 color:#3b4a60;
-min-height:50px;
+min-height:60px;
 display:flex;
 align-items:center;
 justify-content:center;
+margin-bottom:16px;
 }
 
 /* MARCO */
 
 .image-frame{
 position:relative;
-width:90%;
+width:88%;
 aspect-ratio:1/1;
-margin-bottom:14px;
+margin-bottom:18px;
 border:2px solid #3b4a60;
-border-radius:20px;
+border-radius:22px;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 
 .image-frame img.main{
-width:92%;
-height:92%;
+width:90%;
+height:90%;
 object-fit:cover;
-border-radius:16px;
+border-radius:18px;
 }
 
-/* ESTRELLAS BONITAS */
+/* ESTRELLAS (MISMO TAMAÑO) */
 
 .star{
 position:absolute;
-width:clamp(14px,2.2vw,28px);
+width:26px;
 opacity:0.9;
 }
 
-.star.s1{ top:-12px; left:20%; }
+.star.s1{ top:-12px; left:18%; }
 .star.s2{ bottom:-14px; right:18%; }
-.star.s3{ top:40%; left:-14px; }
-.star.s4{ bottom:25%; right:-12px; }
+.star.s3{ top:42%; left:-14px; }
+.star.s4{ bottom:28%; right:-12px; }
 
-/* SUBTÍTULO */
+/* SUBTÍTULO BLOQUE FIJO */
 
 .card p{
 font-family:'Lobster';
 font-size:17px;
 text-align:center;
-margin-bottom:18px;
 color:#3b4a60;
-min-height:48px;
+min-height:60px;
 display:flex;
 align-items:center;
 justify-content:center;
+margin-bottom:20px;
 }
 
 /* BOTÓN */
 
 .card button{
-padding:8px 24px;
-border-radius:22px;
+padding:9px 26px;
+border-radius:24px;
 border:1.5px solid #3b4a60;
 background:transparent;
 font-family:'NotoEthiopic';
@@ -222,15 +214,19 @@ cursor:pointer;
 
 /* RESPONSIVE */
 
-@media(min-width:900px){
+@media(min-width:1024px){
 .card{
-width:calc((100% - 48px)/3);
+width:300px;
 }
 }
 
-@media(max-width:899px){
+@media(max-width:768px){
+.carousel{
+gap:30px;
+}
 .card{
-width:calc((100% - 24px)/2);
+width:240px;
+padding:24px 18px;
 }
 }
 
@@ -251,12 +247,15 @@ width:calc((100% - 24px)/2);
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
 
-<div class="carousel-container">
-<div class="carousel" id="carousel">
+<div class="carousel" id="carousel"></div>
+
+</div>
+</section>
 
 <script>
+
 const servicios=[
-["Lectura de Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
+["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
 ["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
 ["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
 ["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
@@ -281,20 +280,14 @@ carousel.innerHTML+=`
 <button>Ver Todo</button>
 </div>`;
 });
-</script>
 
-</div>
-</div>
-</div>
-</section>
-
-<script>
 function enviarWhatsApp(){
 const numero="56928055904";
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
+
 </script>
 
 </body>
