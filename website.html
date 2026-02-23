@@ -103,11 +103,11 @@ background-image:url('fondo 3.png');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-padding:40px 0 120px 0;
+padding:30px 0 120px 0;
 }
 
 .contenido-celeste{
-max-width:1200px;
+max-width:1300px;
 margin:0 auto;
 text-align:center;
 }
@@ -116,37 +116,21 @@ text-align:center;
 font-family:'Halja';
 font-size:60px;
 font-weight:300;
-margin:30px 0 30px 0;
+margin:20px 0 15px 0;
 color:#39548C;
 text-shadow:
-0 0 8px rgba(255,255,255,0.8),
-0 0 18px rgba(255,255,255,0.6);
-}
-
-/* ================= WRAPPER AURA ================= */
-
-.carousel-wrapper{
-max-width:1150px;
-margin:0 auto;
-position:relative;
-overflow:hidden;
-background-image:url('aura.jpeg');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-border-radius:35px;
-padding:40px 0;
+0 4px 12px rgba(255,255,255,0.85);
 }
 
 /* ================= CARRUSEL ================= */
 
 .carousel{
 display:flex;
-gap:35px;
+gap:40px;
 overflow-x:auto;
 scroll-behavior:smooth;
-padding:30px 60px;
 scroll-snap-type:x mandatory;
+padding:20px 80px;
 justify-content:center;
 }
 
@@ -161,9 +145,7 @@ flex:0 0 320px;
 display:flex;
 flex-direction:column;
 align-items:center;
-padding:18px 18px 24px 18px;
-border-radius:26px;
-background:transparent;
+padding:10px 15px 20px 15px;
 scroll-snap-align:center;
 }
 
@@ -177,11 +159,8 @@ justify-content:center;
 text-align:center;
 color:white;
 margin-bottom:12px;
-text-shadow:
-0 3px 6px rgba(0,0,0,0.4);
+text-shadow:0 3px 8px rgba(0,0,0,0.4);
 }
-
-/* MARCO */
 
 .image-frame{
 position:relative;
@@ -205,8 +184,6 @@ object-fit:cover;
 border-radius:18px;
 }
 
-/* ESTRELLAS BRILLANTES */
-
 .star{
 position:absolute;
 width:28px;
@@ -216,7 +193,6 @@ drop-shadow(0 0 25px #e6ecf4)
 drop-shadow(0 0 40px #cfd8ea);
 }
 
-/* posiciones */
 .star.s1{ top:-14px; left:15%; }
 .star.s2{ bottom:-16px; right:18%; }
 .star.s3{ top:45%; left:-16px; }
@@ -232,8 +208,7 @@ justify-content:center;
 text-align:center;
 color:white;
 margin-bottom:16px;
-text-shadow:
-0 2px 5px rgba(0,0,0,0.35);
+text-shadow:0 2px 6px rgba(0,0,0,0.35);
 }
 
 .card button{
@@ -244,8 +219,7 @@ background:transparent;
 font-family:'NotoEthiopic';
 color:white;
 cursor:pointer;
-box-shadow:
-0 3px 8px rgba(0,0,0,0.35);
+box-shadow:0 3px 8px rgba(0,0,0,0.35);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -254,7 +228,7 @@ box-shadow:
 
 .carousel{
 justify-content:flex-start;
-padding:30px;
+padding:20px 30px;
 }
 
 .card{
@@ -280,9 +254,7 @@ flex:0 0 250px;
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
 
-<div class="carousel-wrapper">
 <div class="carousel" id="carousel"></div>
-</div>
 
 </div>
 </section>
