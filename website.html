@@ -29,7 +29,6 @@ margin:0;
 padding:0;
 font-family:'NotoEthiopic',serif;
 overflow-x:hidden;
-
 background-image:url('fondo 3.png');
 background-size:cover;
 background-position:center;
@@ -65,16 +64,9 @@ text-shadow:
 0 0 18px rgba(255,255,255,0.5);
 }
 
-.hero-subtitle{
-font-size:22px;
-margin-top:10px;
-}
+.hero-subtitle{ font-size:22px; margin-top:10px; }
 
-.hero-emojis{
-margin:10px 0;
-font-size:20px;
-letter-spacing:8px;
-}
+.hero-emojis{ margin:10px 0; font-size:20px; letter-spacing:8px; }
 
 .hero-text{
 font-family:'Lobster';
@@ -96,16 +88,9 @@ box-shadow:
 
 /* ================= SERVICIOS ================= */
 
-.fondo-celeste{
-min-height:100vh;
-padding:40px 0 20px 0;
-}
+.fondo-celeste{ min-height:100vh; padding:40px 0 20px 0; }
 
-.contenido-celeste{
-max-width:1300px;
-margin:0 auto;
-text-align:center;
-}
+.contenido-celeste{ max-width:1300px; margin:0 auto; text-align:center; }
 
 .contenido-celeste h2{
 font-family:'Halja';
@@ -127,9 +112,7 @@ scroll-snap-type:x mandatory;
 padding:20px calc((100vw - 960px)/2);
 }
 
-.carousel::-webkit-scrollbar{
-display:none;
-}
+.carousel::-webkit-scrollbar{ display:none; }
 
 /* ================= TARJETAS ================= */
 
@@ -162,9 +145,7 @@ border-radius:22px;
 display:flex;
 justify-content:center;
 align-items:center;
-box-shadow:
-0 0 10px #c5c9d3,
-0 0 25px #9ea4b3;
+box-shadow:0 0 10px #c5c9d3,0 0 25px #9ea4b3;
 }
 
 .image-frame img.main{
@@ -177,9 +158,7 @@ border-radius:18px;
 .star{
 position:absolute;
 width:28px;
-filter:
-drop-shadow(0 0 6px #ffffff)
-drop-shadow(0 0 14px #cfd3db);
+filter:drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 14px #cfd3db);
 }
 
 .star.s1{ top:-14px; left:15%; }
@@ -210,10 +189,7 @@ box-shadow:0 3px 8px rgba(0,0,0,0.3);
 
 /* ================= OJITO ================= */
 
-.ojito-section{
-padding:25px 20px 20px 20px;
-text-align:center;
-}
+.ojito-section{ padding:25px 20px 20px 20px; text-align:center; }
 
 .ojito-title{
 display:flex;
@@ -228,9 +204,7 @@ font-size:clamp(62px,6.5vw,95px);
 font-weight:300;
 margin:0;
 color:#39548C;
-text-shadow:
-2px 3px 6px rgba(0,0,0,0.35),
-4px 8px 18px rgba(0,0,0,0.22);
+text-shadow:2px 3px 6px rgba(0,0,0,0.35),4px 8px 18px rgba(0,0,0,0.22);
 }
 
 .heart{
@@ -250,13 +224,8 @@ width:auto;
 100%{ transform:rotate(18deg) translateX(0); }
 }
 
-.heart-left{
-animation:heartLeftMove 1.2s ease-in-out infinite;
-}
-
-.heart-right{
-animation:heartRightMove 1.2s ease-in-out infinite;
-}
+.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
+.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
 
 /* ================= PAGOS & PROHIBIDOS ================= */
 
@@ -278,27 +247,40 @@ align-items:center;
 text-align:center;
 }
 
+/* IMÁGENES */
+
 .info-column img{
 width:260px;
-max-width:80%;
-margin-bottom:25px;
-filter:
-drop-shadow(0 0 10px rgba(255,255,255,0.7))
+margin-bottom:15px;
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.7))
 drop-shadow(0 0 30px rgba(255,255,255,0.35));
 }
 
+/* Agrandar solo prohibido */
+.info-column.prohibido img{
+width:290px;
+}
+
+/* TÍTULOS FUERA DEL RECUADRO */
+
+.info-title{
+font-family:'Lobster';
+font-size:34px;
+margin-bottom:18px;
+color:#1E2F4F;
+text-shadow:
+0 0 8px rgba(255,255,255,0.6),
+0 0 18px rgba(255,255,255,0.35);
+}
+
+/* RECUADRO */
+
 .info-box{
 background:rgba(30,47,79,0.88);
-padding:35px 30px;
+padding:25px 30px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.35);
 color:#f3f6ff;
-}
-
-.info-box h3{
-font-family:'Lobster';
-font-size:34px;
-margin-bottom:20px;
 }
 
 .info-box p{
@@ -308,9 +290,9 @@ line-height:1.7;
 margin:0;
 }
 
-.info-box strong{
-font-weight:700;
-}
+.info-box strong{ font-weight:700; }
+
+/* RESPONSIVE */
 
 @media(max-width:900px){
 .card{
@@ -321,7 +303,6 @@ min-height:480px;
 .info-wrapper{
 flex-direction:column;
 gap:60px;
-margin:50px auto 70px auto;
 }
 }
 
@@ -330,7 +311,6 @@ margin:50px auto 70px auto;
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
 
@@ -346,12 +326,9 @@ Terapias Holísticas, Tarot Evolutivo y Rituales
 Espacio de Compañía, Amor & Sanación
 </div>
 
-<button class="btn-agenda" onclick="enviarWhatsApp()">
-Agenda Aquí
-</button>
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
 
-<!-- SERVICIOS -->
 <section class="fondo-celeste">
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
@@ -359,7 +336,6 @@ Agenda Aquí
 </div>
 </section>
 
-<!-- OJITO -->
 <section class="ojito-section">
 <div class="ojito-title">
 <img src="corazon.png" class="heart heart-left">
@@ -368,13 +344,12 @@ Agenda Aquí
 </div>
 </section>
 
-<!-- PAGOS & PROHIBIDOS -->
 <section class="info-wrapper">
 
 <div class="info-column">
 <img src="pago.png">
+<div class="info-title">Pagos</div>
 <div class="info-box">
-<h3>Pagos</h3>
 <p>
 Los pagos son exclusivamente por transferencia bancaria.<br><br>
 <strong>Pagos Nacionales:</strong> Mercado Pago<br>
@@ -386,10 +361,10 @@ Servicio pagado es servicio asegurado.
 </div>
 </div>
 
-<div class="info-column">
+<div class="info-column prohibido">
 <img src="prohibido.png">
+<div class="info-title">Prohibidos</div>
 <div class="info-box">
-<h3>Prohibidos</h3>
 <p>
 No realizo lecturas ni rituales a menores de 18 años.<br>
 No leo salud (física o mental), ni embarazo.<br>
@@ -429,13 +404,6 @@ carousel.innerHTML+=`
 <button>Ver Todo</button>
 </div>`;
 });
-
-function enviarWhatsApp(){
-const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
-window.open(url,"_blank");
-}
 </script>
 
 </body>
