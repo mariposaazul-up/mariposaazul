@@ -40,7 +40,6 @@ linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
 url('fondo 2.jpeg');
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -64,6 +63,12 @@ text-shadow:
 .hero-subtitle{
 font-size:22px;
 margin-top:10px;
+}
+
+.hero-emojis{
+margin:10px 0;
+font-size:20px;
+letter-spacing:8px;
 }
 
 .hero-text{
@@ -131,8 +136,10 @@ display:none;
 flex:0 0 300px;
 display:flex;
 flex-direction:column;
+justify-content:space-between; /* ALINEA BOTONES */
 align-items:center;
 scroll-snap-align:start;
+min-height:520px; /* misma altura todas */
 }
 
 .card h3{
@@ -141,6 +148,7 @@ text-align:center;
 color:#39548C;
 margin-bottom:14px;
 text-shadow:0 3px 8px rgba(0,0,0,0.35);
+min-height:50px;
 }
 
 .image-frame{
@@ -148,7 +156,7 @@ position:relative;
 width:85%;
 aspect-ratio:1/1;
 margin-bottom:16px;
-border:2px solid #9ea4b3; /* gris plata oscuro */
+border:2px solid #9ea4b3;
 border-radius:22px;
 display:flex;
 justify-content:center;
@@ -164,8 +172,6 @@ height:88%;
 object-fit:cover;
 border-radius:18px;
 }
-
-/* ESTRELLAS PLATA */
 
 .star{
 position:absolute;
@@ -187,6 +193,7 @@ text-align:center;
 color:#39548C;
 margin-bottom:16px;
 text-shadow:0 2px 6px rgba(0,0,0,0.3);
+min-height:60px; /* ALINEA TEXTOS */
 }
 
 .card button{
@@ -211,6 +218,7 @@ padding:20px 30px;
 @media(max-width:900px){
 .card{
 flex:0 0 250px;
+min-height:480px;
 }
 }
 
@@ -221,9 +229,22 @@ flex:0 0 250px;
 
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
-<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
-<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
-<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+
+<div class="hero-subtitle">
+Terapias Holísticas, Tarot Evolutivo y Rituales
+</div>
+
+<div class="hero-emojis">
+🥀 🥀 🥀
+</div>
+
+<div class="hero-text">
+Espacio de Compañía, Amor & Sanación
+</div>
+
+<button class="btn-agenda" onclick="enviarWhatsApp()">
+Agenda Aquí
+</button>
 </section>
 
 <section class="fondo-celeste">
