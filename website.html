@@ -4,95 +4,95 @@
 <meta charset="UTF-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>Servicios | Mariposa Azul</title>  
-  
-<style>  
-  
-/* ================= FUENTES ================= */  
-  
-@font-face {  
-    font-family: 'Halja';  
-    src: url('HALJA-Regular.otf') format('opentype');  
-}  
-  
-@font-face {  
-    font-family: 'NotoEthiopic';  
-    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');  
-}  
-  
-@font-face {  
-    font-family: 'Lobster';  
-    src: url('LobsterTwo-Regular.ttf') format('truetype');  
-}  
-  
-body{  
-margin:0;  
-padding:0;  
-font-family:'NotoEthiopic',serif;  
-overflow-x:hidden;  
-background-image:url('fondo 3.png');  
-background-size:cover;  
-background-position:center;  
-background-attachment:fixed;  
-}  
-  
-/* ================= HERO ================= */  
-  
-.hero{  
-min-height:75vh;  
-background-image:  
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),  
-url('fondo 2.jpeg');  
-background-size:cover;  
-background-position:center;  
-display:flex;  
-flex-direction:column;  
-justify-content:center;  
-align-items:center;  
-text-align:center;  
-padding:60px 40px;  
-color:white;  
-}  
-  
-.hero-title{  
-font-family:'Halja';  
-font-size:56px;  
-font-weight:300;  
-letter-spacing:1px;  
-color:#ffffff;  
-text-shadow:  
-0 0 6px rgba(255,255,255,0.8),  
-0 0 18px rgba(255,255,255,0.5);  
-}  
-  
-.hero-subtitle{  
-font-size:22px;  
-margin-top:10px;  
-}  
-  
-.hero-emojis{  
-margin:10px 0;  
-font-size:20px;  
-letter-spacing:8px;  
-}  
-  
-.hero-text{  
-font-family:'Lobster';  
-font-size:21px;  
-margin:10px 0 25px 0;  
-}  
-  
-.btn-agenda{  
-padding:14px 36px;  
-border-radius:30px;  
-border:1.5px solid rgba(255,255,255,0.85);  
-background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);  
-color:white;  
-cursor:pointer;  
-box-shadow:  
-0 0 12px rgba(255,255,255,0.35),  
-0 6px 18px rgba(0,0,0,0.45);  
-}  
-  
+
+<style>
+
+/* ================= FUENTES ================= */
+
+@font-face {
+    font-family: 'Halja';
+    src: url('HALJA-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoEthiopic';
+    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('LobsterTwo-Regular.ttf') format('truetype');
+}
+
+body{
+margin:0;
+padding:0;
+font-family:'NotoEthiopic',serif;
+overflow-x:hidden;
+background-image:url('fondo 3.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:75vh;
+background-image:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('fondo 2.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 40px;
+color:white;
+}
+
+.hero-title{
+font-family:'Halja';
+font-size:56px;
+font-weight:300;
+letter-spacing:1px;
+color:#ffffff;
+text-shadow:
+0 0 6px rgba(255,255,255,0.8),
+0 0 18px rgba(255,255,255,0.5);
+}
+
+.hero-subtitle{
+font-size:22px;
+margin-top:10px;
+}
+
+.hero-emojis{
+margin:10px 0;
+font-size:20px;
+letter-spacing:8px;
+}
+
+.hero-text{
+font-family:'Lobster';
+font-size:21px;
+margin:10px 0 25px 0;
+}
+
+.btn-agenda{
+padding:14px 36px;
+border-radius:30px;
+border:1.5px solid rgba(255,255,255,0.85);
+background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
+color:white;
+cursor:pointer;
+box-shadow:
+0 0 12px rgba(255,255,255,0.35),
+0 6px 18px rgba(0,0,0,0.45);
+}
+
 /* ================= SERVICIOS ================= */
 
 .fondo-celeste{
@@ -374,36 +374,38 @@ text-shadow:2px 3px 6px rgba(0,0,0,0.4);
 margin-bottom:20px;
 }
 
-.catalogo-imagenes{
-display:flex;
-gap:20px;
-overflow-x:auto;
-scroll-behavior:smooth;
-width:100%;
-padding-bottom:10px;
-}
-
-.catalogo-imagenes::-webkit-scrollbar{
-display:none;
-}
+/* ==== MARCO FIJO ==== */
 
 .catalogo-frame{
 position:relative;
-min-width:100%;
+width:100%;
 aspect-ratio:1/1;
 border:2px solid #e6e6e6;
 border-radius:22px;
+overflow:hidden;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 box-shadow:0 0 10px #f5f5f5,0 0 25px #d9d9d9;
+margin-bottom:20px;
+}
+
+.catalogo-slider{
+display:flex;
+width:100%;
+height:100%;
+overflow-x:auto;
+scroll-behavior:smooth;
+}
+
+.catalogo-slider::-webkit-scrollbar{
+display:none;
 }
 
 .catalogo-img{
-width:88%;
-height:88%;
+min-width:100%;
+height:100%;
 object-fit:cover;
-border-radius:18px;
 }
 
 .catalogo-descripcion{
@@ -430,32 +432,15 @@ padding:10px 28px;
 border-radius:25px;
 cursor:pointer;
 text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+font-family:'NotoEthiopic';
 }
 
 @media(max-width:900px){
-.info-section{
-flex-direction:column;
-align-items:center;
-}
-
-.info-col{
-padding-left:20px;
-padding-right:20px;
-}
-
-.catalogo-titulo{
-margin-left:40px;
-}
-
-.catalogo-grid{
-grid-template-columns:repeat(2,1fr);
-}
+.catalogo-grid{ grid-template-columns:repeat(2,1fr); }
 }
 
 @media(max-width:600px){
-.catalogo-grid{
-grid-template-columns:1fr;
-}
+.catalogo-grid{ grid-template-columns:1fr; }
 }
 
 </style>
@@ -487,32 +472,7 @@ grid-template-columns:1fr;
 </section>
 
 <section class="info-section">
-
-<div class="info-col">
-<img src="pago.png" class="info-img">
-<div class="info-title">Pagos</div>
-<div class="info-box">
-<p>Los pagos son exclusivamente por transferencia bancaria.</p>
-<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>
-<p><strong>Pagos Internacionales:</strong> PayPal</p>
-<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>
-<p>Una vez efectuado el pago, no hay reembolso.</p>
-<p>Servicio pagado es servicio asegurado.</p>
-</div>
-</div>
-
-<div class="info-col prohibidos-wrapper">
-<img src="prohibido.png" class="info-img prohibido-img">
-<div class="info-title">Prohibidos</div>
-<div class="info-box">
-<p>No realizo lecturas ni rituales a menores de 18 años.</p>
-<p>No leo salud (física o mental), ni embarazo.</p>
-<p>No realizo nada que transgreda el libre albedrío de nadie.</p>
-<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>
-<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>
-</div>
-</div>
-
+...
 </section>
 
 <h2 class="catalogo-titulo">
@@ -525,22 +485,15 @@ Tarot Terapéutico <span class="brillo">✨</span>
 
 <div class="catalogo-titulo-card">Preguntas Específicas</div>
 
-<div class="catalogo-imagenes">
 <div class="catalogo-frame">
+<div class="catalogo-slider">
 <img src="tarotespecifico1.jpeg" class="catalogo-img">
-<img src="estrella.png" class="star s1">
-<img src="estrella.png" class="star s2">
-<img src="estrella.png" class="star s3">
-<img src="estrella.png" class="star s4">
-</div>
-
-<div class="catalogo-frame">
 <img src="tarotespecifico2.jpeg" class="catalogo-img">
+</div>
 <img src="estrella.png" class="star s1">
 <img src="estrella.png" class="star s2">
 <img src="estrella.png" class="star s3">
 <img src="estrella.png" class="star s4">
-</div>
 </div>
 
 <div class="catalogo-descripcion">
@@ -556,40 +509,6 @@ Ideal para personas que solo desean saber algo en puntual y profundizar en ello.
 </section>
 
 <script>
-const servicios=[
-["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
-["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
-["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
-["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
-["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],
-["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
-];
-
-const carousel=document.getElementById("carousel");
-
-servicios.forEach(s=>{
-carousel.innerHTML+=`
-<div class="card">
-<h3>${s[0]}</h3>
-<div class="image-frame">
-<img src="${s[1]}" class="main">
-<img src="estrella.png" class="star s1">
-<img src="estrella.png" class="star s2">
-<img src="estrella.png" class="star s3">
-<img src="estrella.png" class="star s4">
-</div>
-<p>${s[2]}</p>
-<button>Ver Todo</button>
-</div>`;
-});
-
-function enviarWhatsApp(){
-const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
-window.open(url,"_blank");
-}
-
 function agendarEspecificas(){
 const numero="56928055904";
 const mensaje="Hola ,Scar 🦋🌙. Quisiera agendar este servicio de *Preguntas Específicas*";
