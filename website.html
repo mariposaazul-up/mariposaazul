@@ -1,426 +1,424 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios | Mariposa Azul</title>
-
-<style>
-
-/* ================= FUENTES ================= */
-
-@font-face {
-    font-family: 'Halja';
-    src: url('HALJA-Regular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'NotoEthiopic';
-    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Lobster';
-    src: url('LobsterTwo-Regular.ttf') format('truetype');
-}
-
-body{
-margin:0;
-padding:0;
-font-family:'NotoEthiopic',serif;
-overflow-x:hidden;
-background-image:url('fondo 3.png');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-min-height:75vh;
-background-image:
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-url('fondo 2.jpeg');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:60px 40px;
-color:white;
-}
-
-.hero-title{
-font-family:'Halja';
-font-size:56px;
-font-weight:300;
-letter-spacing:1px;
-color:#ffffff;
-text-shadow:
-0 0 6px rgba(255,255,255,0.8),
-0 0 18px rgba(255,255,255,0.5);
-}
-
-.hero-subtitle{
-font-size:22px;
-margin-top:10px;
-}
-
-.hero-emojis{
-margin:10px 0;
-font-size:20px;
-letter-spacing:8px;
-}
-
-.hero-text{
-font-family:'Lobster';
-font-size:21px;
-margin:10px 0 25px 0;
-}
-
-.btn-agenda{
-padding:14px 36px;
-border-radius:30px;
-border:1.5px solid rgba(255,255,255,0.85);
-background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
-color:white;
-cursor:pointer;
-box-shadow:
-0 0 12px rgba(255,255,255,0.35),
-0 6px 18px rgba(0,0,0,0.45);
-}
-
-/* ================= SERVICIOS ================= */
-
-.fondo-celeste{
-padding:40px 0 20px 0;
-}
-
-.contenido-celeste{
-max-width:1300px;
-margin:0 auto;
-text-align:center;
-}
-
-.contenido-celeste h2{
-font-family:'Halja';
-font-size:60px;
-font-weight:300;
-margin:20px 0 25px 0;
-color:#39548C;
-text-shadow:3px 4px 8px rgba(0,0,0,0.35);
-}
-
-/* ================= CARRUSEL ================= */
-
-.carousel{
-display:flex;
-gap:40px;
-overflow-x:auto;
-scroll-behavior:smooth;
-scroll-snap-type:x mandatory;
-padding:20px calc((100vw - 960px)/2);
-}
-
-.carousel::-webkit-scrollbar{
-display:none;
-}
-
-/* ================= TARJETAS ================= */
-
-.card{
-flex:0 0 300px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center;
-scroll-snap-align:start;
-min-height:520px;
-}
-
-.card h3{
-font-size:20px;
-text-align:center;
-color:#39548C;
-margin-bottom:14px;
-text-shadow:0 3px 8px rgba(0,0,0,0.35);
-min-height:50px;
-}
-
-.image-frame{
-position:relative;
-width:85%;
-aspect-ratio:1/1;
-margin-bottom:16px;
-border:2px solid #9ea4b3;
-border-radius:22px;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:
-0 0 10px #c5c9d3,
-0 0 25px #9ea4b3;
-}
-
-.image-frame img.main{
-width:88%;
-height:88%;
-object-fit:cover;
-border-radius:18px;
-}
-
-.star{
-position:absolute;
-width:28px;
-filter:
-drop-shadow(0 0 6px #ffffff)
-drop-shadow(0 0 14px #cfd3db);
-}
-
-.star.s1{ top:-14px; left:15%; }
-.star.s2{ bottom:-16px; right:18%; }
-.star.s3{ top:45%; left:-16px; }
-.star.s4{ bottom:30%; right:-14px; }
-
-.card p{
-font-family:'Lobster';
-font-size:17px;
-text-align:center;
-color:#39548C;
-margin-bottom:16px;
-text-shadow:0 2px 6px rgba(0,0,0,0.3);
-min-height:60px;
-}
-
-.card button{
-padding:8px 24px;
-border-radius:22px;
-border:1.5px solid #39548C;
-background:transparent;
-font-family:'NotoEthiopic';
-color:#39548C;
-cursor:pointer;
-box-shadow:0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* ================= OJITO ================= */
-
-.ojito-section{
-padding:20px 20px 10px 20px;
-text-align:center;
-}
-
-.ojito-title{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-}
-
-.ojito-title h2{
-font-family:'Halja';
-font-size:clamp(70px,7vw,100px);
-font-weight:300;
-margin:0;
-color:#39548C;
-text-shadow:
-2px 3px 6px rgba(0,0,0,0.35),
-4px 8px 18px rgba(0,0,0,0.22);
-}
-
-.heart{
-height:clamp(55px,6vw,85px);
-}
-
-@keyframes heartLeftMove{
-0%{ transform:rotate(-18deg) translateX(0); }
-50%{ transform:rotate(-18deg) translateX(-16px); }
-100%{ transform:rotate(-18deg) translateX(0); }
-}
-
-@keyframes heartRightMove{
-0%{ transform:rotate(18deg) translateX(0); }
-50%{ transform:rotate(18deg) translateX(16px); }
-100%{ transform:rotate(18deg) translateX(0); }
-}
-
-.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
-.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
-
-/* ================= PAGOS & PROHIBIDOS ================= */
-
-.info-section{
-max-width:1200px;
-margin:40px auto 100px auto;
-display:flex;
-justify-content:space-between;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.info-col{
-flex:1;
-min-width:300px;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.info-img{
-width:180px;
-margin-bottom:10px;
-}
-
-.prohibido-img{
-width:195px;
-}
-
-/* SUBIMOS SOLO TÍTULO Y RECUADRO, NO LA IMAGEN */
-
-.prohibidos-wrapper .info-title{
-margin-top:-12px;
-}
-
-.prohibidos-wrapper .info-box{
-margin-top:-10px;
-}
-
-.info-title{
-font-family:'Lobster';
-font-size:38px;
-color:#1f376d;
-text-align:center;
-margin-top:0;
-margin-bottom:20px;
-text-shadow:
-1px 0 #1f376d,
--1px 0 #1f376d,
-0 1px #1f376d,
-0 -1px #1f376d,
-0 0 10px rgba(31,55,109,0.35);
-}
-
-.info-box{
-background:rgba(30,55,110,0.85);
-padding:30px;
-border-radius:20px;
-color:white;
-text-align:center;
-line-height:1.6;
-}
-
-.info-box p{
-margin-bottom:14px;
-}
-
-@media(max-width:900px){
-.info-section{
-flex-direction:column;
-align-items:center;
-}
-
-/* SOLO agrega margen lateral visual a las tarjetas */
-.info-col{
-padding-left:20px;
-padding-right:20px;
-}
-}
-
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-<h1 class="hero-title">Mariposa Azul</h1>
-<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
-<div class="hero-emojis">🥀 🥀 🥀</div>
-<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
-<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
-</section>
-
-<section class="fondo-celeste">
-<div class="contenido-celeste">
-<h2>¿Qué estás buscando?</h2>
-<div class="carousel" id="carousel"></div>
-</div>
-</section>
-
-<section class="ojito-section">
-<div class="ojito-title">
-<img src="corazon.png" class="heart heart-left">
-<h2>Ojito</h2>
-<img src="corazon.png" class="heart heart-right">
-</div>
-</section>
-
-<section class="info-section">
-
-<div class="info-col">
-<img src="pago.png" class="info-img">
-<div class="info-title">Pagos</div>
-<div class="info-box">
-<p>Los pagos son exclusivamente por transferencia bancaria.</p>
-<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>
-<p><strong>Pagos Internacionales:</strong> PayPal</p>
-<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>
-<p>Una vez efectuado el pago, no hay reembolso.</p>
-<p>Servicio pagado es servicio asegurado.</p>
-</div>
-</div>
-
-<div class="info-col prohibidos-wrapper">
-<img src="prohibido.png" class="info-img prohibido-img">
-<div class="info-title">Prohibidos</div>
-<div class="info-box">
-<p>No realizo lecturas ni rituales a menores de 18 años.</p>
-<p>No leo salud (física o mental), ni embarazo.</p>
-<p>No realizo nada que transgreda el libre albedrío de nadie.</p>
-<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>
-<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>
-</div>
-</div>
-
-</section>
-
-<script>
-const servicios=[
-["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
-["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
-["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
-["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
-["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],
-["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
-];
-
-const carousel=document.getElementById("carousel");
-
-servicios.forEach(s=>{
-carousel.innerHTML+=`
-<div class="card">
-<h3>${s[0]}</h3>
-<div class="image-frame">
-<img src="${s[1]}" class="main">
-<img src="estrella.png" class="star s1">
-<img src="estrella.png" class="star s2">
-<img src="estrella.png" class="star s3">
-<img src="estrella.png" class="star s4">
-</div>
-<p>${s[2]}</p>
-<button>Ver Todo</button>
-</div>`;
-});
-
-function enviarWhatsApp(){
-const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
-window.open(url,"_blank");
-}
-</script>
-
-</body>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Servicios | Mariposa Azul</title>  
+  
+<style>  
+  
+/* ================= FUENTES ================= */  
+  
+@font-face {  
+    font-family: 'Halja';  
+    src: url('HALJA-Regular.otf') format('opentype');  
+}  
+  
+@font-face {  
+    font-family: 'NotoEthiopic';  
+    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');  
+}  
+  
+@font-face {  
+    font-family: 'Lobster';  
+    src: url('LobsterTwo-Regular.ttf') format('truetype');  
+}  
+  
+body{  
+margin:0;  
+padding:0;  
+font-family:'NotoEthiopic',serif;  
+overflow-x:hidden;  
+background-image:url('fondo 3.png');  
+background-size:cover;  
+background-position:center;  
+background-attachment:fixed;  
+}  
+  
+/* ================= HERO ================= */  
+  
+.hero{  
+min-height:75vh;  
+background-image:  
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),  
+url('fondo 2.jpeg');  
+background-size:cover;  
+background-position:center;  
+display:flex;  
+flex-direction:column;  
+justify-content:center;  
+align-items:center;  
+text-align:center;  
+padding:60px 40px;  
+color:white;  
+}  
+  
+.hero-title{  
+font-family:'Halja';  
+font-size:56px;  
+font-weight:300;  
+letter-spacing:1px;  
+color:#ffffff;  
+text-shadow:  
+0 0 6px rgba(255,255,255,0.8),  
+0 0 18px rgba(255,255,255,0.5);  
+}  
+  
+.hero-subtitle{  
+font-size:22px;  
+margin-top:10px;  
+}  
+  
+.hero-emojis{  
+margin:10px 0;  
+font-size:20px;  
+letter-spacing:8px;  
+}  
+  
+.hero-text{  
+font-family:'Lobster';  
+font-size:21px;  
+margin:10px 0 25px 0;  
+}  
+  
+.btn-agenda{  
+padding:14px 36px;  
+border-radius:30px;  
+border:1.5px solid rgba(255,255,255,0.85);  
+background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);  
+color:white;  
+cursor:pointer;  
+box-shadow:  
+0 0 12px rgba(255,255,255,0.35),  
+0 6px 18px rgba(0,0,0,0.45);  
+}  
+  
+/* ================= SERVICIOS ================= */  
+  
+.fondo-celeste{  
+padding:40px 0 20px 0;  
+}  
+  
+.contenido-celeste{  
+max-width:1300px;  
+margin:0 auto;  
+text-align:center;  
+}  
+  
+.contenido-celeste h2{  
+font-family:'Halja';  
+font-size:60px;  
+font-weight:300;  
+margin:20px 0 25px 0;  
+color:#39548C;  
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);  
+}  
+  
+/* ================= CARRUSEL ================= */  
+  
+.carousel{  
+display:flex;  
+gap:40px;  
+overflow-x:auto;  
+scroll-behavior:smooth;  
+scroll-snap-type:x mandatory;  
+padding:20px calc((100vw - 960px)/2);  
+}  
+  
+.carousel::-webkit-scrollbar{  
+display:none;  
+}  
+  
+/* ================= TARJETAS ================= */  
+  
+.card{  
+flex:0 0 300px;  
+display:flex;  
+flex-direction:column;  
+justify-content:space-between;  
+align-items:center;  
+scroll-snap-align:start;  
+min-height:520px;  
+}  
+  
+.card h3{  
+font-size:20px;  
+text-align:center;  
+color:#39548C;  
+margin-bottom:14px;  
+text-shadow:0 3px 8px rgba(0,0,0,0.35);  
+min-height:50px;  
+}  
+  
+.image-frame{  
+position:relative;  
+width:85%;  
+aspect-ratio:1/1;  
+margin-bottom:16px;  
+border:2px solid #9ea4b3;  
+border-radius:22px;  
+display:flex;  
+justify-content:center;  
+align-items:center;  
+box-shadow:  
+0 0 10px #c5c9d3,  
+0 0 25px #9ea4b3;  
+}  
+  
+.image-frame img.main{  
+width:88%;  
+height:88%;  
+object-fit:cover;  
+border-radius:18px;  
+}  
+  
+.star{  
+position:absolute;  
+width:28px;  
+filter:  
+drop-shadow(0 0 6px #ffffff)  
+drop-shadow(0 0 14px #cfd3db);  
+}  
+  
+.star.s1{ top:-14px; left:15%; }  
+.star.s2{ bottom:-16px; right:18%; }  
+.star.s3{ top:45%; left:-16px; }  
+.star.s4{ bottom:30%; right:-14px; }  
+  
+.card p{  
+font-family:'Lobster';  
+font-size:17px;  
+text-align:center;  
+color:#39548C;  
+margin-bottom:16px;  
+text-shadow:0 2px 6px rgba(0,0,0,0.3);  
+min-height:60px;  
+}  
+  
+.card button{  
+padding:8px 24px;  
+border-radius:22px;  
+border:1.5px solid #39548C;  
+background:transparent;  
+font-family:'NotoEthiopic';  
+color:#39548C;  
+cursor:pointer;  
+box-shadow:0 3px 8px rgba(0,0,0,0.3);  
+}  
+  
+/* ================= OJITO ================= */  
+  
+.ojito-section{  
+padding:20px 20px 10px 20px;  
+text-align:center;  
+}  
+  
+.ojito-title{  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+gap:10px;  
+}  
+  
+.ojito-title h2{  
+font-family:'Halja';  
+font-size:clamp(70px,7vw,100px);  
+font-weight:300;  
+margin:0;  
+color:#39548C;  
+text-shadow:  
+2px 3px 6px rgba(0,0,0,0.35),  
+4px 8px 18px rgba(0,0,0,0.22);  
+}  
+  
+.heart{  
+height:clamp(55px,6vw,85px);  
+}  
+  
+@keyframes heartLeftMove{  
+0%{ transform:rotate(-18deg) translateX(0); }  
+50%{ transform:rotate(-18deg) translateX(-16px); }  
+100%{ transform:rotate(-18deg) translateX(0); }  
+}  
+  
+@keyframes heartRightMove{  
+0%{ transform:rotate(18deg) translateX(0); }  
+50%{ transform:rotate(18deg) translateX(16px); }  
+100%{ transform:rotate(18deg) translateX(0); }  
+}  
+  
+.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }  
+.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }  
+  
+/* ================= PAGOS & PROHIBIDOS ================= */  
+  
+.info-section{  
+max-width:1200px;  
+margin:40px auto 100px auto;  
+display:flex;  
+justify-content:space-between;  
+gap:60px;  
+flex-wrap:wrap;  
+}  
+  
+.info-col{  
+flex:1;  
+min-width:300px;  
+display:flex;  
+flex-direction:column;  
+align-items:center;  
+}  
+  
+.info-img{  
+width:180px;  
+margin-bottom:10px;  
+}  
+  
+.prohibido-img{  
+width:195px;  
+}  
+  
+.prohibidos-wrapper .info-title{  
+margin-top:-12px;  
+}  
+  
+.prohibidos-wrapper .info-box{  
+margin-top:-10px;  
+}  
+  
+.info-title{  
+font-family:'Lobster';  
+font-size:38px;  
+color:#1f376d;  
+text-align:center;  
+margin-top:0;  
+margin-bottom:20px;  
+text-shadow:  
+1px 0 #1f376d,  
+-1px 0 #1f376d,  
+0 1px #1f376d,  
+0 -1px #1f376d,  
+0 0 10px rgba(31,55,109,0.35);  
+}  
+  
+.info-box{  
+background:rgba(30,55,110,0.85);  
+padding:30px;  
+border-radius:20px;  
+color:white;  
+text-align:center;  
+line-height:1.6;  
+box-shadow:-12px 14px 25px rgba(0,0,0,0.35);
+}  
+  
+.info-box p{  
+margin-bottom:14px;  
+}  
+  
+@media(max-width:900px){  
+.info-section{  
+flex-direction:column;  
+align-items:center;  
+}  
+  
+.info-col{  
+padding-left:20px;  
+padding-right:20px;  
+}  
+}  
+  
+</style>  
+</head>  
+  
+<body>  
+  
+<section class="hero">  
+<h1 class="hero-title">Mariposa Azul</h1>  
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>  
+<div class="hero-emojis">🥀 🥀 🥀</div>  
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>  
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>  
+</section>  
+  
+<section class="fondo-celeste">  
+<div class="contenido-celeste">  
+<h2>¿Qué estás buscando?</h2>  
+<div class="carousel" id="carousel"></div>  
+</div>  
+</section>  
+  
+<section class="ojito-section">  
+<div class="ojito-title">  
+<img src="corazon.png" class="heart heart-left">  
+<h2>Ojito</h2>  
+<img src="corazon.png" class="heart heart-right">  
+</div>  
+</section>  
+  
+<section class="info-section">  
+  
+<div class="info-col">  
+<img src="pago.png" class="info-img">  
+<div class="info-title">Pagos</div>  
+<div class="info-box">  
+<p>Los pagos son exclusivamente por transferencia bancaria.</p>  
+<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>  
+<p><strong>Pagos Internacionales:</strong> PayPal</p>  
+<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>  
+<p>Una vez efectuado el pago, no hay reembolso.</p>  
+<p>Servicio pagado es servicio asegurado.</p>  
+</div>  
+</div>  
+  
+<div class="info-col prohibidos-wrapper">  
+<img src="prohibido.png" class="info-img prohibido-img">  
+<div class="info-title">Prohibidos</div>  
+<div class="info-box">  
+<p>No realizo lecturas ni rituales a menores de 18 años.</p>  
+<p>No leo salud (física o mental), ni embarazo.</p>  
+<p>No realizo nada que transgreda el libre albedrío de nadie.</p>  
+<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>  
+<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>  
+</div>  
+</div>  
+  
+</section>  
+  
+<script>  
+const servicios=[  
+["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],  
+["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],  
+["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],  
+["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],  
+["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],  
+["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]  
+];  
+  
+const carousel=document.getElementById("carousel");  
+  
+servicios.forEach(s=>{  
+carousel.innerHTML+=`  
+<div class="card">  
+<h3>${s[0]}</h3>  
+<div class="image-frame">  
+<img src="${s[1]}" class="main">  
+<img src="estrella.png" class="star s1">  
+<img src="estrella.png" class="star s2">  
+<img src="estrella.png" class="star s3">  
+<img src="estrella.png" class="star s4">  
+</div>  
+<p>${s[2]}</p>  
+<button>Ver Todo</button>  
+</div>`;  
+});  
+  
+function enviarWhatsApp(){  
+const numero="56928055904";  
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";  
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
+window.open(url,"_blank");  
+}  
+</script>  
+  
+</body>  
 </html>
