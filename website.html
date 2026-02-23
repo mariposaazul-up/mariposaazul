@@ -275,9 +275,17 @@ margin-bottom:10px;
 }
 
 .prohibido-img{
-position:relative;
-top:5px; /* ajuste fino subida */
 width:195px;
+}
+
+/* SUBIMOS SOLO TÍTULO Y RECUADRO, NO LA IMAGEN */
+
+.prohibidos-wrapper .info-title{
+margin-top:-14px;
+}
+
+.prohibidos-wrapper .info-box{
+margin-top:-10px;
 }
 
 .info-title{
@@ -285,6 +293,7 @@ font-family:'Lobster';
 font-size:38px;
 color:#1f376d;
 text-align:center;
+margin-top:0;
 margin-bottom:20px;
 text-shadow:
 1px 0 #1f376d,
@@ -292,11 +301,6 @@ text-shadow:
 0 1px #1f376d,
 0 -1px #1f376d,
 0 0 10px rgba(31,55,109,0.35);
-}
-
-.prohibidos-wrapper{
-position:relative;
-top:-10px; /* alineación con Pagos */
 }
 
 .info-box{
@@ -316,9 +320,6 @@ margin-bottom:14px;
 .info-section{
 flex-direction:column;
 align-items:center;
-}
-.prohibidos-wrapper{
-top:0;
 }
 }
 
