@@ -64,8 +64,16 @@ text-shadow:
 0 0 18px rgba(255,255,255,0.5);
 }
 
-.hero-subtitle{ font-size:22px; margin-top:10px; }
-.hero-emojis{ margin:10px 0; font-size:20px; letter-spacing:8px; }
+.hero-subtitle{
+font-size:22px;
+margin-top:10px;
+}
+
+.hero-emojis{
+margin:10px 0;
+font-size:20px;
+letter-spacing:8px;
+}
 
 .hero-text{
 font-family:'Lobster';
@@ -88,7 +96,6 @@ box-shadow:
 /* ================= SERVICIOS ================= */
 
 .fondo-celeste{
-min-height:100vh;
 padding:40px 0 20px 0;
 }
 
@@ -118,7 +125,9 @@ scroll-snap-type:x mandatory;
 padding:20px calc((100vw - 960px)/2);
 }
 
-.carousel::-webkit-scrollbar{ display:none; }
+.carousel::-webkit-scrollbar{
+display:none;
+}
 
 /* ================= TARJETAS ================= */
 
@@ -151,7 +160,9 @@ border-radius:22px;
 display:flex;
 justify-content:center;
 align-items:center;
-box-shadow:0 0 10px #c5c9d3,0 0 25px #9ea4b3;
+box-shadow:
+0 0 10px #c5c9d3,
+0 0 25px #9ea4b3;
 }
 
 .image-frame img.main{
@@ -198,7 +209,7 @@ box-shadow:0 3px 8px rgba(0,0,0,0.3);
 /* ================= OJITO ================= */
 
 .ojito-section{
-padding:25px 20px 20px 20px;
+padding:20px 20px 10px 20px;
 text-align:center;
 }
 
@@ -211,16 +222,17 @@ gap:10px;
 
 .ojito-title h2{
 font-family:'Halja';
-font-size:clamp(62px,6.5vw,95px);
+font-size:clamp(70px,7vw,100px);
 font-weight:300;
 margin:0;
 color:#39548C;
-text-shadow:2px 3px 6px rgba(0,0,0,0.35),4px 8px 18px rgba(0,0,0,0.22);
+text-shadow:
+2px 3px 6px rgba(0,0,0,0.35),
+4px 8px 18px rgba(0,0,0,0.22);
 }
 
 .heart{
 height:clamp(55px,6vw,85px);
-width:auto;
 }
 
 @keyframes heartLeftMove{
@@ -240,75 +252,72 @@ width:auto;
 
 /* ================= PAGOS & PROHIBIDOS ================= */
 
-.info-wrapper{
+.info-section{
 max-width:1200px;
-margin:60px auto 100px auto;
+margin:40px auto 100px auto;
 display:flex;
-gap:80px;
-justify-content:center;
-align-items:flex-start;
-padding:0 40px;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
 }
 
-.info-column{
+.info-col{
 flex:1;
+min-width:300px;
 display:flex;
 flex-direction:column;
 align-items:center;
-text-align:center;
 }
 
-/* AJUSTE DE EQUIDAD VISUAL */
-.info-column.prohibido{
-margin-top:-18px;
+.info-img{
+width:180px;
+margin-bottom:10px;
 }
 
-.info-column img{
-width:260px;
-margin-bottom:15px;
-filter:drop-shadow(0 0 10px rgba(255,255,255,0.7))
-drop-shadow(0 0 30px rgba(255,255,255,0.35));
-}
-
-.info-column.prohibido img{
-width:290px;
+.prohibido-img{
+position:relative;
+top:-10px; /* ajuste fino subida */
 }
 
 .info-title{
 font-family:'Lobster';
-font-size:34px;
-margin-bottom:18px;
-color:#1E2F4F;
+font-size:38px;
+color:#1f376d;
+text-align:center;
+margin-bottom:20px;
 text-shadow:
-0 0 8px rgba(255,255,255,0.6),
-0 0 18px rgba(255,255,255,0.35);
+1px 0 #1f376d,
+-1px 0 #1f376d,
+0 1px #1f376d,
+0 -1px #1f376d,
+0 0 10px rgba(31,55,109,0.35);
+}
+
+.prohibidos-wrapper{
+position:relative;
+top:-35px; /* alineación con Pagos */
 }
 
 .info-box{
-background:rgba(30,47,79,0.88);
-padding:25px 30px;
+background:rgba(30,55,110,0.85);
+padding:30px;
 border-radius:20px;
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
-color:#f3f6ff;
+color:white;
+text-align:center;
+line-height:1.6;
 }
 
 .info-box p{
-font-family:'NotoEthiopic';
-font-size:16px;
-line-height:1.7;
-margin:0;
+margin-bottom:14px;
 }
-
-.info-box strong{ font-weight:700; }
 
 @media(max-width:900px){
-.card{
-flex:0 0 250px;
-min-height:480px;
-}
-.info-wrapper{
+.info-section{
 flex-direction:column;
-gap:60px;
+align-items:center;
+}
+.prohibidos-wrapper{
+top:0;
 }
 }
 
@@ -319,22 +328,10 @@ gap:60px;
 
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
-
-<div class="hero-subtitle">
-Terapias Holísticas, Tarot Evolutivo y Rituales
-</div>
-
-<div class="hero-emojis">
-🥀 🥀 🥀
-</div>
-
-<div class="hero-text">
-Espacio de Compañía, Amor & Sanación
-</div>
-
-<button class="btn-agenda" onclick="enviarWhatsApp()">
-Agenda Aquí
-</button>
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
+<div class="hero-emojis">🥀 🥀 🥀</div>
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
 
 <section class="fondo-celeste">
@@ -352,41 +349,36 @@ Agenda Aquí
 </div>
 </section>
 
-<section class="info-wrapper">
+<section class="info-section">
 
-<div class="info-column pagos">
-<img src="pago.png">
+<div class="info-col">
+<img src="pago.png" class="info-img">
 <div class="info-title">Pagos</div>
 <div class="info-box">
-<p>
-Los pagos son exclusivamente por transferencia bancaria.<br><br>
-<strong>Pagos Nacionales:</strong> Mercado Pago<br>
-<strong>Pagos Internacionales:</strong> PayPal<br><br>
-No se realizan servicios sin antes enviar el comprobante de depósito.<br>
-Una vez efectuado el pago, no hay reembolso.<br>
-Servicio pagado es servicio asegurado.
-</p>
+<p>Los pagos son exclusivamente por transferencia bancaria.</p>
+<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>
+<p><strong>Pagos Internacionales:</strong> PayPal</p>
+<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>
+<p>Una vez efectuado el pago, no hay reembolso.</p>
+<p>Servicio pagado es servicio asegurado.</p>
 </div>
 </div>
 
-<div class="info-column prohibido">
-<img src="prohibido.png">
+<div class="info-col prohibidos-wrapper">
+<img src="prohibido.png" class="info-img prohibido-img">
 <div class="info-title">Prohibidos</div>
 <div class="info-box">
-<p>
-No realizo lecturas ni rituales a menores de 18 años.<br>
-No leo salud (física o mental), ni embarazo.<br>
-No realizo nada que transgreda el libre albedrío de nadie.<br>
-Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.<br>
-Si son menores de esa edad, deberán contar con autorización de sus padres.
-</p>
+<p>No realizo lecturas ni rituales a menores de 18 años.</p>
+<p>No leo salud (física o mental), ni embarazo.</p>
+<p>No realizo nada que transgreda el libre albedrío de nadie.</p>
+<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>
+<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>
 </div>
 </div>
 
 </section>
 
 <script>
-
 const servicios=[
 ["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
 ["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
@@ -420,7 +412,6 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
-
 </script>
 
 </body>
