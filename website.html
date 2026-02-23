@@ -26,234 +26,212 @@
 
 /* ================= BASE ================= */
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'NotoEthiopic', serif;
+body{
+margin:0;
+padding:0;
+font-family:'NotoEthiopic',serif;
 }
 
 /* ================= HERO ================= */
 
-.hero {
-    min-height: 75vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)),
-        url('fondo 2.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 50px 40px;
+.hero{
+min-height:75vh;
+background-image:
+linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)),
+url('fondo 2.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px 40px;
+color:white;
 }
 
-.hero-title {
-    font-family: 'Halja';
-    font-size: 56px;
-    color: white;
+.hero-title{
+font-family:'Halja';
+font-size:56px;
 }
 
-.hero-subtitle {
-    font-size: 22px;
-    color: white;
+.hero-subtitle{
+font-size:22px;
 }
 
-.hero-emojis {
-    font-size: 20px;
-    margin: 6px 0;
-    letter-spacing: 4px;
+.hero-emojis{
+font-size:20px;
+margin:6px 0;
+letter-spacing:4px;
 }
 
-.hero-text {
-    font-family: 'Lobster';
-    font-size: 21px;
-    color: white;
-    margin-bottom: 25px;
+.hero-text{
+font-family:'Lobster';
+font-size:21px;
+margin-bottom:25px;
 }
 
-.btn-agenda {
-    padding: 14px 36px;
-    border-radius: 30px;
-    border: 1.5px solid rgba(255,255,255,0.85);
-    font-family: 'NotoEthiopic';
-    cursor: pointer;
-    color: white;
-    background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
+.btn-agenda{
+padding:14px 36px;
+border-radius:30px;
+border:1.5px solid rgba(255,255,255,0.85);
+background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
+color:white;
+font-family:'NotoEthiopic';
+cursor:pointer;
 }
 
 /* ================= SECCIÓN ================= */
 
-.fondo-celeste {
-    min-height: 100vh;
-    background-image: url('fondo 3.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 20px 20px 100px 20px;
+.fondo-celeste{
+min-height:100vh;
+background-image:url('fondo 3.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+padding:20px 10px 120px 10px;
 }
 
-.contenido-celeste {
-    max-width: 1200px;
-    margin: -60px auto 0 auto; /* subido a la mitad visual */
-    text-align: center;
+.contenido-celeste{
+max-width:1200px;
+margin:-50px auto 0 auto;
+text-align:center;
 }
 
-.contenido-celeste h2 {
-    font-family: 'Halja';
-    font-weight: 300;
-    font-size: 52px;
-    margin-bottom: 40px;
-    color: #3d4c63;
+.contenido-celeste h2{
+font-family:'Halja';
+font-weight:300;
+font-size:52px;
+margin-bottom:35px;
+color:#3d4c63;
 }
 
 /* ================= CARRUSEL ================= */
 
-.carousel-container {
-    position: relative;
-    overflow: visible; /* para que no corte sombras */
-    padding: 60px 0;
-    border-radius: 40px;
-    background:
-        linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
-        url('aura.jpeg');
-    background-size: cover;
-    background-position: center;
+.carousel-container{
+position:relative;
+overflow:visible;
+padding:30px 0 80px 0;
 }
 
-.carousel {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px 60px;
+.carousel{
+display:flex;
+gap:24px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding:20px 20px;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
+.carousel::-webkit-scrollbar{
+display:none;
 }
 
 /* ================= TARJETAS ================= */
 
-.card {
-    flex: 0 0 auto;
-    min-width: 260px;
-    max-width: 260px;
-    padding: 20px;
-    border-radius: 22px;
-    backdrop-filter: blur(25px);
-    background: rgba(255,255,255,0.55);
-    border: 1px solid rgba(255,255,255,0.6);
-    box-shadow: -18px 25px 45px rgba(70,70,120,0.35);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.card{
+flex:0 0 auto;
+width:280px;
+padding:20px;
+border-radius:24px;
+background:
+linear-gradient(rgba(255,255,255,0.45),rgba(255,255,255,0.45)),
+url('aura.jpeg');
+background-size:cover;
+background-position:center;
+backdrop-filter:blur(25px);
+border:1px solid rgba(255,255,255,0.7);
+box-shadow:-20px 30px 55px rgba(70,70,120,0.35);
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-.card h3 {
-    font-family: 'NotoEthiopic';
-    font-size: 19px;
-    text-align: center;
-    margin-bottom: 12px;
-    color: #3b4a60;
-    min-height: 52px; /* fuerza alineación móvil */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* TÍTULO */
+
+.card h3{
+font-family:'NotoEthiopic';
+font-size:19px;
+text-align:center;
+margin-bottom:12px;
+color:#3b4a60;
+min-height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.image-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 12px;
-    border: 2px solid #3b4a60;
-    border-radius: 18px;
+/* MARCO */
+
+.image-frame{
+position:relative;
+width:90%;
+aspect-ratio:1/1;
+margin-bottom:14px;
+border:2px solid #3b4a60;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.image-frame img:first-child {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
+.image-frame img.main{
+width:92%;
+height:92%;
+object-fit:cover;
+border-radius:16px;
 }
 
-/* ESTRELLAS ADAPTATIVAS */
+/* ESTRELLAS BONITAS */
 
-.star {
-    position: absolute;
-    width: clamp(20px, 3vw, 32px);
+.star{
+position:absolute;
+width:clamp(14px,2.2vw,28px);
+opacity:0.9;
 }
 
-.star.top-left {
-    top: -14px;
-    left: -14px;
+.star.s1{ top:-12px; left:20%; }
+.star.s2{ bottom:-14px; right:18%; }
+.star.s3{ top:40%; left:-14px; }
+.star.s4{ bottom:25%; right:-12px; }
+
+/* SUBTÍTULO */
+
+.card p{
+font-family:'Lobster';
+font-size:17px;
+text-align:center;
+margin-bottom:18px;
+color:#3b4a60;
+min-height:48px;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.star.top-right {
-    top: -14px;
-    right: -14px;
+/* BOTÓN */
+
+.card button{
+padding:8px 24px;
+border-radius:22px;
+border:1.5px solid #3b4a60;
+background:transparent;
+font-family:'NotoEthiopic';
+color:#3b4a60;
+cursor:pointer;
 }
 
-.star.bottom-right {
-    bottom: -14px;
-    right: -14px;
+/* RESPONSIVE */
+
+@media(min-width:900px){
+.card{
+width:calc((100% - 48px)/3);
+}
 }
 
-.card p {
-    font-family: 'Lobster';
-    font-size: 17px;
-    text-align: center;
-    margin-bottom: 16px;
-    color: #3b4a60;
-    min-height: 50px; /* alinea textos */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media(max-width:899px){
+.card{
+width:calc((100% - 24px)/2);
 }
-
-.card button {
-    padding: 9px 24px;
-    border-radius: 25px;
-    border: 1.5px solid #3b4a60;
-    background: transparent;
-    font-family: 'NotoEthiopic';
-    cursor: pointer;
-    color: #3b4a60;
-}
-
-/* ================= FLECHAS ================= */
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 34px;
-    cursor: pointer;
-    background: rgba(255,255,255,0.7);
-    border-radius: 50%;
-    padding: 6px 12px;
-}
-
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
-
-/* ================= RESPONSIVE ================= */
-
-@media (min-width: 900px) {
-    .card {
-        min-width: calc((100% - 60px) / 3);
-        max-width: calc((100% - 60px) / 3);
-    }
-}
-
-@media (max-width: 899px) {
-    .card {
-        min-width: calc((100% - 30px) / 2);
-        max-width: calc((100% - 30px) / 2);
-    }
 }
 
 </style>
@@ -263,13 +241,9 @@ body {
 
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
-<div class="hero-subtitle">
-Terapias Holísticas, Tarot Evolutivo y Rituales
-</div>
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
 <div class="hero-emojis">🥀 🥀 🥀</div>
-<div class="hero-text">
-Espacio de Compañía, Amor & Sanación
-</div>
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
 <button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
 
@@ -278,16 +252,10 @@ Espacio de Compañía, Amor & Sanación
 <h2>¿Qué estás buscando?</h2>
 
 <div class="carousel-container">
-
-<div class="arrow left" onclick="scrollCarousel(-1)">‹</div>
-<div class="arrow right" onclick="scrollCarousel(1)">›</div>
-
 <div class="carousel" id="carousel">
 
-<!-- TARJETAS -->
-
 <script>
-const servicios = [
+const servicios=[
 ["Lectura de Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
 ["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
 ["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
@@ -296,22 +264,22 @@ const servicios = [
 ["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
 ];
 
-const carousel = document.getElementById("carousel");
+const carousel=document.getElementById("carousel");
 
-servicios.forEach(servicio=>{
-carousel.innerHTML += `
+servicios.forEach(s=>{
+carousel.innerHTML+=`
 <div class="card">
-<h3>${servicio[0]}</h3>
+<h3>${s[0]}</h3>
 <div class="image-frame">
-<img src="${servicio[1]}">
-<img src="estrella.png" class="star top-left">
-<img src="estrella.png" class="star top-right">
-<img src="estrella.png" class="star bottom-right">
+<img src="${s[1]}" class="main">
+<img src="estrella.png" class="star s1">
+<img src="estrella.png" class="star s2">
+<img src="estrella.png" class="star s3">
+<img src="estrella.png" class="star s4">
 </div>
-<p>${servicio[2]}</p>
+<p>${s[2]}</p>
 <button>Ver Todo</button>
-</div>
-`;
+</div>`;
 });
 </script>
 
@@ -321,17 +289,11 @@ carousel.innerHTML += `
 </section>
 
 <script>
-function scrollCarousel(direction) {
-const carousel = document.getElementById("carousel");
-const cardWidth = carousel.querySelector(".card").offsetWidth + 30;
-carousel.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-}
-
-function enviarWhatsApp() {
-const numero = "56928055904";
-const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
-window.open(url, "_blank");
+function enviarWhatsApp(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
 }
 </script>
 
