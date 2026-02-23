@@ -29,7 +29,6 @@
 body {
     margin: 0;
     padding: 0;
-    color: #f5f7fa;
     font-family: 'NotoEthiopic', serif;
 }
 
@@ -42,35 +41,30 @@ body {
         url('fondo 2.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px 40px;
-    flex-direction: column;
+    color: white;
 }
 
 .hero-title {
     font-family: 'Halja';
     font-size: 56px;
     margin-bottom: 8px;
-    color: #ffffff;
-    text-shadow:
-        0 0 4px rgba(255,255,255,0.7),
-        0 0 10px rgba(255,255,255,0.35),
-        0 0 18px rgba(255,255,255,0.2);
+    text-shadow: 0 0 12px rgba(255,255,255,0.5);
 }
 
 .hero-subtitle {
     font-size: 22px;
     margin-bottom: 4px;
-    text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 
 .hero-emojis {
     font-size: 20px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     letter-spacing: 4px;
 }
 
@@ -78,32 +72,19 @@ body {
     font-family: 'Lobster';
     font-size: 21px;
     margin-bottom: 28px;
-    text-shadow:
-        0 0 5px rgba(255,255,255,0.5),
-        0 0 10px rgba(255,255,255,0.2);
 }
 
 .btn-agenda {
     padding: 14px 36px;
-    font-size: 18px;
     border-radius: 30px;
-    border: 1.5px solid rgba(255,255,255,0.85);
-    cursor: pointer;
-    color: #ffffff;
-    font-family: 'NotoEthiopic', serif;
+    border: 1.5px solid white;
     background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
-    box-shadow:
-        0 0 12px rgba(255,255,255,0.35),
-        0 6px 18px rgba(0,0,0,0.45);
-    text-shadow: 0 0 6px rgba(255,255,255,0.7);
-    transition: all 0.3s ease;
+    color: white;
+    font-family: 'NotoEthiopic';
+    cursor: pointer;
 }
 
-.btn-agenda:hover {
-    transform: translateY(-3px);
-}
-
-/* ================= SECCIÓN CELESTE ================= */
+/* ================= SECCIÓN AURA ================= */
 
 .fondo-celeste {
     min-height: 120vh;
@@ -111,34 +92,34 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 80px 40px;
+    padding: 40px 40px 120px 40px;
 }
 
 .contenido-celeste {
-    width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
     text-align: center;
 }
 
 .contenido-celeste h2 {
     font-family: 'Halja';
-    font-size: 42px;
-    color: #0e2a47;
-    text-shadow:
-        -3px 3px 8px rgba(0,0,0,0.25);
-    margin-bottom: 60px;
+    font-weight: 300;
+    font-size: 38px;
+    color: #2f4a66;
+    text-shadow: -2px 2px 6px rgba(0,0,0,0.2);
+    margin-bottom: 45px;
 }
 
 /* ================= CARRUSEL ================= */
 
 .slider-wrapper {
     position: relative;
+    padding-bottom: 50px;
 }
 
 .slider {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -151,92 +132,88 @@ body {
 /* ================= TARJETAS ================= */
 
 .card {
-    min-width: 30%;
-    flex: 0 0 30%;
-    padding: 30px;
+    flex: 0 0 28%;
+    padding: 22px;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 
     background:
-    radial-gradient(circle at 30% 30%, rgba(255, 220, 230, 0.35), transparent 60%),
-    radial-gradient(circle at 70% 40%, rgba(210, 230, 255, 0.30), transparent 65%),
-    radial-gradient(circle at 50% 80%, rgba(220, 210, 255, 0.28), transparent 70%);
+    radial-gradient(circle at 30% 30%, rgba(255, 220, 230, 0.55), transparent 65%),
+    radial-gradient(circle at 70% 40%, rgba(210, 230, 255, 0.45), transparent 70%),
+    radial-gradient(circle at 50% 80%, rgba(220, 210, 255, 0.45), transparent 75%),
+    rgba(255,255,255,0.35);
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
 
-    border: 1px solid rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.4);
 
     box-shadow:
-        -18px 22px 40px rgba(0,0,0,0.25); /* sombra hacia abajo izquierda */
-
-    border-radius: 16px;
+        -20px 28px 50px rgba(60,60,90,0.28);
 }
 
-/* TITULOS */
+/* TITULO */
 
 .card-title {
     font-family: 'NotoEthiopic';
-    font-size: 20px;
+    font-size: 17px;
     color: #2f4a66;
-    text-shadow: 0 0 8px rgba(200,220,255,0.6);
+    text-align: center;
 }
 
-/* IMAGEN */
+/* IMAGEN + MARCO */
 
 .image-frame {
     position: relative;
     width: 100%;
+    border-radius: 14px;
+    border: 2px solid #2f4a66;
+    padding: 6px;
 }
 
 .card-img {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #2f4a66;
+    border-radius: 10px;
 }
 
-/* ESTRELLAS */
+/* ESTRELLAS EN MARCO ADAPTABLES */
 
 .star {
     position: absolute;
-    width: 28px;
+    width: clamp(24px, 3vw, 42px);
     pointer-events: none;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
 }
 
-.star1 { top: 4%; left: 4%; }
-.star2 { bottom: 6%; right: 6%; width: 32px; }
-.star3 { top: 50%; right: -6%; width: 22px; }
+.star1 { top: -12px; left: -12px; }
+.star2 { bottom: -14px; right: -14px; }
+.star3 { top: 50%; right: -20px; }
 
 /* SUBTITULO */
 
 .card-sub {
     font-family: 'Lobster';
-    font-size: 19px;
+    font-size: 17px;
     color: #2f4a66;
-    text-shadow: 0 0 8px rgba(200,220,255,0.4);
-    min-height: 60px; /* mantiene botones alineados */
+    text-align: center;
+    min-height: 52px;
 }
 
 /* BOTON */
 
 .card-btn {
     margin-top: auto;
-    padding: 10px 30px;
-    border-radius: 25px;
+    padding: 8px 26px;
+    border-radius: 22px;
     border: 1.5px solid #2f4a66;
     background: transparent;
     color: #2f4a66;
     font-family: 'NotoEthiopic';
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.card-btn:hover {
-    background: rgba(47,74,102,0.08);
 }
 
 /* FLECHAS */
@@ -245,11 +222,11 @@ body {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.4);
     border: none;
-    font-size: 26px;
+    font-size: 24px;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 10px 14px;
     border-radius: 50%;
     backdrop-filter: blur(10px);
 }
@@ -260,10 +237,7 @@ body {
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
-    .card {
-        min-width: 45%;
-        flex: 0 0 45%;
-    }
+    .card { flex: 0 0 45%; }
     .arrow { display: none; }
 }
 
@@ -281,25 +255,20 @@ body {
     <div class="hero-text">
         Espacio de Compañía, Amor & Sanación
     </div>
-    <button class="btn-agenda" onclick="enviarWhatsApp()">
-        Agenda Aquí
-    </button>
+    <button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
 
 <section class="fondo-celeste">
 <div class="contenido-celeste">
-
 <h2>¿Qué estás buscando?</h2>
 
 <div class="slider-wrapper">
-
 <button class="arrow left" onclick="scrollSlider(-1)">❮</button>
 
 <div class="slider" id="slider">
 
 <!-- TARJETAS -->
 
-<!-- TAROT -->
 <div class="card">
 <h3 class="card-title">Lectura de Tarot Terapéutico</h3>
 <div class="image-frame">
@@ -312,7 +281,6 @@ body {
 <button class="card-btn">Ver Todo</button>
 </div>
 
-<!-- ORÁCULO -->
 <div class="card">
 <h3 class="card-title">Lectura de Oráculo</h3>
 <div class="image-frame">
@@ -325,7 +293,6 @@ body {
 <button class="card-btn">Ver Todo</button>
 </div>
 
-<!-- REIKI -->
 <div class="card">
 <h3 class="card-title">Reiki</h3>
 <div class="image-frame">
@@ -338,7 +305,6 @@ body {
 <button class="card-btn">Ver Todo</button>
 </div>
 
-<!-- RADIOESTESIA -->
 <div class="card">
 <h3 class="card-title">Radiestesia</h3>
 <div class="image-frame">
@@ -351,7 +317,6 @@ body {
 <button class="card-btn">Ver Todo</button>
 </div>
 
-<!-- CRUZ DE ANKH -->
 <div class="card">
 <h3 class="card-title">Limpiezas con Cruz de Ankh</h3>
 <div class="image-frame">
@@ -364,7 +329,6 @@ body {
 <button class="card-btn">Ver Todo</button>
 </div>
 
-<!-- RITUALES -->
 <div class="card">
 <h3 class="card-title">Rituales Energéticos</h3>
 <div class="image-frame">
@@ -380,7 +344,6 @@ body {
 </div>
 
 <button class="arrow right" onclick="scrollSlider(1)">❯</button>
-
 </div>
 
 </div>
@@ -396,9 +359,8 @@ function enviarWhatsApp() {
 
 function scrollSlider(direction) {
     const slider = document.getElementById("slider");
-    const scrollAmount = slider.clientWidth;
     slider.scrollBy({
-        left: direction * scrollAmount,
+        left: slider.clientWidth,
         behavior: 'smooth'
     });
 }
