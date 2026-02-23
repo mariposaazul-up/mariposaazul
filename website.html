@@ -7,7 +7,8 @@
 
 <style>
 
-/* FUENTES */
+/* ================= FUENTES ================= */
+
 @font-face {
     font-family: 'Halja';
     src: url('HALJA-Regular.otf') format('opentype');
@@ -18,99 +19,121 @@
     src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-/* BASE */
+@font-face {
+    font-family: 'Lobster';
+    src: url('LobsterTwo-Regular.ttf') format('truetype');
+}
+
+/* ================= BASE ================= */
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'NotoEthiopic', serif;
     color: #f5f7fa;
+    font-family: 'NotoEthiopic', serif;
 }
 
 /* ================= HERO ================= */
 
 .hero {
-    min-height: 85vh;
+    min-height: 75vh;
     background-image:
-        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+        linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)),
         url('fondo 2.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 50px 40px;
+    flex-direction: column;
 }
 
 .hero-title {
     font-family: 'Halja';
     font-size: 56px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 12px rgba(255,255,255,0.6);
-}
-
-.hero-sub {
-    font-size: 22px;
     margin-bottom: 8px;
+    color: #ffffff;
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.7),
+        0 0 10px rgba(255,255,255,0.35),
+        0 0 18px rgba(255,255,255,0.2);
 }
 
-.roses {
-    font-size: 24px;
-    margin: 5px 0;
+.hero-subtitle {
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 
-.hero-sub2 {
-    font-family: 'Lobster', cursive;
+.hero-emojis {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 4px;
+    letter-spacing: 4px;
+}
+
+.hero-text {
+    font-family: 'Lobster';
+    font-size: 21px;
+    margin-bottom: 28px;
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 10px rgba(255,255,255,0.2);
 }
 
 .btn-agenda {
-    padding: 14px 32px;
+    padding: 14px 36px;
+    font-size: 18px;
     border-radius: 30px;
-    border: 1.5px solid rgba(255,255,255,0.8);
-    background: transparent;
-    color: white;
+    border: 1.5px solid rgba(255,255,255,0.85);
     cursor: pointer;
-    transition: 0.3s;
+    color: #ffffff;
+    font-family: 'NotoEthiopic', serif;
+    background: linear-gradient(135deg, #0e2a47, #0f4c6b, #126e82);
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.35),
+        0 6px 18px rgba(0,0,0,0.45);
+    text-shadow: 0 0 6px rgba(255,255,255,0.7);
+    transition: all 0.3s ease;
 }
 
 .btn-agenda:hover {
-    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    transform: translateY(-3px);
 }
 
-/* ================= FONDO CELESTE FIJO ================= */
+/* ================= SECCIÓN CELESTE ================= */
 
-.static-bg {
+.fondo-celeste {
+    min-height: 120vh;
     background-image: url('fondo 3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 80px 0;
+    padding: 80px 40px;
 }
 
-/* TITULO */
-.section-title {
+.contenido-celeste {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
     text-align: center;
-    font-size: 30px;
-    color: #1f3a5f;
-    margin-bottom: 50px;
-    text-shadow: -2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.contenido-celeste h2 {
+    font-family: 'Halja';
+    font-size: 42px;
+    color: #0e2a47;
+    text-shadow:
+        -3px 3px 8px rgba(0,0,0,0.25);
+    margin-bottom: 60px;
 }
 
 /* ================= CARRUSEL ================= */
 
-.tarjetas-section {
-    display: flex;
-    justify-content: center;
-}
-
 .slider-wrapper {
     position: relative;
-    width: 90%;
-    max-width: 1300px;
 }
 
 .slider {
@@ -125,6 +148,8 @@ body {
     display: none;
 }
 
+/* ================= TARJETAS ================= */
+
 .card {
     min-width: 30%;
     flex: 0 0 30%;
@@ -132,8 +157,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
-    text-align: center;
+    gap: 20px;
 
     background:
     radial-gradient(circle at 30% 30%, rgba(255, 220, 230, 0.35), transparent 60%),
@@ -141,24 +165,26 @@ body {
     radial-gradient(circle at 50% 80%, rgba(220, 210, 255, 0.28), transparent 70%);
 
     backdrop-filter: blur(20px);
+
     border: 1px solid rgba(255,255,255,0.35);
-    box-shadow: 0 10px 35px rgba(120,110,160,0.15);
-    border-radius: 14px;
+
+    box-shadow:
+        -18px 22px 40px rgba(0,0,0,0.25); /* sombra hacia abajo izquierda */
+
+    border-radius: 16px;
 }
+
+/* TITULOS */
 
 .card-title {
+    font-family: 'NotoEthiopic';
     font-size: 20px;
-    color: #3d556f;
-    text-shadow: 0 0 6px rgba(180,200,255,0.6);
+    color: #2f4a66;
+    text-shadow: 0 0 8px rgba(200,220,255,0.6);
 }
 
-.card-sub {
-    font-family: 'Lobster', cursive;
-    font-size: 18px;
-    color: #3d556f;
-}
+/* IMAGEN */
 
-/* IMAGEN + MARCO */
 .image-frame {
     position: relative;
     width: 100%;
@@ -169,46 +195,69 @@ body {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 12px;
-    border: 1.5px solid #3d556f;
+    border: 2px solid #2f4a66;
 }
 
 /* ESTRELLAS */
+
 .star {
     position: absolute;
-    width: 18px;
+    width: 28px;
     pointer-events: none;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.7));
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
 }
 
 .star1 { top: 4%; left: 4%; }
-.star2 { bottom: 6%; right: 6%; width: 22px; }
-.star3 { top: 50%; right: -4%; width: 14px; }
+.star2 { bottom: 6%; right: 6%; width: 32px; }
+.star3 { top: 50%; right: -6%; width: 22px; }
 
-/* BOTON TARJETA */
+/* SUBTITULO */
+
+.card-sub {
+    font-family: 'Lobster';
+    font-size: 19px;
+    color: #2f4a66;
+    text-shadow: 0 0 8px rgba(200,220,255,0.4);
+    min-height: 60px; /* mantiene botones alineados */
+}
+
+/* BOTON */
+
 .card-btn {
+    margin-top: auto;
     padding: 10px 30px;
     border-radius: 25px;
-    border: 1.5px solid #3d556f;
+    border: 1.5px solid #2f4a66;
     background: transparent;
-    color: #3d556f;
+    color: #2f4a66;
+    font-family: 'NotoEthiopic';
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: rgba(47,74,102,0.08);
 }
 
 /* FLECHAS */
+
 .arrow {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.25);
     border: none;
     font-size: 26px;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 50%;
+    backdrop-filter: blur(10px);
 }
 
 .left { left: -10px; }
 .right { right: -10px; }
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
     .card {
@@ -223,115 +272,128 @@ body {
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
     <h1 class="hero-title">Mariposa Azul</h1>
-    <div class="hero-sub">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
-    <div class="roses">🥀 🥀 🥀</div>
-    <div class="hero-sub2">Espacio de compañía, amor y sanación</div>
-    <button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+    <div class="hero-subtitle">
+        Terapias Holísticas, Tarot Evolutivo y Rituales
+    </div>
+    <div class="hero-emojis">🥀 🥀 🥀</div>
+    <div class="hero-text">
+        Espacio de Compañía, Amor & Sanación
+    </div>
+    <button class="btn-agenda" onclick="enviarWhatsApp()">
+        Agenda Aquí
+    </button>
 </section>
 
-<!-- FONDO CELESTE + TARJETAS -->
-<section class="static-bg">
+<section class="fondo-celeste">
+<div class="contenido-celeste">
 
-    <div class="section-title">¿Qué estás buscando?</div>
+<h2>¿Qué estás buscando?</h2>
 
-    <div class="tarjetas-section">
-        <div class="slider-wrapper">
+<div class="slider-wrapper">
 
-            <button class="arrow left" onclick="scrollSlider(-1)">❮</button>
+<button class="arrow left" onclick="scrollSlider(-1)">❮</button>
 
-            <div class="slider" id="slider">
+<div class="slider" id="slider">
 
-                <!-- TAROT -->
-                <div class="card">
-                    <div class="card-title">Lectura de Tarot Terapéutico</div>
-                    <div class="image-frame">
-                        <img src="tarot.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Respuestas y guía para tu proceso.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- TARJETAS -->
 
-                <!-- ORACULO -->
-                <div class="card">
-                    <div class="card-title">Lectura de Oráculo</div>
-                    <div class="image-frame">
-                        <img src="oraculo.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Mensajes que tu alma necesita escuchar.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- TAROT -->
+<div class="card">
+<h3 class="card-title">Lectura de Tarot Terapéutico</h3>
+<div class="image-frame">
+<img src="tarot.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Respuestas y guía para tu proceso.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-                <!-- REIKI -->
-                <div class="card">
-                    <div class="card-title">Reiki</div>
-                    <div class="image-frame">
-                        <img src="reiki.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Sanación energética para cuerpo, mente y espíritu.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- ORÁCULO -->
+<div class="card">
+<h3 class="card-title">Lectura de Oráculo</h3>
+<div class="image-frame">
+<img src="oraculo.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Mensajes que tu alma necesita escuchar.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-                <!-- RADIOESTESIA -->
-                <div class="card">
-                    <div class="card-title">Radiestesia</div>
-                    <div class="image-frame">
-                        <img src="radiestesia.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Dirección y equilibrio desde la vibración correcta.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- REIKI -->
+<div class="card">
+<h3 class="card-title">Reiki</h3>
+<div class="image-frame">
+<img src="reiki.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Sanación energética para cuerpo, mente y espíritu.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-                <!-- CRUZ ANKH -->
-                <div class="card">
-                    <div class="card-title">Limpiezas con Cruz de Ankh</div>
-                    <div class="image-frame">
-                        <img src="cruzankh.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Protección y limpieza para tu alma y tu espacio.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- RADIOESTESIA -->
+<div class="card">
+<h3 class="card-title">Radiestesia</h3>
+<div class="image-frame">
+<img src="radiestesia.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Dirección y equilibrio desde la vibración correcta.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-                <!-- RITUALES -->
-                <div class="card">
-                    <div class="card-title">Rituales Energéticos</div>
-                    <div class="image-frame">
-                        <img src="ritual.jpeg" class="card-img">
-                        <img src="estrella.png" class="star star1">
-                        <img src="estrella.png" class="star star2">
-                        <img src="estrella.png" class="star star3">
-                    </div>
-                    <div class="card-sub">Rituales guiados para acompañar tus procesos.</div>
-                    <button class="card-btn">Ver Todo</button>
-                </div>
+<!-- CRUZ DE ANKH -->
+<div class="card">
+<h3 class="card-title">Limpiezas con Cruz de Ankh</h3>
+<div class="image-frame">
+<img src="cruzankh.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Protección y limpieza para tu alma y tu espacio.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-            </div>
+<!-- RITUALES -->
+<div class="card">
+<h3 class="card-title">Rituales Energéticos</h3>
+<div class="image-frame">
+<img src="ritual.jpeg" class="card-img">
+<img src="estrella.png" class="star star1">
+<img src="estrella.png" class="star star2">
+<img src="estrella.png" class="star star3">
+</div>
+<div class="card-sub">Rituales guiados para acompañar tus procesos.</div>
+<button class="card-btn">Ver Todo</button>
+</div>
 
-            <button class="arrow right" onclick="scrollSlider(1)">❯</button>
+</div>
 
-        </div>
-    </div>
+<button class="arrow right" onclick="scrollSlider(1)">❯</button>
 
+</div>
+
+</div>
 </section>
 
 <script>
+function enviarWhatsApp() {
+    const numero = "56928055904";
+    const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+    const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
+    window.open(url, "_blank");
+}
+
 function scrollSlider(direction) {
     const slider = document.getElementById("slider");
     const scrollAmount = slider.clientWidth;
@@ -339,13 +401,6 @@ function scrollSlider(direction) {
         left: direction * scrollAmount,
         behavior: 'smooth'
     });
-}
-
-function enviarWhatsApp() {
-    const numero = "56928055904";
-    const mensaje = "Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
-    const url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + encodeURIComponent(mensaje);
-    window.open(url, "_blank");
 }
 </script>
 
