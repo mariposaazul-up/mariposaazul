@@ -30,7 +30,6 @@ padding:0;
 font-family:'NotoEthiopic',serif;
 overflow-x:hidden;
 
-/* Fondo fijo limpio para toda la página */
 background-image:url('fondo 3.png');
 background-size:cover;
 background-position:center;
@@ -95,7 +94,7 @@ box-shadow:
 0 6px 18px rgba(0,0,0,0.45);
 }
 
-/* ================= SECCIÓN SERVICIOS ================= */
+/* ================= SERVICIOS ================= */
 
 .fondo-celeste{
 min-height:100vh;
@@ -212,7 +211,7 @@ box-shadow:0 3px 8px rgba(0,0,0,0.3);
 /* ================= OJITO ================= */
 
 .ojito-section{
-padding:25.5px 20px 20px 20px;
+padding:25px 20px 20px 20px;
 text-align:center;
 }
 
@@ -239,8 +238,6 @@ height:clamp(55px,6vw,85px);
 width:auto;
 }
 
-/* Movimiento más notorio */
-
 @keyframes heartLeftMove{
 0%{ transform:rotate(-18deg) translateX(0); }
 50%{ transform:rotate(-18deg) translateX(-16px); }
@@ -261,18 +258,70 @@ animation:heartLeftMove 1.2s ease-in-out infinite;
 animation:heartRightMove 1.2s ease-in-out infinite;
 }
 
-/* RESPONSIVE */
+/* ================= PAGOS & PROHIBIDOS ================= */
 
-@media(max-width:1100px){
-.carousel{
-padding:20px 30px;
+.info-wrapper{
+max-width:1200px;
+margin:60px auto 100px auto;
+display:flex;
+gap:80px;
+justify-content:center;
+align-items:flex-start;
+padding:0 40px;
 }
+
+.info-column{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.info-column img{
+width:260px;
+max-width:80%;
+margin-bottom:25px;
+filter:
+drop-shadow(0 0 10px rgba(255,255,255,0.7))
+drop-shadow(0 0 30px rgba(255,255,255,0.35));
+}
+
+.info-box{
+background:rgba(30,47,79,0.88);
+padding:35px 30px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+color:#f3f6ff;
+}
+
+.info-box h3{
+font-family:'Lobster';
+font-size:34px;
+margin-bottom:20px;
+}
+
+.info-box p{
+font-family:'NotoEthiopic';
+font-size:16px;
+line-height:1.7;
+margin:0;
+}
+
+.info-box strong{
+font-weight:700;
 }
 
 @media(max-width:900px){
 .card{
 flex:0 0 250px;
 min-height:480px;
+}
+
+.info-wrapper{
+flex-direction:column;
+gap:60px;
+margin:50px auto 70px auto;
 }
 }
 
@@ -281,6 +330,7 @@ min-height:480px;
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
 
@@ -301,6 +351,7 @@ Agenda Aquí
 </button>
 </section>
 
+<!-- SERVICIOS -->
 <section class="fondo-celeste">
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
@@ -309,7 +360,6 @@ Agenda Aquí
 </section>
 
 <!-- OJITO -->
-
 <section class="ojito-section">
 <div class="ojito-title">
 <img src="corazon.png" class="heart heart-left">
@@ -318,8 +368,41 @@ Agenda Aquí
 </div>
 </section>
 
-<script>
+<!-- PAGOS & PROHIBIDOS -->
+<section class="info-wrapper">
 
+<div class="info-column">
+<img src="pago.png">
+<div class="info-box">
+<h3>Pagos</h3>
+<p>
+Los pagos son exclusivamente por transferencia bancaria.<br><br>
+<strong>Pagos Nacionales:</strong> Mercado Pago<br>
+<strong>Pagos Internacionales:</strong> PayPal<br><br>
+No se realizan servicios sin antes enviar el comprobante de depósito.<br>
+Una vez efectuado el pago, no hay reembolso.<br>
+Servicio pagado es servicio asegurado.
+</p>
+</div>
+</div>
+
+<div class="info-column">
+<img src="prohibido.png">
+<div class="info-box">
+<h3>Prohibidos</h3>
+<p>
+No realizo lecturas ni rituales a menores de 18 años.<br>
+No leo salud (física o mental), ni embarazo.<br>
+No realizo nada que transgreda el libre albedrío de nadie.<br><br>
+Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.<br>
+Si son menores de esa edad, deberán contar con autorización de sus padres.
+</p>
+</div>
+</div>
+
+</section>
+
+<script>
 const servicios=[
 ["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
 ["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
@@ -353,7 +436,6 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
-
 </script>
 
 </body>
