@@ -60,23 +60,8 @@ text-shadow:
 0 0 35px rgba(210,220,240,0.4);
 }
 
-.hero-subtitle{
-font-size:22px;
-text-shadow:
-0 0 6px rgba(255,255,255,0.6),
-0 0 14px rgba(210,220,240,0.35);
-}
-
-.hero-emojis{
-font-size:20px;
-margin:6px 0;
-letter-spacing:4px;
-}
-
+.hero-subtitle,
 .hero-text{
-font-family:'Lobster';
-font-size:21px;
-margin-bottom:25px;
 text-shadow:
 0 0 6px rgba(255,255,255,0.6),
 0 0 16px rgba(210,220,240,0.4);
@@ -88,7 +73,6 @@ border-radius:30px;
 border:1.5px solid rgba(255,255,255,0.85);
 background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
 color:white;
-font-family:'NotoEthiopic';
 cursor:pointer;
 box-shadow:
 0 0 12px rgba(255,255,255,0.35),
@@ -103,7 +87,7 @@ background-image:url('fondo 3.png');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-padding:30px 0 120px 0;
+padding:30px 0 100px 0;
 }
 
 .contenido-celeste{
@@ -116,10 +100,10 @@ text-align:center;
 font-family:'Halja';
 font-size:60px;
 font-weight:300;
-margin:20px 0 15px 0;
+margin:20px 0 20px 0;
 color:#39548C;
 text-shadow:
-0 4px 12px rgba(255,255,255,0.85);
+0 4px 12px rgba(255,255,255,0.9);
 }
 
 /* ================= CARRUSEL ================= */
@@ -130,8 +114,7 @@ gap:40px;
 overflow-x:auto;
 scroll-behavior:smooth;
 scroll-snap-type:x mandatory;
-padding:20px 80px;
-justify-content:center;
+padding:20px calc((100vw - 960px)/2);
 }
 
 .carousel::-webkit-scrollbar{
@@ -141,25 +124,21 @@ display:none;
 /* ================= TARJETAS ================= */
 
 .card{
-flex:0 0 320px;
+flex:0 0 300px;
 display:flex;
 flex-direction:column;
 align-items:center;
-padding:10px 15px 20px 15px;
-scroll-snap-align:center;
+scroll-snap-align:start;
 }
 
 .card h3{
 font-family:'NotoEthiopic';
 font-size:20px;
 min-height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
 text-align:center;
-color:white;
+color:#39548C;
 margin-bottom:12px;
-text-shadow:0 3px 8px rgba(0,0,0,0.4);
+text-shadow:0 3px 8px rgba(0,0,0,0.35);
 }
 
 .image-frame{
@@ -167,14 +146,14 @@ position:relative;
 width:85%;
 aspect-ratio:1/1;
 margin-bottom:14px;
-border:2px solid rgba(255,255,255,0.95);
+border:2px solid #cfd3da;
 border-radius:20px;
 display:flex;
 justify-content:center;
 align-items:center;
 box-shadow:
-0 0 14px rgba(255,255,255,0.9),
-0 0 28px rgba(210,220,240,0.6);
+0 0 12px #dfe3ea,
+0 0 25px #c7ccd6;
 }
 
 .image-frame img.main{
@@ -184,13 +163,14 @@ object-fit:cover;
 border-radius:18px;
 }
 
+/* ESTRELLAS PLATA */
+
 .star{
 position:absolute;
 width:28px;
 filter:
-drop-shadow(0 0 12px #ffffff)
-drop-shadow(0 0 25px #e6ecf4)
-drop-shadow(0 0 40px #cfd8ea);
+drop-shadow(0 0 6px #ffffff)
+drop-shadow(0 0 18px #dfe3ea);
 }
 
 .star.s1{ top:-14px; left:15%; }
@@ -202,39 +182,35 @@ drop-shadow(0 0 40px #cfd8ea);
 font-family:'Lobster';
 font-size:17px;
 min-height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
 text-align:center;
-color:white;
+color:#39548C;
 margin-bottom:16px;
-text-shadow:0 2px 6px rgba(0,0,0,0.35);
+text-shadow:0 2px 6px rgba(0,0,0,0.3);
 }
 
 .card button{
 padding:8px 24px;
 border-radius:22px;
-border:1.5px solid white;
+border:1.5px solid #39548C;
 background:transparent;
 font-family:'NotoEthiopic';
-color:white;
+color:#39548C;
 cursor:pointer;
-box-shadow:0 3px 8px rgba(0,0,0,0.35);
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:900px){
-
+@media(max-width:1100px){
 .carousel{
-justify-content:flex-start;
 padding:20px 30px;
 }
+}
 
+@media(max-width:900px){
 .card{
 flex:0 0 250px;
 }
-
 }
 
 </style>
@@ -245,7 +221,6 @@ flex:0 0 250px;
 <section class="hero">
 <h1 class="hero-title">Mariposa Azul</h1>
 <div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>
-<div class="hero-emojis">🥀 🥀 🥀</div>
 <div class="hero-text">Espacio de Compañía, Amor & Sanación</div>
 <button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
 </section>
@@ -253,9 +228,7 @@ flex:0 0 250px;
 <section class="fondo-celeste">
 <div class="contenido-celeste">
 <h2>¿Qué estás buscando?</h2>
-
 <div class="carousel" id="carousel"></div>
-
 </div>
 </section>
 
