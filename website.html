@@ -65,7 +65,6 @@ text-shadow:
 }
 
 .hero-subtitle{ font-size:22px; margin-top:10px; }
-
 .hero-emojis{ margin:10px 0; font-size:20px; letter-spacing:8px; }
 
 .hero-text{
@@ -88,9 +87,16 @@ box-shadow:
 
 /* ================= SERVICIOS ================= */
 
-.fondo-celeste{ min-height:100vh; padding:40px 0 20px 0; }
+.fondo-celeste{
+min-height:100vh;
+padding:40px 0 20px 0;
+}
 
-.contenido-celeste{ max-width:1300px; margin:0 auto; text-align:center; }
+.contenido-celeste{
+max-width:1300px;
+margin:0 auto;
+text-align:center;
+}
 
 .contenido-celeste h2{
 font-family:'Halja';
@@ -158,7 +164,9 @@ border-radius:18px;
 .star{
 position:absolute;
 width:28px;
-filter:drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 14px #cfd3db);
+filter:
+drop-shadow(0 0 6px #ffffff)
+drop-shadow(0 0 14px #cfd3db);
 }
 
 .star.s1{ top:-14px; left:15%; }
@@ -189,7 +197,10 @@ box-shadow:0 3px 8px rgba(0,0,0,0.3);
 
 /* ================= OJITO ================= */
 
-.ojito-section{ padding:25px 20px 20px 20px; text-align:center; }
+.ojito-section{
+padding:25px 20px 20px 20px;
+text-align:center;
+}
 
 .ojito-title{
 display:flex;
@@ -247,7 +258,10 @@ align-items:center;
 text-align:center;
 }
 
-/* IMÁGENES */
+/* AJUSTE DE EQUIDAD VISUAL */
+.info-column.prohibido{
+margin-top:-18px;
+}
 
 .info-column img{
 width:260px;
@@ -256,12 +270,9 @@ filter:drop-shadow(0 0 10px rgba(255,255,255,0.7))
 drop-shadow(0 0 30px rgba(255,255,255,0.35));
 }
 
-/* Agrandar solo prohibido */
 .info-column.prohibido img{
 width:290px;
 }
-
-/* TÍTULOS FUERA DEL RECUADRO */
 
 .info-title{
 font-family:'Lobster';
@@ -272,8 +283,6 @@ text-shadow:
 0 0 8px rgba(255,255,255,0.6),
 0 0 18px rgba(255,255,255,0.35);
 }
-
-/* RECUADRO */
 
 .info-box{
 background:rgba(30,47,79,0.88);
@@ -292,14 +301,11 @@ margin:0;
 
 .info-box strong{ font-weight:700; }
 
-/* RESPONSIVE */
-
 @media(max-width:900px){
 .card{
 flex:0 0 250px;
 min-height:480px;
 }
-
 .info-wrapper{
 flex-direction:column;
 gap:60px;
@@ -326,7 +332,9 @@ Terapias Holísticas, Tarot Evolutivo y Rituales
 Espacio de Compañía, Amor & Sanación
 </div>
 
-<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>
+<button class="btn-agenda" onclick="enviarWhatsApp()">
+Agenda Aquí
+</button>
 </section>
 
 <section class="fondo-celeste">
@@ -346,7 +354,7 @@ Espacio de Compañía, Amor & Sanación
 
 <section class="info-wrapper">
 
-<div class="info-column">
+<div class="info-column pagos">
 <img src="pago.png">
 <div class="info-title">Pagos</div>
 <div class="info-box">
@@ -368,7 +376,7 @@ Servicio pagado es servicio asegurado.
 <p>
 No realizo lecturas ni rituales a menores de 18 años.<br>
 No leo salud (física o mental), ni embarazo.<br>
-No realizo nada que transgreda el libre albedrío de nadie.<br><br>
+No realizo nada que transgreda el libre albedrío de nadie.<br>
 Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.<br>
 Si son menores de esa edad, deberán contar con autorización de sus padres.
 </p>
@@ -378,6 +386,7 @@ Si son menores de esa edad, deberán contar con autorización de sus padres.
 </section>
 
 <script>
+
 const servicios=[
 ["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
 ["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
@@ -404,6 +413,14 @@ carousel.innerHTML+=`
 <button>Ver Todo</button>
 </div>`;
 });
+
+function enviarWhatsApp(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
 </script>
 
 </body>
