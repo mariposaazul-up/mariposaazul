@@ -106,11 +106,60 @@ margin:0 auto;
 text-align:center;
 }
 
-.contenido-celeste h2{
+/* ================= OJITO ================= */
+
+.ojito-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:0.25em;
+margin:20px 0 10px 0;
+}
+
+.ojito-title h2{
+font-family:'Halja';
+font-size:clamp(42px,5vw,60px);
+font-weight:300;
+margin:0;
+color:#39548C;
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);
+line-height:1;
+}
+
+.ojito{
+height:1em;
+width:auto;
+}
+
+/* Animación suave */
+
+@keyframes balanceoIzq{
+0%{ transform:rotate(-12deg); }
+50%{ transform:rotate(-18deg); }
+100%{ transform:rotate(-12deg); }
+}
+
+@keyframes balanceoDer{
+0%{ transform:rotate(12deg) scaleX(-1); }
+50%{ transform:rotate(18deg) scaleX(-1); }
+100%{ transform:rotate(12deg) scaleX(-1); }
+}
+
+.ojito.left{
+animation:balanceoIzq 3s ease-in-out infinite;
+}
+
+.ojito.right{
+animation:balanceoDer 3s ease-in-out infinite;
+}
+
+/* ================= TÍTULO ================= */
+
+.contenido-celeste .buscando{
 font-family:'Halja';
 font-size:60px;
 font-weight:300;
-margin:20px 0 25px 0;
+margin:15px 0 25px 0;
 color:#39548C;
 text-shadow:3px 4px 8px rgba(0,0,0,0.35);
 }
@@ -136,10 +185,10 @@ display:none;
 flex:0 0 300px;
 display:flex;
 flex-direction:column;
-justify-content:space-between; /* ALINEA BOTONES */
+justify-content:space-between;
 align-items:center;
 scroll-snap-align:start;
-min-height:520px; /* misma altura todas */
+min-height:520px;
 }
 
 .card h3{
@@ -193,7 +242,7 @@ text-align:center;
 color:#39548C;
 margin-bottom:16px;
 text-shadow:0 2px 6px rgba(0,0,0,0.3);
-min-height:60px; /* ALINEA TEXTOS */
+min-height:60px;
 }
 
 .card button{
@@ -249,8 +298,17 @@ Agenda Aquí
 
 <section class="fondo-celeste">
 <div class="contenido-celeste">
-<h2>¿Qué estás buscando?</h2>
+
+<div class="ojito-title">
+<img src="corazon.png" class="ojito left">
+<h2>Ojito</h2>
+<img src="corazon.png" class="ojito right">
+</div>
+
+<h2 class="buscando">¿Qué estás buscando?</h2>
+
 <div class="carousel" id="carousel"></div>
+
 </div>
 </section>
 
