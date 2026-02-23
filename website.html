@@ -1,11 +1,8 @@
-<!DOCTYPE html>    
-<html lang="es">    
+<!DOCTYPE html>    <html lang="es">    
 <head>    
 <meta charset="UTF-8">    
 <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Servicios | Mariposa Azul</title>    
-    
-<style>    
+<title>Servicios | Mariposa Azul</title>    <style>    
     
 /* ================= FUENTES ================= */    
     
@@ -373,40 +370,39 @@ color:white;
 text-shadow:2px 3px 6px rgba(0,0,0,0.4);  
 margin-bottom:20px;  
 }  
-
-/* MARCO FIJO */
-
+  
+.catalogo-imagenes{  
+display:flex;  
+gap:20px;  
+overflow-x:auto;  
+scroll-behavior:smooth;  
+width:100%;  
+padding-bottom:10px;  
+}  
+  
+.catalogo-imagenes::-webkit-scrollbar{  
+display:none;  
+}  
+  
 .catalogo-frame{  
 position:relative;  
-width:100%;  
+min-width:100%;  
 aspect-ratio:1/1;  
 border:2px solid #e6e6e6;  
 border-radius:22px;  
 display:flex;  
+justify-content:center;  
 align-items:center;  
-overflow:hidden;  
 box-shadow:0 0 10px #f5f5f5,0 0 25px #d9d9d9;  
-margin-bottom:20px;  
 }  
-
-.catalogo-slider{  
-display:flex;  
-overflow-x:auto;  
-scroll-behavior:smooth;  
-width:100%;  
-height:100%;  
-}  
-
-.catalogo-slider::-webkit-scrollbar{  
-display:none;  
-}  
-
+  
 .catalogo-img{  
-min-width:100%;  
-height:100%;  
+width:88%;  
+height:88%;  
 object-fit:cover;  
+border-radius:18px;  
 }  
-
+  
 .catalogo-descripcion{  
 font-family:'NotoEthiopic';  
 font-size:15px;  
@@ -434,6 +430,20 @@ text-shadow:2px 3px 6px rgba(0,0,0,0.4);
 }  
   
 @media(max-width:900px){  
+.info-section{  
+flex-direction:column;  
+align-items:center;  
+}  
+  
+.info-col{  
+padding-left:20px;  
+padding-right:20px;  
+}  
+  
+.catalogo-titulo{  
+margin-left:40px;  
+}  
+  
 .catalogo-grid{  
 grid-template-columns:repeat(2,1fr);  
 }  
@@ -445,50 +455,104 @@ grid-template-columns:1fr;
 }  
 }  
   
-</style>  
-</head>  
-  
-<body>  
-  
-<!-- TODO el HTML superior se mantiene EXACTAMENTE igual hasta el catálogo -->
-
-<section class="catalogo-grid">  
-  
-<div class="catalogo-card" style="background-image:url('catalogo222.jpeg');">  
-  
-<div class="catalogo-titulo-card">Preguntas Específicas</div>  
-  
-<div class="catalogo-frame">  
-<div class="catalogo-slider">  
-<img src="tarotespecifico1.jpeg" class="catalogo-img">  
-<img src="tarotespecifico2.jpeg" class="catalogo-img">  
+</style>  </head>  <body>  <section class="hero">  
+<h1 class="hero-title">Mariposa Azul</h1>  
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>  
+<div class="hero-emojis">🥀 🥀 🥀</div>  
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>  
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>  
+</section>  <section class="fondo-celeste">  
+<div class="contenido-celeste">  
+<h2>¿Qué estás buscando?</h2>  
+<div class="carousel" id="carousel"></div>  
 </div>  
+</section>  <section class="ojito-section">  
+<div class="ojito-title">  
+<img src="corazon.png" class="heart heart-left">  
+<h2>Ojito</h2>  
+<img src="corazon.png" class="heart heart-right">  
+</div>  
+</section>  <section class="info-section">  <div class="info-col">  
+<img src="pago.png" class="info-img">  
+<div class="info-title">Pagos</div>  
+<div class="info-box">  
+<p>Los pagos son exclusivamente por transferencia bancaria.</p>  
+<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>  
+<p><strong>Pagos Internacionales:</strong> PayPal</p>  
+<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>  
+<p>Una vez efectuado el pago, no hay reembolso.</p>  
+<p>Servicio pagado es servicio asegurado.</p>  
+</div>  
+</div>  <div class="info-col prohibidos-wrapper">  
+<img src="prohibido.png" class="info-img prohibido-img">  
+<div class="info-title">Prohibidos</div>  
+<div class="info-box">  
+<p>No realizo lecturas ni rituales a menores de 18 años.</p>  
+<p>No leo salud (física o mental), ni embarazo.</p>  
+<p>No realizo nada que transgreda el libre albedrío de nadie.</p>  
+<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>  
+<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>  
+</div>  
+</div>  </section>  <h2 class="catalogo-titulo">  
+Tarot Terapéutico <span class="brillo">✨</span>  
+</h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo222.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-imagenes">  
+<div class="catalogo-frame">  
+<img src="tarotespecifico1.jpeg" class="catalogo-img">  
+<img src="estrella.png" class="star s1">  
+<img src="estrella.png" class="star s2">  
+<img src="estrella.png" class="star s3">  
+<img src="estrella.png" class="star s4">  
+</div>  <div class="catalogo-frame">  
+<img src="tarotespecifico2.jpeg" class="catalogo-img">  
 <img src="estrella.png" class="star s1">  
 <img src="estrella.png" class="star s2">  
 <img src="estrella.png" class="star s3">  
 <img src="estrella.png" class="star s4">  
 </div>  
-  
-<div class="catalogo-descripcion">  
+</div>  <div class="catalogo-descripcion">  
 Ideal para personas que solo desean saber algo en puntual y profundizar en ello. Las respuestas extensas duran de 5-10 min aproximadamente por cada pregunta. Se entrega por CHAT con fotos+audios  
+</div>  <div class="catalogo-precio">$4.000CLP | 6USD</div>  <button class="catalogo-btn" onclick="agendarEspecificas()">Agenda Aquí</button>
+
+</div>  </section>  <script>  
+const servicios=[  
+["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],  
+["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],  
+["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],  
+["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],  
+["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],  
+["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]  
+];  
+  
+const carousel=document.getElementById("carousel");  
+  
+servicios.forEach(s=>{  
+carousel.innerHTML+=`  
+<div class="card">  
+<h3>${s[0]}</h3>  
+<div class="image-frame">  
+<img src="${s[1]}" class="main">  
+<img src="estrella.png" class="star s1">  
+<img src="estrella.png" class="star s2">  
+<img src="estrella.png" class="star s3">  
+<img src="estrella.png" class="star s4">  
 </div>  
+<p>${s[2]}</p>  
+<button>Ver Todo</button>  
+</div>`;  
+});  
   
-<div class="catalogo-precio">$4.000CLP | 6USD</div>  
+function enviarWhatsApp(){  
+const numero="56928055904";  
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";  
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
+window.open(url,"_blank");  
+}  
   
-<button class="catalogo-btn" onclick="agendarEspecificas()">Agenda Aquí</button>  
-  
-</div>  
-  
-</section>  
-  
-<script>  
 function agendarEspecificas(){  
 const numero="56928055904";  
 const mensaje="Hola ,Scar 🦋🌙. Quisiera agendar este servicio de *Preguntas Específicas*";  
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
 window.open(url,"_blank");  
 }  
-</script>  
-  
-</body>  
+</script>  </body>  
 </html>
