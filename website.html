@@ -93,27 +93,27 @@ box-shadow:
 0 6px 18px rgba(0,0,0,0.45);  
 }  
   
-/* ================= SERVICIOS ================= */  
-  
-.fondo-celeste{  
-padding:40px 0 20px 0;  
-}  
-  
-.contenido-celeste{  
-max-width:1300px;  
-margin:0 auto;  
-text-align:center;  
-}  
-  
-.contenido-celeste h2{  
-font-family:'Halja';  
-font-size:60px;  
-font-weight:300;  
-margin:20px 0 25px 0;  
-color:#39548C;  
-text-shadow:3px 4px 8px rgba(0,0,0,0.35);  
-}  
-  
+/* ================= SERVICIOS ================= */
+
+.fondo-celeste{
+padding:40px 0 20px 0;
+}
+
+.contenido-celeste{
+max-width:1300px;
+margin:0 auto;
+text-align:center;
+}
+
+.contenido-celeste h2{
+font-family:'Halja';
+font-size:60px;
+font-weight:300;
+margin:20px 0 25px 0;
+color:#39548C;
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);
+}
+
 /* ================= CARRUSEL ================= */
 
 .carousel{
@@ -329,26 +329,109 @@ margin-left:80px;
 margin-top:20px;
 margin-bottom:40px;
 }
+
 .brillo{
 display:inline-block;
 animation:brillar 1.5s ease-in-out infinite;
 }
 
 @keyframes brillar{
-0%{ 
-transform:scale(1);
-filter:drop-shadow(0 0 2px #ffffff);
+0%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }
+50%{ transform:scale(1.3); filter:drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 18px #ffffff); }
+100%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }
 }
-50%{ 
-transform:scale(1.3);
-filter:drop-shadow(0 0 10px #ffffff)
-        drop-shadow(0 0 18px #ffffff);
+
+/* ================= CATALOGO GRID ================= */
+
+.catalogo-grid{
+max-width:1200px;
+margin:60px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
 }
-100%{ 
-transform:scale(1);
-filter:drop-shadow(0 0 2px #ffffff);
+
+.catalogo-card{
+background-size:cover;
+background-position:center;
+padding:30px;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+min-height:650px;
+box-shadow:-6px 8px 18px rgba(0,0,0,0.15);
+text-align:center;
 }
+
+.catalogo-titulo-card{
+font-family:'Lobster';
+font-weight:bold;
+font-size:32px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin-bottom:20px;
 }
+
+.catalogo-imagenes{
+display:flex;
+gap:20px;
+overflow-x:auto;
+scroll-behavior:smooth;
+width:100%;
+padding-bottom:10px;
+}
+
+.catalogo-imagenes::-webkit-scrollbar{
+display:none;
+}
+
+.catalogo-frame{
+position:relative;
+min-width:100%;
+aspect-ratio:1/1;
+border:2px solid #e6e6e6;
+border-radius:22px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 10px #f5f5f5,0 0 25px #d9d9d9;
+}
+
+.catalogo-img{
+width:88%;
+height:88%;
+object-fit:cover;
+border-radius:18px;
+}
+
+.catalogo-descripcion{
+font-family:'NotoEthiopic';
+font-size:15px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin:20px 0;
+}
+
+.catalogo-precio{
+font-family:'Lobster';
+font-size:32px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin-bottom:20px;
+}
+
+.catalogo-btn{
+background:rgba(0,0,0,0.35);
+color:white;
+border:1.5px solid rgba(255,255,255,0.7);
+padding:10px 28px;
+border-radius:25px;
+cursor:pointer;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+}
+
 @media(max-width:900px){
 .info-section{
 flex-direction:column;
@@ -362,6 +445,16 @@ padding-right:20px;
 
 .catalogo-titulo{
 margin-left:40px;
+}
+
+.catalogo-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.catalogo-grid{
+grid-template-columns:1fr;
 }
 }
 
@@ -424,7 +517,43 @@ margin-left:40px;
 
 <h2 class="catalogo-titulo">
 Tarot Terapéutico <span class="brillo">✨</span>
-</h2> 
+</h2>
+
+<section class="catalogo-grid">
+
+<div class="catalogo-card" style="background-image:url('catalogo222.jpeg');">
+
+<div class="catalogo-titulo-card">Preguntas Específicas</div>
+
+<div class="catalogo-imagenes">
+<div class="catalogo-frame">
+<img src="tarotespecifico1.jpeg" class="catalogo-img">
+<img src="estrella.png" class="star s1">
+<img src="estrella.png" class="star s2">
+<img src="estrella.png" class="star s3">
+<img src="estrella.png" class="star s4">
+</div>
+
+<div class="catalogo-frame">
+<img src="tarotespecifico2.jpeg" class="catalogo-img">
+<img src="estrella.png" class="star s1">
+<img src="estrella.png" class="star s2">
+<img src="estrella.png" class="star s3">
+<img src="estrella.png" class="star s4">
+</div>
+</div>
+
+<div class="catalogo-descripcion">
+Ideal para personas que solo desean saber algo en puntual y profundizar en ello. Las respuestas extensas duran de 5-10 min aproximadamente por cada pregunta. Se entrega por CHAT con fotos+audios
+</div>
+
+<div class="catalogo-precio">$4.000CLP | 6USD</div>
+
+<button class="catalogo-btn" onclick="agendarEspecificas()">Agenda Aquí</button>
+
+</div>
+
+</section>
 
 <script>
 const servicios=[
@@ -457,6 +586,13 @@ carousel.innerHTML+=`
 function enviarWhatsApp(){
 const numero="56928055904";
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
+function agendarEspecificas(){
+const numero="56928055904";
+const mensaje="Hola ,Scar 🦋🌙. Quisiera agendar este servicio de *Preguntas Específicas*";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
