@@ -28,6 +28,7 @@ body{
 margin:0;
 padding:0;
 font-family:'NotoEthiopic',serif;
+overflow-x:hidden;
 }
 
 /* ================= HERO ================= */
@@ -35,16 +36,17 @@ font-family:'NotoEthiopic',serif;
 .hero{
 min-height:75vh;
 background-image:
-linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)),
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
 url('fondo 2.jpeg');
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:50px 40px;
+padding:60px 40px;
 color:white;
 }
 
@@ -52,19 +54,22 @@ color:white;
 font-family:'Halja';
 font-size:56px;
 font-weight:300;
-letter-spacing:1.5px;
+letter-spacing:1px;
 color:#ffffff;
 text-shadow:
 0 0 6px rgba(255,255,255,0.8),
-0 0 18px rgba(255,255,255,0.5),
-0 0 35px rgba(210,220,240,0.4);
+0 0 18px rgba(255,255,255,0.5);
 }
 
-.hero-subtitle,
+.hero-subtitle{
+font-size:22px;
+margin-top:10px;
+}
+
 .hero-text{
-text-shadow:
-0 0 6px rgba(255,255,255,0.6),
-0 0 16px rgba(210,220,240,0.4);
+font-family:'Lobster';
+font-size:21px;
+margin:10px 0 25px 0;
 }
 
 .btn-agenda{
@@ -87,7 +92,7 @@ background-image:url('fondo 3.png');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-padding:30px 0 100px 0;
+padding:40px 0 120px 0;
 }
 
 .contenido-celeste{
@@ -100,10 +105,9 @@ text-align:center;
 font-family:'Halja';
 font-size:60px;
 font-weight:300;
-margin:20px 0 20px 0;
+margin:20px 0 25px 0;
 color:#39548C;
-text-shadow:
-0 4px 12px rgba(255,255,255,0.9);
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);
 }
 
 /* ================= CARRUSEL ================= */
@@ -132,12 +136,10 @@ scroll-snap-align:start;
 }
 
 .card h3{
-font-family:'NotoEthiopic';
 font-size:20px;
-min-height:50px;
 text-align:center;
 color:#39548C;
-margin-bottom:12px;
+margin-bottom:14px;
 text-shadow:0 3px 8px rgba(0,0,0,0.35);
 }
 
@@ -145,15 +147,15 @@ text-shadow:0 3px 8px rgba(0,0,0,0.35);
 position:relative;
 width:85%;
 aspect-ratio:1/1;
-margin-bottom:14px;
-border:2px solid #cfd3da;
-border-radius:20px;
+margin-bottom:16px;
+border:2px solid #9ea4b3; /* gris plata oscuro */
+border-radius:22px;
 display:flex;
 justify-content:center;
 align-items:center;
 box-shadow:
-0 0 12px #dfe3ea,
-0 0 25px #c7ccd6;
+0 0 10px #c5c9d3,
+0 0 25px #9ea4b3;
 }
 
 .image-frame img.main{
@@ -170,7 +172,7 @@ position:absolute;
 width:28px;
 filter:
 drop-shadow(0 0 6px #ffffff)
-drop-shadow(0 0 18px #dfe3ea);
+drop-shadow(0 0 14px #cfd3db);
 }
 
 .star.s1{ top:-14px; left:15%; }
@@ -181,7 +183,6 @@ drop-shadow(0 0 18px #dfe3ea);
 .card p{
 font-family:'Lobster';
 font-size:17px;
-min-height:50px;
 text-align:center;
 color:#39548C;
 margin-bottom:16px;
@@ -199,7 +200,7 @@ cursor:pointer;
 box-shadow:0 3px 8px rgba(0,0,0,0.3);
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media(max-width:1100px){
 .carousel{
