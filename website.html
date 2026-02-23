@@ -314,7 +314,24 @@ box-shadow:-12px 14px 25px rgba(0,0,0,0.35);
 .info-box p{  
 margin-bottom:14px;  
 }  
-  
+
+/* ================= NUEVO TITULO CATALOGO ================= */
+
+.catalogo-titulo{
+font-family:'Halja';
+font-size:38px;
+color:#39548C;
+text-shadow:
+1px 0 #39548C,
+-1px 0 #39548C,
+0 1px #39548C,
+0 -1px #39548C,
+0 0 10px rgba(31,55,109,0.35);
+margin-left:40px;
+margin-top:20px;
+margin-bottom:40px;
+}
+
 @media(max-width:900px){  
 .info-section{  
 flex-direction:column;  
@@ -325,6 +342,10 @@ align-items:center;
 padding-left:20px;  
 padding-right:20px;  
 }  
+
+.catalogo-titulo{
+margin-left:20px;
+}
 }  
   
 </style>  
@@ -383,6 +404,8 @@ padding-right:20px;
 </div>  
   
 </section>  
+
+<h2 class="catalogo-titulo">Tarot Terapéutico</h2>
   
 <script>  
 const servicios=[  
@@ -415,9 +438,9 @@ carousel.innerHTML+=`
 function enviarWhatsApp(){  
 const numero="56928055904";  
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";  
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
-window.open(url,"_blank");  
-}  
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
 </script>  
   
 </body>  
