@@ -693,6 +693,37 @@ Lectura de Oráculo <span class="brillo">🌙</span>
     <button class="catalogo-btn" onclick="agendarBloqueos()">Agenda Aquí</button>
 
 </div>   
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">Mensaje de tu Ser Superior</div>
+
+    <div class="catalogo-frame">
+
+        <div class="indicador-scroll">
+        Desliza <span>→</span>
+        </div>
+
+        <div class="catalogo-imagenes">
+            <img src="ser1.jpeg" class="catalogo-img">
+            <img src="ser2.jpeg" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    ¿Qué es lo que tienes que ver o escuchar?
+    </div>
+
+    <div class="catalogo-precio">$6.000 CLP | 8 USD</div>
+
+    <button class="catalogo-btn" onclick="agendarSerSuperior()">Agenda Aquí</button>
+
+</div>
 </section>
     
     <script>  
@@ -769,6 +800,13 @@ window.open(url,"_blank");
 function agendarBloqueos(){
 const numero="56928055904";
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada para Bloqueos*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
+function agendarSerSuperior(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensaje de tu Ser Superior*¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
