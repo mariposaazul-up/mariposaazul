@@ -872,7 +872,67 @@ Reiki <span class="brillo">🌱</span>
 <h2 id="radiestesia" class="catalogo-titulo">
 Radiestesia <span class="brillo">🍓</span>
 </h2>
- <section class="catalogo-grid">        
+ <section class="catalogo-grid"> 
+     <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">
+    Cuales son mis dones espirituales
+    </div>
+
+    <div class="catalogo-frame">
+
+        <img src="pendulo1.jpeg" class="catalogo-img">
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    A través de la radiestesia abrimos tu campo energético para saber cuales son tus dones, que tan desarrollado esta, que puede estar bloqueando cada una de tus habilidades y cuales son los 3 rayos cósmicos que predominan mas en tu campo energético
+    </div>
+
+    <div class="catalogo-precio">
+    $13.000 CLP | 17 USD
+    </div>
+
+    <button class="catalogo-btn" onclick="agendarDones()">
+    Agenda Aquí
+    </button>
+
+</div>
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">
+    Quienes son mis Guias
+    </div>
+
+    <div class="catalogo-frame">
+
+        <img src="pendulo2.jpeg" class="catalogo-img">
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    Acá veremos quienes son los seres que te acompañan y que siempre velan por tu mas alto bien, si hay ancestros familiares, algún arcángel, maestros ascendidos, animales de poder y todo lo que salga
+    </div>
+
+    <div class="catalogo-precio">
+    $15.000 CLP | 20 USD
+    </div>
+
+    <button class="catalogo-btn" onclick="agendarGuiasRadiestesia()">
+    Agenda Aquí
+    </button>
+
+</div>
 </section>
     <script>
 
@@ -1009,6 +1069,21 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Conexión de
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
+
+function agendarDones(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Cuales son mis dones espirituales*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
+function agendarGuiasRadiestesia(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Quienes son mis Guias*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
 function irASeccion(nombre){
 
 if(nombre === "Tarot Terapéutico"){
