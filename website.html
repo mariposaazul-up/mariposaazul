@@ -832,23 +832,35 @@ const servicios=[
 
 const carousel=document.getElementById("carousel");
 
-servicios.forEach(s=>{
+servicios.forEach((s,index)=>{
+
+let botonAccion = "";
+
+if(index === 0){
+botonAccion = "document.getElementById('tarot-terapeutico').scrollIntoView({behavior:'smooth'})";
+}
+
+if(index === 1){
+botonAccion = "document.getElementById('lectura-oraculo').scrollIntoView({behavior:'smooth'})";
+}
+
 carousel.innerHTML+=`
 
-<div class="card">    
-<h3>${s[0]}</h3>    
-<div class="image-frame">    
-<img src="${s[1]}" class="main">    
-<img src="estrella.png" class="star s1">    
-<img src="estrella.png" class="star s2">    
-<img src="estrella.png" class="star s3">    
-<img src="estrella.png" class="star s4">    
-</div>    
-<p>${s[2]}</p>    
-<button  
-onclick="irASeccion('{s[1]}')">Ver Todo</button>    
-</div>`;    
-});    function enviarWhatsApp(){
+<div class="card">
+<h3>${s[0]}</h3>
+<div class="image-frame">
+<img src="${s[1]}" class="main">
+<img src="estrella.png" class="star s1">
+<img src="estrella.png" class="star s2">
+<img src="estrella.png" class="star s3">
+<img src="estrella.png" class="star s4">
+</div>
+<p>${s[2]}</p>
+<button onclick="${botonAccion}">Ver Todo</button>
+</div>`;
+
+});    
+function enviarWhatsApp(){
 const numero="56928055904";
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
