@@ -989,18 +989,16 @@ function irASeccion(nombre){
 if(nombre === "Tarot Terapéutico"){
 document.getElementById("tarot-terapeutico")
 .scrollIntoView({ behavior: "smooth" });
+return;
 }
 
 if(nombre === "Lectura de Oráculo"){
 document.getElementById("lectura-oraculo")
 .scrollIntoView({ behavior: "smooth" });
+return;
 }
 
 }
-window.addEventListener("load", function(){
-history.replaceState(null, null, window.location.pathname);
-window.scrollTo(0,0);
-});
     </script>  </body>  
 </html>
  
