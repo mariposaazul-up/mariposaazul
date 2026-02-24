@@ -1012,7 +1012,9 @@ if(nombre === "Lectura de Oráculo"){
 document.getElementById("lectura-oraculo")
 .scrollIntoView({ behavior: "smooth" });
 }
-
+if(index === 2){
+botonAccion = "document.getElementById('reiki').scrollIntoView({behavior:'smooth'})";
+}
 }
 window.addEventListener("load", function(){
 history.replaceState(null, null, window.location.pathname);
