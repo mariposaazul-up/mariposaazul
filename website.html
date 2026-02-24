@@ -662,7 +662,37 @@ Desliza <span>→</span>
 Lectura de Oráculo <span class="brillo">🌙</span>
 </h2>
 <section class="catalogo-grid">
-    
+ <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">Tirada para Bloqueos</div>
+
+    <div class="catalogo-frame">
+
+        <div class="indicador-scroll">
+        Desliza <span>→</span>
+        </div>
+
+        <div class="catalogo-imagenes">
+            <img src="bloqueos1.jpeg" class="catalogo-img">
+            <img src="bloqueos2.jpeg" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    Para aquella situación que sientes estancada o no sabes cómo actuar
+    </div>
+
+    <div class="catalogo-precio">$6.000 CLP | 8 USD</div>
+
+    <button class="catalogo-btn" onclick="agendarBloqueos()">Agenda Aquí</button>
+
+</div>   
 </section>
     
     <script>  
@@ -732,6 +762,13 @@ window.open(url,"_blank");
 function agendarGuias2(){
 const numero="56928055904";
 const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensajes de tus Guías 2*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
+function agendarBloqueos(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada para Bloqueos*¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
