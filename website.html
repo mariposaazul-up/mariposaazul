@@ -515,6 +515,45 @@ font-size:22px;
   }
 }
 
+/* ===== SEPARADOR CATALOGO ELEGANTE ===== */
+
+.separador-catalogo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  margin:40px 0 40px 0;
+}
+
+.separador-catalogo p{
+  margin:0;
+  font-family:'Glacial Indifference Bold', sans-serif;
+  font-size:13px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:#4a4538;
+  text-shadow:
+    0 0 6px rgba(180,160,120,0.25),
+    0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* LÍNEAS FINAS CON BRILLO SUAVE */
+.separador-catalogo .linea{
+  flex:1;
+  max-width:130px;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(190,170,120,0.8),
+    rgba(90,80,60,0.9),
+    rgba(190,170,120,0.8),
+    transparent
+  );
+  box-shadow:
+    0 0 8px rgba(190,170,120,0.35);
+}
+  
 </style>  </head>  <body>  <section class="hero">
 
 <h1 class="hero-title">Mariposa Azul</h1>    
@@ -555,7 +594,14 @@ font-size:22px;
 <p>No realizo nada que transgreda el libre albedrío de nadie.</p>    
   
 </div>    
-</div>  </section>  <h2 id="tarot-terapeutico" class="catalogo-titulo">    
+</div>  
+</section> 
+  <div class="separador-catalogo">
+  <span class="linea"></span>
+  <p>CATÁLOGO</p>
+  <span class="linea"></span>
+</div>
+  <h2 id="tarot-terapeutico" class="catalogo-titulo">    
 Tarot Terapéutico <span class="brillo">✨</span>    
 </h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-frame">  
 <div class="indicador-scroll">  
