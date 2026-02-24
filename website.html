@@ -517,6 +517,8 @@ font-size:22px;
 
 /* ===== SEPARADOR CATALOGO ELEGANTE ===== */
 
+/* ===== SEPARADOR CATALOGO PLATEADO ===== */
+
 .separador-catalogo{
   display:flex;
   align-items:center;
@@ -530,28 +532,27 @@ font-size:22px;
   font-family:'Glacial Indifference Bold', sans-serif;
   font-size:13px;
   letter-spacing:5px;
-  text-transform:uppercase;
-  color:#4a4538;
+  color:#e6e6e6; /* mismo gris del marco */
   text-shadow:
-    0 0 6px rgba(180,160,120,0.25),
-    0 1px 2px rgba(0,0,0,0.15);
+    0 0 6px #f5f5f5,
+    0 0 12px #d9d9d9;
 }
 
-/* LÍNEAS FINAS CON BRILLO SUAVE */
 .separador-catalogo .linea{
   flex:1;
-  max-width:130px;
+  max-width:140px;
   height:1px;
   background:linear-gradient(
     to right,
     transparent,
-    rgba(190,170,120,0.8),
-    rgba(90,80,60,0.9),
-    rgba(190,170,120,0.8),
+    #f5f5f5,
+    #e6e6e6,
+    #d9d9d9,
     transparent
   );
   box-shadow:
-    0 0 8px rgba(190,170,120,0.35);
+    0 0 8px #f5f5f5,
+    0 0 16px #d9d9d9;
 }
   
 </style>  </head>  <body>  <section class="hero">
@@ -598,7 +599,7 @@ font-size:22px;
 </section> 
   <div class="separador-catalogo">
   <span class="linea"></span>
-  <p>CATÁLOGO</p>
+  <p>Catálogo</p>
   <span class="linea"></span>
 </div>
   <h2 id="tarot-terapeutico" class="catalogo-titulo">    
