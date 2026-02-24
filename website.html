@@ -551,6 +551,33 @@ Ideal para personas que solo desean saber algo en puntual y profundizar en ello.
     <button class="catalogo-btn" onclick="agendarGeneral1()">Agenda Aquí</button>
 
 </div>
+<div class="catalogo-card" style="background-image:url('catalogo222.jpeg');">
+
+    <div class="catalogo-titulo-card">Lectura General II</div>
+
+    <div class="catalogo-frame">
+
+        <div class="catalogo-imagenes">
+            <img src="general.jpeg" class="catalogo-img">
+            <img src="general22.jpeg" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    Lectura que profundiza en el estado general de tu vida con duración aproximada de 40min como mínimo. Incluye un mensaje canalizado con oráculo. Se realiza vía CHAT+AUDIO
+    </div>
+
+    <div class="catalogo-precio">$15.000CLP | 20USD</div>
+
+    <button class="catalogo-btn" onclick="agendarGeneral2()">Agenda Aquí</button>
+
+</div>
 </section>  <script>  
 const servicios=[  
 ["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],  
@@ -599,5 +626,13 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura Gen
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
+
+function agendarGeneral2(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Lectura General II";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
 </script>  </body>  
 </html>
