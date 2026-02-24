@@ -755,6 +755,39 @@ Lectura de Oráculo <span class="brillo">🌙</span>
     <button class="catalogo-btn" onclick="agendarSerSuperior()">Agenda Aquí</button>
 
 </div>
+
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">Lectura de Sanación Interna</div>
+
+    <div class="catalogo-frame">
+
+        <div class="indicador-scroll">
+        Desliza <span>→</span>
+        </div>
+
+        <div class="catalogo-imagenes">
+            <img src="sanacion1.jpeg" class="catalogo-img">
+            <img src="sanacion2.jpeg" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    Para explorar qué parte de ti pide sanación y profundizar en ello
+    </div>
+
+    <div class="catalogo-precio">$9.000 CLP | 12 USD</div>
+
+    <button class="catalogo-btn" onclick="agendarSanacion()">Agenda Aquí</button>
+
+</div>
+    
 </section>
     
     <script>  
@@ -848,6 +881,12 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada de A
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
-        
+
+function agendarSanacion(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura de Sanación Interna*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
 </script>  </body>  
 </html>
