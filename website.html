@@ -837,6 +837,31 @@ Lectura de Oráculo <span class="brillo">🌙</span>
     <button class="catalogo-btn" onclick="agendarVidasPasadas()">Agenda Aquí</button>
 
 </div>
+
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">¿Conexión de Almas?</div>
+
+    <div class="catalogo-frame">
+
+        <img src="alma.jpeg" class="catalogo-img">
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+    Enfocada en comprender esas conexiones profundas que sentimos con ciertas personas, ya sea desde la armonía (como un alma gemela) o desde el desafío (como una relación kármica). Para comprender el recorrido de sus almas en vidas pasadas y qué los une en esta vida, entregando una mirada superior, clara y llena de sentido.
+    </div>
+
+    <div class="catalogo-precio">$20.000 CLP | 26 USD</div>
+
+    <button class="catalogo-btn" onclick="agendarAlmas()">Agenda Aquí</button>
+
+</div>
     
 </section>
     
@@ -953,6 +978,12 @@ const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURICompon
 window.open(url,"_blank");
 }
 
+function agendarAlmas(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Conexión de Almas*¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}        
 </script>  </body>  
 </html>
  
