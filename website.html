@@ -890,7 +890,7 @@ carousel.innerHTML+=`
 </div>  
 <p>${s[2]}</p>  
 <button
-onclick="location.href='#tarot-terapeutico'">Ver Todo</button>  
+onclick="irASeccion('{s[0]}')">Ver Todo</button>  
 </div>`;  
 });  
   
@@ -984,6 +984,19 @@ const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Conexión d
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }        
-</script>  </body>  
+function irASeccion(nombre){
+
+if(nombre === "Tarot Terapéutico"){
+document.getElementById("tarot-terapeutico")
+.scrollIntoView({ behavior: "smooth" });
+}
+
+if(nombre === "Lectura de Oráculo"){
+document.getElementById("lectura-oraculo")
+.scrollIntoView({ behavior: "smooth" });
+}
+
+}
+    </script>  </body>  
 </html>
  
