@@ -1,379 +1,376 @@
-<!DOCTYPE html>    <html lang="es">    
-<head>    
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Servicios | Mariposa Azul</title>    <style>    
-    
-/* ================= FUENTES ================= */    
-    
-@font-face {    
-    font-family: 'Halja';    
-    src: url('HALJA-Regular.otf') format('opentype');    
-}    
-    
-@font-face {    
-    font-family: 'NotoEthiopic';    
-    src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');    
-}    
-    
-@font-face {    
-    font-family: 'Lobster';    
-    src: url('LobsterTwo-Regular.ttf') format('truetype');    
-}    
-    
-body{    
-margin:0;    
-padding:0;    
-font-family:'NotoEthiopic',serif;    
-overflow-x:hidden;    
-background-image:url('fondo 3.png');    
-background-size:cover;    
-background-position:center;    
-background-attachment:fixed;    
-}    
-html {
-    scroll-behavior:smooth;
+<!DOCTYPE html>    <html lang="es">      <head>      
+<meta charset="UTF-8">      
+<meta name="viewport" content="width=device-width, initial-scale=1.0">      
+<title>Servicios | Mariposa Azul</title>    <style>      /* ================= FUENTES ================= */
+
+@font-face {
+font-family: 'Halja';
+src: url('HALJA-Regular.otf') format('opentype');
 }
-/* ================= HERO ================= */    
-    
-.hero{    
-min-height:75vh;    
-background-image:    
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),    
-url('fondo 2.jpeg');    
-background-size:cover;    
-background-position:center;    
-display:flex;    
-flex-direction:column;    
-justify-content:center;    
-align-items:center;    
-text-align:center;    
-padding:60px 40px;    
-color:white;    
-}    
-    
-.hero-title{    
-font-family:'Halja';    
-font-size:56px;    
-font-weight:300;    
-letter-spacing:1px;    
-color:#ffffff;    
-text-shadow:    
-0 0 6px rgba(255,255,255,0.8),    
-0 0 18px rgba(255,255,255,0.5);    
-}    
-    
-.hero-subtitle{    
-font-size:22px;    
-margin-top:10px;    
-}    
-    
-.hero-emojis{    
-margin:10px 0;    
-font-size:20px;    
-letter-spacing:8px;    
-}    
-    
-.hero-text{    
-font-family:'Lobster';    
-font-size:21px;    
-margin:10px 0 25px 0;    
-}    
-    
-.btn-agenda{    
-padding:14px 36px;    
-border-radius:30px;    
-border:1.5px solid rgba(255,255,255,0.85);    
-background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);    
-color:white;    
-cursor:pointer;    
-box-shadow:    
-0 0 12px rgba(255,255,255,0.35),    
-0 6px 18px rgba(0,0,0,0.45);    
-    font-family:'NotoEthiopic',serif;
-}    
-    
-/* ================= SERVICIOS ================= */  
-  
-.fondo-celeste{  
-padding:40px 0 20px 0;  
-}  
-  
-.contenido-celeste{  
-max-width:1300px;  
-margin:0 auto;  
-text-align:center;  
-}  
-  
-.contenido-celeste h2{  
-font-family:'Halja';  
-font-size:60px;  
-font-weight:300;  
-margin:20px 0 25px 0;  
-color:#39548C;  
-text-shadow:3px 4px 8px rgba(0,0,0,0.35);  
-}  
-  
-/* ================= CARRUSEL ================= */  
-  
-.carousel{  
-display:flex;  
-gap:40px;  
-overflow-x:auto;  
-scroll-behavior:smooth;  
-scroll-snap-type:x mandatory;  
-padding:20px calc((100vw - 960px)/2);  
-}  
-  
-.carousel::-webkit-scrollbar{  
-display:none;  
-}  
-  
-/* ================= TARJETAS ================= */  
-  
-.card{  
-flex:0 0 300px;  
-display:flex;  
-flex-direction:column;  
-justify-content:space-between;  
-align-items:center;  
-scroll-snap-align:start;  
-min-height:520px;  
-}  
-  
-.card h3{  
-font-size:20px;  
-text-align:center;  
-color:#39548C;  
-margin-bottom:14px;  
-text-shadow:0 3px 8px rgba(0,0,0,0.35);  
-min-height:50px;  
-}  
-  
-.image-frame{  
-position:relative;  
-width:85%;  
-aspect-ratio:1/1;  
-margin-bottom:16px;  
-border:2px solid #9ea4b3;  
-border-radius:22px;  
-display:flex;  
-justify-content:center;  
-align-items:center;  
-box-shadow:  
-0 0 10px #c5c9d3,  
-0 0 25px #9ea4b3;  
-}  
-  
-.image-frame img.main{  
-width:88%;  
-height:88%;  
-object-fit:cover;  
-border-radius:18px;  
-}  
-  
-.star{  
-position:absolute;  
-width:28px;  
-filter:  
-drop-shadow(0 0 6px #ffffff)  
-drop-shadow(0 0 14px #cfd3db);  
-}  
-  
-.star.s1{ top:-14px; left:15%; }  
-.star.s2{ bottom:-16px; right:18%; }  
-.star.s3{ top:45%; left:-16px; }  
-.star.s4{ bottom:30%; right:-14px; }  
-  
-.card p{  
-font-family:'Lobster';  
-font-size:17px;  
-text-align:center;  
-color:#39548C;  
-margin-bottom:16px;  
-text-shadow:0 2px 6px rgba(0,0,0,0.3);  
-min-height:60px;  
-}  
-  
-.card button{  
-padding:8px 24px;  
-border-radius:22px;  
-border:1.5px solid #39548C;  
-background:transparent;  
-font-family:'NotoEthiopic';  
-color:#39548C;  
-cursor:pointer;  
-box-shadow:0 3px 8px rgba(0,0,0,0.3);  
-}  
-  
-/* ================= OJITO ================= */  
-  
-.ojito-section{  
-padding:20px 20px 10px 20px;  
-text-align:center;  
-}  
-  
-.ojito-title{  
-display:flex;  
-align-items:center;  
-justify-content:center;  
-gap:10px;  
-}  
-  
-.ojito-title h2{  
-font-family:'Halja';  
-font-size:clamp(70px,7vw,100px);  
-font-weight:300;  
-margin:0;  
-color:#39548C;  
-text-shadow:  
-2px 3px 6px rgba(0,0,0,0.35),  
-4px 8px 18px rgba(0,0,0,0.22);  
-}  
-  
-.heart{  
-height:clamp(55px,6vw,85px);  
-}  
-  
-@keyframes heartLeftMove{  
-0%{ transform:rotate(-18deg) translateX(0); }  
-50%{ transform:rotate(-18deg) translateX(-16px); }  
-100%{ transform:rotate(-18deg) translateX(0); }  
-}  
-  
-@keyframes heartRightMove{  
-0%{ transform:rotate(18deg) translateX(0); }  
-50%{ transform:rotate(18deg) translateX(16px); }  
-100%{ transform:rotate(18deg) translateX(0); }  
-}  
-  
-.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }  
-.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }  
-  
-/* ================= PAGOS & PROHIBIDOS ================= */  
-  
-.info-section{  
-max-width:1200px;  
-margin:40px auto 100px auto;  
-display:flex;  
-justify-content:space-between;  
-gap:60px;  
-flex-wrap:wrap;  
-}  
-  
-.info-col{  
-flex:1;  
-min-width:300px;  
-display:flex;  
-flex-direction:column;  
-align-items:center;  
-}  
-  
-.info-img{  
-width:180px;  
-margin-bottom:10px;  
-}  
-  
-.prohibido-img{  
-width:195px;  
-}  
-  
-.prohibidos-wrapper .info-title{  
-margin-top:-12px;  
-}  
-  
-.prohibidos-wrapper .info-box{  
-margin-top:-10px;  
-}  
-  
-.info-title{  
-font-family:'Lobster';  
-font-size:38px;  
-color:#1f376d;  
-text-align:center;  
-margin-top:0;  
-margin-bottom:20px;  
-text-shadow:  
-1px 0 #1f376d,  
--1px 0 #1f376d,  
-0 1px #1f376d,  
-0 -1px #1f376d,  
-0 0 10px rgba(31,55,109,0.35);  
-}  
-  
-.info-box{  
-background:rgba(30,55,110,0.85);  
-padding:30px;  
-border-radius:20px;  
-color:white;  
-text-align:center;  
-line-height:1.6;  
-box-shadow:-12px 14px 25px rgba(0,0,0,0.35);  
-}  
-  
-.info-box p{  
-margin-bottom:14px;  
-}  
-  
-/* ================= NUEVO TITULO CATALOGO ================= */  
-  
-.catalogo-titulo{  
-font-family:'Halja';  
-font-size:42px;  
-font-weight:100;  
-color:#39548C;  
-text-shadow:  
-2px 3px 6px rgba(0,0,0,0.35),  
-4px 8px 18px rgba(0,0,0,0.22);  
-margin-left:80px;  
-margin-top:20px;  
-margin-bottom:40px;  
-}  
-  
-.brillo{  
-display:inline-block;  
-animation:brillar 1.5s ease-in-out infinite;  
-}  
-  
-@keyframes brillar{  
-0%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }  
-50%{ transform:scale(1.3); filter:drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 18px #ffffff); }  
-100%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }  
-}  
-  
-/* ================= CATALOGO GRID ================= */  
-  
-.catalogo-grid{  
-max-width:1200px;  
-margin:60px auto;  
-display:grid;  
-grid-template-columns:repeat(3,1fr);  
-gap:40px;  
-}  
-  
-.catalogo-card{  
-background-size:cover;  
-background-position:center;  
-padding:30px;  
-border-radius:20px;  
-display:flex;  
-flex-direction:column;  
-justify-content:space-between;  
-align-items:center;  
-min-height:650px;  
-box-shadow:-8px 12px 28px rgba(0,0,0,0.25);  
-text-align:center;  
-}  
-  
-.catalogo-titulo-card{  
-font-family:'Lobster';  
-font-weight:bold;  
-font-size:32px;  
-color:white;  
-text-shadow:2px 3px 6px rgba(0,0,0,0.4);  
-margin-bottom:20px;  
-}  
-  
+
+@font-face {
+font-family: 'NotoEthiopic';
+src: url('NotoSerifEthiopic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Lobster';
+src: url('LobsterTwo-Regular.ttf') format('truetype');
+}
+
+body{
+margin:0;
+padding:0;
+font-family:'NotoEthiopic',serif;
+overflow-x:hidden;
+background-image:url('fondo 3.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+html {
+scroll-behavior:smooth;
+}
+/* ================= HERO ================= */
+
+.hero{
+min-height:75vh;
+background-image:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('fondo 2.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 40px;
+color:white;
+}
+
+.hero-title{
+font-family:'Halja';
+font-size:56px;
+font-weight:300;
+letter-spacing:1px;
+color:#ffffff;
+text-shadow:
+0 0 6px rgba(255,255,255,0.8),
+0 0 18px rgba(255,255,255,0.5);
+}
+
+.hero-subtitle{
+font-size:22px;
+margin-top:10px;
+}
+
+.hero-emojis{
+margin:10px 0;
+font-size:20px;
+letter-spacing:8px;
+}
+
+.hero-text{
+font-family:'Lobster';
+font-size:21px;
+margin:10px 0 25px 0;
+}
+
+.btn-agenda{
+padding:14px 36px;
+border-radius:30px;
+border:1.5px solid rgba(255,255,255,0.85);
+background:linear-gradient(135deg,#0e2a47,#0f4c6b,#126e82);
+color:white;
+cursor:pointer;
+box-shadow:
+0 0 12px rgba(255,255,255,0.35),
+0 6px 18px rgba(0,0,0,0.45);
+font-family:'NotoEthiopic',serif;
+}
+
+/* ================= SERVICIOS ================= */
+
+.fondo-celeste{
+padding:40px 0 20px 0;
+}
+
+.contenido-celeste{
+max-width:1300px;
+margin:0 auto;
+text-align:center;
+}
+
+.contenido-celeste h2{
+font-family:'Halja';
+font-size:60px;
+font-weight:300;
+margin:20px 0 25px 0;
+color:#39548C;
+text-shadow:3px 4px 8px rgba(0,0,0,0.35);
+}
+
+/* ================= CARRUSEL ================= */
+
+.carousel{
+display:flex;
+gap:40px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scroll-snap-type:x mandatory;
+padding:20px calc((100vw - 960px)/2);
+}
+
+.carousel::-webkit-scrollbar{
+display:none;
+}
+
+/* ================= TARJETAS ================= */
+
+.card{
+flex:0 0 300px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+scroll-snap-align:start;
+min-height:520px;
+}
+
+.card h3{
+font-size:20px;
+text-align:center;
+color:#39548C;
+margin-bottom:14px;
+text-shadow:0 3px 8px rgba(0,0,0,0.35);
+min-height:50px;
+}
+
+.image-frame{
+position:relative;
+width:85%;
+aspect-ratio:1/1;
+margin-bottom:16px;
+border:2px solid #9ea4b3;
+border-radius:22px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:
+0 0 10px #c5c9d3,
+0 0 25px #9ea4b3;
+}
+
+.image-frame img.main{
+width:88%;
+height:88%;
+object-fit:cover;
+border-radius:18px;
+}
+
+.star{
+position:absolute;
+width:28px;
+filter:
+drop-shadow(0 0 6px #ffffff)
+drop-shadow(0 0 14px #cfd3db);
+}
+
+.star.s1{ top:-14px; left:15%; }
+.star.s2{ bottom:-16px; right:18%; }
+.star.s3{ top:45%; left:-16px; }
+.star.s4{ bottom:30%; right:-14px; }
+
+.card p{
+font-family:'Lobster';
+font-size:17px;
+text-align:center;
+color:#39548C;
+margin-bottom:16px;
+text-shadow:0 2px 6px rgba(0,0,0,0.3);
+min-height:60px;
+}
+
+.card button{
+padding:8px 24px;
+border-radius:22px;
+border:1.5px solid #39548C;
+background:transparent;
+font-family:'NotoEthiopic';
+color:#39548C;
+cursor:pointer;
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* ================= OJITO ================= */
+
+.ojito-section{
+padding:20px 20px 10px 20px;
+text-align:center;
+}
+
+.ojito-title{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.ojito-title h2{
+font-family:'Halja';
+font-size:clamp(70px,7vw,100px);
+font-weight:300;
+margin:0;
+color:#39548C;
+text-shadow:
+2px 3px 6px rgba(0,0,0,0.35),
+4px 8px 18px rgba(0,0,0,0.22);
+}
+
+.heart{
+height:clamp(55px,6vw,85px);
+}
+
+@keyframes heartLeftMove{
+0%{ transform:rotate(-18deg) translateX(0); }
+50%{ transform:rotate(-18deg) translateX(-16px); }
+100%{ transform:rotate(-18deg) translateX(0); }
+}
+
+@keyframes heartRightMove{
+0%{ transform:rotate(18deg) translateX(0); }
+50%{ transform:rotate(18deg) translateX(16px); }
+100%{ transform:rotate(18deg) translateX(0); }
+}
+
+.heart-left{ animation:heartLeftMove 1.2s ease-in-out infinite; }
+.heart-right{ animation:heartRightMove 1.2s ease-in-out infinite; }
+
+/* ================= PAGOS & PROHIBIDOS ================= */
+
+.info-section{
+max-width:1200px;
+margin:40px auto 100px auto;
+display:flex;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.info-col{
+flex:1;
+min-width:300px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.info-img{
+width:180px;
+margin-bottom:10px;
+}
+
+.prohibido-img{
+width:195px;
+}
+
+.prohibidos-wrapper .info-title{
+margin-top:-12px;
+}
+
+.prohibidos-wrapper .info-box{
+margin-top:-10px;
+}
+
+.info-title{
+font-family:'Lobster';
+font-size:38px;
+color:#1f376d;
+text-align:center;
+margin-top:0;
+margin-bottom:20px;
+text-shadow:
+1px 0 #1f376d,
+-1px 0 #1f376d,
+0 1px #1f376d,
+0 -1px #1f376d,
+0 0 10px rgba(31,55,109,0.35);
+}
+
+.info-box{
+background:rgba(30,55,110,0.85);
+padding:30px;
+border-radius:20px;
+color:white;
+text-align:center;
+line-height:1.6;
+box-shadow:-12px 14px 25px rgba(0,0,0,0.35);
+}
+
+.info-box p{
+margin-bottom:14px;
+}
+
+/* ================= NUEVO TITULO CATALOGO ================= */
+
+.catalogo-titulo{
+font-family:'Halja';
+font-size:42px;
+font-weight:100;
+color:#39548C;
+text-shadow:
+2px 3px 6px rgba(0,0,0,0.35),
+4px 8px 18px rgba(0,0,0,0.22);
+margin-left:80px;
+margin-top:20px;
+margin-bottom:40px;
+}
+
+.brillo{
+display:inline-block;
+animation:brillar 1.5s ease-in-out infinite;
+}
+
+@keyframes brillar{
+0%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }
+50%{ transform:scale(1.3); filter:drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 18px #ffffff); }
+100%{ transform:scale(1); filter:drop-shadow(0 0 2px #ffffff); }
+}
+
+/* ================= CATALOGO GRID ================= */
+
+.catalogo-grid{
+max-width:1200px;
+margin:60px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.catalogo-card{
+background-size:cover;
+background-position:center;
+padding:30px;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+min-height:650px;
+box-shadow:-8px 12px 28px rgba(0,0,0,0.25);
+text-align:center;
+}
+
+.catalogo-titulo-card{
+font-family:'Lobster';
+font-weight:bold;
+font-size:32px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin-bottom:20px;
+}
+
 .catalogo-imagenes{
 display:flex;
 overflow-x:auto;
@@ -390,22 +387,22 @@ padding:0;
 .catalogo-imagenes::-webkit-scrollbar{
 display:none;
 }
-  
-.catalogo-imagenes::-webkit-scrollbar{  
-display:none;  
-}  
-  
-.catalogo-frame{  
-position:relative;  
-min-width:100%;  
-aspect-ratio:1/1;  
-border:2px solid #e6e6e6;  
-border-radius:22px;  
-display:flex;  
-justify-content:center;  
-align-items:center;  
-box-shadow:0 0 10px #f5f5f5,0 0 25px #d9d9d9;  
-}  
+
+.catalogo-imagenes::-webkit-scrollbar{
+display:none;
+}
+
+.catalogo-frame{
+position:relative;
+min-width:100%;
+aspect-ratio:1/1;
+border:2px solid #e6e6e6;
+border-radius:22px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 10px #f5f5f5,0 0 25px #d9d9d9;
+}
 
 .indicador-scroll{
 position:absolute;
@@ -425,7 +422,7 @@ text-shadow:0 2px 6px rgba(0,0,0,0.4);
 .indicador-scroll span{
 font-size:16px;
 }
-  
+
 .catalogo-img{
 flex: 0 0 100%;
 width:100%;
@@ -434,573 +431,530 @@ object-fit:contain;
 border-radius:18px;
 scroll-snap-align:start;
 }
-  
-.catalogo-descripcion{  
-font-family:'NotoEthiopic';  
-font-size:15px;  
-color:white;  
-text-shadow:2px 3px 6px rgba(0,0,0,0.4);  
-margin:20px 0;  
-}  
-  
-.catalogo-precio{  
-font-family:'Lobster';  
-font-size:32px;  
-color:white;  
-text-shadow:2px 3px 6px rgba(0,0,0,0.4);  
-margin-bottom:20px;  
-}  
-  
-.catalogo-btn{  
-background:rgba(0,0,0,0.35);  
-color:white;  
-border:1.5px solid rgba(255,255,255,0.7);  
-padding:10px 28px;  
-border-radius:25px;  
-cursor:pointer;  
+
+.catalogo-descripcion{
+font-family:'NotoEthiopic';
+font-size:15px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin:20px 0;
+}
+
+.catalogo-precio{
+font-family:'Lobster';
+font-size:32px;
+color:white;
+text-shadow:2px 3px 6px rgba(0,0,0,0.4);
+margin-bottom:20px;
+}
+
+.catalogo-btn{
+background:rgba(0,0,0,0.35);
+color:white;
+border:1.5px solid rgba(255,255,255,0.7);
+padding:10px 28px;
+border-radius:25px;
+cursor:pointer;
 text-shadow:2px 3px 6px rgba(0,0,0,0.4);
 font-family:'NotoEthiopic',serif;
-}  
-  
-@media(max-width:900px){  
-.info-section{  
-flex-direction:column;  
-align-items:center;  
-}  
-  
-.info-col{  
-padding-left:20px;  
-padding-right:20px;  
-}  
-  
-.catalogo-titulo{  
-margin-left:40px;  
-}  
-  
-.catalogo-grid{  
-grid-template-columns:repeat(2,1fr);  
-}  
-}  
-  
-@media(max-width:600px){  
-.catalogo-grid{  
-grid-template-columns:1fr;  
+}
+
+@media(max-width:900px){
+.info-section{
+flex-direction:column;
+align-items:center;
+}
+
+.info-col{
+padding-left:20px;
+padding-right:20px;
+}
+
+.catalogo-titulo{
+margin-left:40px;
+}
+
+.catalogo-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.catalogo-grid{
+grid-template-columns:1fr;
 padding:0 20px;
-}  
-}  
-  
-</style>  </head>  <body>  <section class="hero">  
-<h1 class="hero-title">Mariposa Azul</h1>  
-<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>  
-<div class="hero-emojis">🥀 🥀 🥀</div>  
-<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>  
-<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>  
-</section>  <section class="fondo-celeste">  
-<div class="contenido-celeste">  
-<h2>¿Qué estás buscando?</h2>  
-<div class="carousel" id="carousel"></div>  
+}
+}
+
+</style>  </head>  <body>  <section class="hero">
+
+<h1 class="hero-title">Mariposa Azul</h1>    
+<div class="hero-subtitle">Terapias Holísticas, Tarot Evolutivo y Rituales</div>    
+<div class="hero-emojis">🥀 🥀 🥀</div>    
+<div class="hero-text">Espacio de Compañía, Amor & Sanación</div>    
+<button class="btn-agenda" onclick="enviarWhatsApp()">Agenda Aquí</button>    
+</section>  <section class="fondo-celeste">    
+<div class="contenido-celeste">    
+<h2>¿Qué estás buscando?</h2>    
+<div class="carousel" id="carousel"></div>    
+</div>    
+</section>  <section class="ojito-section">    
+<div class="ojito-title">    
+<img src="corazon.png" class="heart heart-left">    
+<h2>Ojito</h2>    
+<img src="corazon.png" class="heart heart-right">    
+</div>    
+</section>  <section class="info-section">  <div class="info-col">    
+<img src="pago.png" class="info-img">    
+<div class="info-title">Pagos</div>    
+<div class="info-box">    
+<p>Los pagos son exclusivamente por transferencia bancaria.</p>    
+<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>    
+<p><strong>Pagos Internacionales:</strong> PayPal</p>    
+<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>    
+<p>Una vez efectuado el pago, no hay reembolso.</p>    
+<p>Servicio pagado es servicio asegurado.</p>    
+</div>    
+</div>  <div class="info-col prohibidos-wrapper">    
+<img src="prohibido.png" class="info-img prohibido-img">    
+<div class="info-title">Prohibidos</div>    
+<div class="info-box">    
+<p>No realizo lecturas ni rituales a menores de 18 años.</p>    
+<p>No leo salud (física o mental), ni embarazo.</p>    
+<p>No realizo nada que transgreda el libre albedrío de nadie.</p>    
+<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>    
+<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>    
+</div>    
+</div>  </section>  <h2 id="tarot-terapeutico" class="catalogo-titulo">    
+Tarot Terapéutico <span class="brillo">✨</span>    
+</h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-frame">  
+<div class="indicador-scroll">  
+Desliza <span>→</span>  
 </div>  
-</section>  <section class="ojito-section">  
-<div class="ojito-title">  
-<img src="corazon.png" class="heart heart-left">  
-<h2>Ojito</h2>  
-<img src="corazon.png" class="heart heart-right">  
-</div>  
-</section>  <section class="info-section">  <div class="info-col">  
-<img src="pago.png" class="info-img">  
-<div class="info-title">Pagos</div>  
-<div class="info-box">  
-<p>Los pagos son exclusivamente por transferencia bancaria.</p>  
-<p><strong>Pagos Nacionales:</strong> Mercado Pago</p>  
-<p><strong>Pagos Internacionales:</strong> PayPal</p>  
-<p>No se realizan servicios sin antes enviar el comprobante de depósito.</p>  
-<p>Una vez efectuado el pago, no hay reembolso.</p>  
-<p>Servicio pagado es servicio asegurado.</p>  
-</div>  
-</div>  <div class="info-col prohibidos-wrapper">  
-<img src="prohibido.png" class="info-img prohibido-img">  
-<div class="info-title">Prohibidos</div>  
-<div class="info-box">  
-<p>No realizo lecturas ni rituales a menores de 18 años.</p>  
-<p>No leo salud (física o mental), ni embarazo.</p>  
-<p>No realizo nada que transgreda el libre albedrío de nadie.</p>  
-<p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>  
-<p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>  
-</div>  
-</div>  </section>  <h2 id="tarot-terapeutico" class="catalogo-titulo">  
-Tarot Terapéutico <span class="brillo">✨</span>  
-</h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-frame">
-<div class="indicador-scroll">
-Desliza <span>→</span>
-</div>
-    <div class="catalogo-imagenes">
-        <img src="tarotespecifico1.jpeg" class="catalogo-img">
-        <img src="tarotespecifico2.jpeg" class="catalogo-img">
-    </div>
-
-    <img src="estrella.png" class="star s1">
-    <img src="estrella.png" class="star s2">
-    <img src="estrella.png" class="star s3">
-    <img src="estrella.png" class="star s4">
-
-</div>  <div class="catalogo-descripcion">  
-Ideal para personas que solo desean saber algo en puntual y profundizar en ello. Las respuestas extensas duran de 5-10 min aproximadamente por cada pregunta. Se entrega por CHAT con fotos+audios  
-</div>  <div class="catalogo-precio">$4.000 CLP | 6 USD</div>  <button class="catalogo-btn" onclick="agendarEspecificas()">Agenda Aquí</button>
-
-</div>  
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Lectura General I</div>
-
-    <div class="catalogo-frame">
-<div class="indicador-scroll">
-Desliza <span>→</span>
-</div>
-        <div class="catalogo-imagenes">
-            <img src="general1.jpeg" class="catalogo-img">
-            <img src="general11.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Lectura que profundiza en el estado general de tu vida con duración aproximada de 30min como mínimo. Se realiza vía CHAT+AUDIO
-    </div>
-
-    <div class="catalogo-precio">$12.000 CLP | 16 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarGeneral1()">Agenda Aquí</button>
-
-</div>
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Lectura General II</div>
-
-    <div class="catalogo-frame">
-<div class="indicador-scroll">
-Desliza <span>→</span>
-</div>
-        <div class="catalogo-imagenes">
-            <img src="general2.jpeg" class="catalogo-img">
-            <img src="general22.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Lectura que profundiza en el estado general de tu vida con duración aproximada de 40min como mínimo. Incluye un mensaje canalizado con oráculo. Se realiza vía CHAT+AUDIO
-    </div>
-
-    <div class="catalogo-precio">$15.000 CLP | 20 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarGeneral2()">Agenda Aquí</button>
-
-</div>
-    <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Mensajes de tus Guías</div>
-
-    <div class="catalogo-frame">
-
-        <img src="guias1.jpeg" class="catalogo-img">
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Enfocado en encontrar una guía sobre tu vida en general o sobre algún tema en específico de manera profunda con el Tarot, siempre preguntándole a los seres de luz y guías que te cuidan y que se enfocan en tu más alto bien. Se realiza vía CHAT+AUDIO
-    </div>
-
-    <div class="catalogo-precio">$6.000 CLP | 8 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarGuias()">Agenda Aquí</button>
-
-</div>
-
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Mensajes de tus Guías 2</div>
-
-    <div class="catalogo-frame">
-
-        <img src="guias2.jpeg" class="catalogo-img">
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Enfocado en encontrar una guía sobre tu vida en general o sobre algún tema en específico de manera profunda con el Tarot, siempre preguntándole a los seres de luz y guías que te cuidan y que se enfocan en tu más alto bien. Además se le acompaña con una lectura de chakra con el péndulo para ver el estado de tus puntos energéticos. Se realiza vía CHAT+AUDIO
-    </div>
-
-    <div class="catalogo-precio">$10.000 CLP | 13 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarGuias2()">Agenda Aquí</button>
-
-</div>
-
-</section> 
-
-<h2 id="lectura-oraculo" class="catalogo-titulo">
-Lectura de Oráculo <span class="brillo">🌙</span>
-</h2>
-<section class="catalogo-grid">
- <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Mensaje de Una Sola Carta</div>
-
-    <div class="catalogo-frame">
-
-        <img src="carta.jpeg" class="catalogo-img">
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Accesible, pero igual de eficiente. Le pedimos una carta al oráculo para ver qué puede aportarte a tu vida y se conecta con el mensaje utilizando la canalización para entregarlo de forma amorosa y para tu más alto bien
-    </div>
-
-    <div class="catalogo-precio">$3.000 CLP | 4 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarCarta()">Agenda Aquí</button>
-
-</div>
-    
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Tirada para Bloqueos</div>
-
-    <div class="catalogo-frame">
-        
-        <div class="indicador-scroll">
-        Desliza <span>→</span>
-        </div>
-
-        <div class="catalogo-imagenes">
-            <img src="bloqueos1.jpeg" class="catalogo-img">
-            <img src="bloqueos2.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Para aquella situación que sientes estancada o no sabes cómo actuar
-    </div>
-
-    <div class="catalogo-precio">$6.000 CLP | 8 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarBloqueos()">Agenda Aquí</button>
-
-</div> 
-    <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Tirada de Autoconocimiento</div>
-
-    <div class="catalogo-frame">
-
-        <div class="indicador-scroll">
-        Desliza <span>→</span>
-        </div>
-
-        <div class="catalogo-imagenes">
-            <img src="conocer1.jpeg" class="catalogo-img">
-            <img src="conocer2.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Para saber el estado actual de tu mente, cuerpo, corazón y espíritu + consejo
-    </div>
-
-    <div class="catalogo-precio">$9.000 CLP | 12 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarAutoconocimiento()">Agenda Aquí</button>
-
-</div>
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Mensaje de tu Ser Superior</div>
-
-    <div class="catalogo-frame">
-
-        <div class="indicador-scroll">
-        Desliza <span>→</span>
-        </div>
-
-        <div class="catalogo-imagenes">
-            <img src="ser1.jpeg" class="catalogo-img">
-            <img src="ser2.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    ¿Qué es lo que tienes que ver o escuchar?
-    </div>
-
-    <div class="catalogo-precio">$6.000 CLP | 8 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarSerSuperior()">Agenda Aquí</button>
-
-</div>
-
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">Lectura de Sanación Interna</div>
-
-    <div class="catalogo-frame">
-
-        <div class="indicador-scroll">
-        Desliza <span>→</span>
-        </div>
-
-        <div class="catalogo-imagenes">
-            <img src="sanacion1.jpeg" class="catalogo-img">
-            <img src="sanacion2.jpeg" class="catalogo-img">
-        </div>
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Para explorar qué parte de ti pide sanación y profundizar en ello
-    </div>
-
-    <div class="catalogo-precio">$9.000 CLP | 12 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarSanacion()">Agenda Aquí</button>
-
-</div>
-
-    <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">¿Qué sigo trayendo Conmigo?</div>
-
-    <div class="catalogo-frame">
-
-        <img src="sigo.jpeg" class="catalogo-img">
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Acá realizaremos una lectura de 3 vidas pasadas que siguen afectando en tu presente
-    </div>
-
-    <div class="catalogo-precio">$12.000 CLP | 16 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarVidasPasadas()">Agenda Aquí</button>
-
-</div>
-
-<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">
-
-    <div class="catalogo-titulo-card">¿Conexión de Almas?</div>
-
-    <div class="catalogo-frame">
-
-        <img src="alma.jpeg" class="catalogo-img">
-
-        <img src="estrella.png" class="star s1">
-        <img src="estrella.png" class="star s2">
-        <img src="estrella.png" class="star s3">
-        <img src="estrella.png" class="star s4">
-
-    </div>
-
-    <div class="catalogo-descripcion">
-    Enfocada en comprender esas conexiones profundas que sentimos con ciertas personas, ya sea desde la armonía (como un alma gemela) o desde el desafío (como una relación kármica). Para comprender el recorrido de sus almas en vidas pasadas y qué los une en esta vida, entregando una mirada superior, clara y llena de sentido.
-    </div>
-
-    <div class="catalogo-precio">$20.000 CLP | 26 USD</div>
-
-    <button class="catalogo-btn" onclick="agendarAlmas()">Agenda Aquí</button>
-
-</div>
-    
-</section>
-    
-    <script>  
-const servicios=[  
-["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],  
-["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],  
-["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],  
-["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],  
-["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],  
-["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]  
-];  
-  
-const carousel=document.getElementById("carousel");  
-  
-servicios.forEach(s=>{  
-carousel.innerHTML+=`  
-<div class="card">  
-<h3>${s[0]}</h3>  
-<div class="image-frame">  
-<img src="${s[1]}" class="main">  
-<img src="estrella.png" class="star s1">  
+    <div class="catalogo-imagenes">  
+        <img src="tarotespecifico1.jpeg" class="catalogo-img">  
+        <img src="tarotespecifico2.jpeg" class="catalogo-img">  
+    </div>  <img src="estrella.png" class="star s1">  
 <img src="estrella.png" class="star s2">  
 <img src="estrella.png" class="star s3">  
-<img src="estrella.png" class="star s4">  
+<img src="estrella.png" class="star s4">
+
+</div>  <div class="catalogo-descripcion">    
+Ideal para personas que solo desean saber algo en puntual y profundizar en ello. Las respuestas extensas duran de 5-10 min aproximadamente por cada pregunta. Se entrega por CHAT con fotos+audios    
+</div>  <div class="catalogo-precio">$4.000 CLP | 6 USD</div>  <button class="catalogo-btn" onclick="agendarEspecificas()">Agenda Aquí</button>  </div>    
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Lectura General I</div>  
+
+<div class="catalogo-frame">
+
+<div class="indicador-scroll">  
+Desliza <span>→</span>  
 </div>  
-<p>${s[2]}</p>  
-<button
-${s[0] === "Tarot Terapéutico" 
-? <button onclick="document.getElementById('tarot-terapeutico').scrollIntoView({behavior:'smooth'})">Ver Todo</button> 
-: <button>Ver Todo</button>} 
-</div>`;  
-});  
-  
-function enviarWhatsApp(){  
-const numero="56928055904";  
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";  
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
-window.open(url,"_blank");  
-}  
-  
-function agendarEspecificas(){  
-const numero="56928055904";  
-const mensaje="Hola ,Scar 🦋🌙. Quisiera agendar este servicio de *Preguntas Específicas*¡!";  
-const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);  
-window.open(url,"_blank");  
-}  
+        <div class="catalogo-imagenes">  
+            <img src="general1.jpeg" class="catalogo-img">  
+            <img src="general11.jpeg" class="catalogo-img">  
+        </div>  <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Lectura que profundiza en el estado general de tu vida con duración aproximada de 30min como mínimo. Se realiza vía CHAT+AUDIO  
+</div>  
+
+<div class="catalogo-precio">$12.000 CLP | 16 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarGeneral1()">Agenda Aquí</button>
+
+</div>  
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Lectura General II</div>  
+
+<div class="catalogo-frame">
+
+<div class="indicador-scroll">  
+Desliza <span>→</span>  
+</div>  
+        <div class="catalogo-imagenes">  
+            <img src="general2.jpeg" class="catalogo-img">  
+            <img src="general22.jpeg" class="catalogo-img">  
+        </div>  <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Lectura que profundiza en el estado general de tu vida con duración aproximada de 40min como mínimo. Incluye un mensaje canalizado con oráculo. Se realiza vía CHAT+AUDIO  
+</div>  
+
+<div class="catalogo-precio">$15.000 CLP | 20 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarGeneral2()">Agenda Aquí</button>
+
+</div>  
+    <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Mensajes de tus Guías</div>  
+
+<div class="catalogo-frame">  
+
+    <img src="guias1.jpeg" class="catalogo-img">  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Enfocado en encontrar una guía sobre tu vida en general o sobre algún tema en específico de manera profunda con el Tarot, siempre preguntándole a los seres de luz y guías que te cuidan y que se enfocan en tu más alto bien. Se realiza vía CHAT+AUDIO  
+</div>  
+
+<div class="catalogo-precio">$6.000 CLP | 8 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarGuias()">Agenda Aquí</button>
+
+</div>  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Mensajes de tus Guías 2</div>  
+
+<div class="catalogo-frame">  
+
+    <img src="guias2.jpeg" class="catalogo-img">  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Enfocado en encontrar una guía sobre tu vida en general o sobre algún tema en específico de manera profunda con el Tarot, siempre preguntándole a los seres de luz y guías que te cuidan y que se enfocan en tu más alto bien. Además se le acompaña con una lectura de chakra con el péndulo para ver el estado de tus puntos energéticos. Se realiza vía CHAT+AUDIO  
+</div>  
+
+<div class="catalogo-precio">$10.000 CLP | 13 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarGuias2()">Agenda Aquí</button>
+
+</div>  </section>   <h2 id="lectura-oraculo" class="catalogo-titulo">  
+Lectura de Oráculo <span class="brillo">🌙</span>  
+</h2>  
+<section class="catalogo-grid">  
+ <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Mensaje de Una Sola Carta</div>  
+
+<div class="catalogo-frame">  
+
+    <img src="carta.jpeg" class="catalogo-img">  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Accesible, pero igual de eficiente. Le pedimos una carta al oráculo para ver qué puede aportarte a tu vida y se conecta con el mensaje utilizando la canalización para entregarlo de forma amorosa y para tu más alto bien  
+</div>  
+
+<div class="catalogo-precio">$3.000 CLP | 4 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarCarta()">Agenda Aquí</button>
+
+</div>  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Tirada para Bloqueos</div>  
+
+<div class="catalogo-frame">  
+      
+    <div class="indicador-scroll">  
+    Desliza <span>→</span>  
+    </div>  
+
+    <div class="catalogo-imagenes">  
+        <img src="bloqueos1.jpeg" class="catalogo-img">  
+        <img src="bloqueos2.jpeg" class="catalogo-img">  
+    </div>  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Para aquella situación que sientes estancada o no sabes cómo actuar  
+</div>  
+
+<div class="catalogo-precio">$6.000 CLP | 8 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarBloqueos()">Agenda Aquí</button>
+
+</div>   
+    <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Tirada de Autoconocimiento</div>  
+
+<div class="catalogo-frame">  
+
+    <div class="indicador-scroll">  
+    Desliza <span>→</span>  
+    </div>  
+
+    <div class="catalogo-imagenes">  
+        <img src="conocer1.jpeg" class="catalogo-img">  
+        <img src="conocer2.jpeg" class="catalogo-img">  
+    </div>  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Para saber el estado actual de tu mente, cuerpo, corazón y espíritu + consejo  
+</div>  
+
+<div class="catalogo-precio">$9.000 CLP | 12 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarAutoconocimiento()">Agenda Aquí</button>
+
+</div>  
+<div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Mensaje de tu Ser Superior</div>  
+
+<div class="catalogo-frame">  
+
+    <div class="indicador-scroll">  
+    Desliza <span>→</span>  
+    </div>  
+
+    <div class="catalogo-imagenes">  
+        <img src="ser1.jpeg" class="catalogo-img">  
+        <img src="ser2.jpeg" class="catalogo-img">  
+    </div>  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+¿Qué es lo que tienes que ver o escuchar?  
+</div>  
+
+<div class="catalogo-precio">$6.000 CLP | 8 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarSerSuperior()">Agenda Aquí</button>
+
+</div>  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Lectura de Sanación Interna</div>  
+
+<div class="catalogo-frame">  
+
+    <div class="indicador-scroll">  
+    Desliza <span>→</span>  
+    </div>  
+
+    <div class="catalogo-imagenes">  
+        <img src="sanacion1.jpeg" class="catalogo-img">  
+        <img src="sanacion2.jpeg" class="catalogo-img">  
+    </div>  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Para explorar qué parte de ti pide sanación y profundizar en ello  
+</div>  
+
+<div class="catalogo-precio">$9.000 CLP | 12 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarSanacion()">Agenda Aquí</button>
+
+</div>  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  
+
+<div class="catalogo-titulo-card">¿Qué sigo trayendo Conmigo?</div>  
+
+<div class="catalogo-frame">  
+
+    <img src="sigo.jpeg" class="catalogo-img">  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Acá realizaremos una lectura de 3 vidas pasadas que siguen afectando en tu presente  
+</div>  
+
+<div class="catalogo-precio">$12.000 CLP | 16 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarVidasPasadas()">Agenda Aquí</button>
+
+</div>  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">¿Conexión de Almas?</div>  
+
+<div class="catalogo-frame">  
+
+    <img src="alma.jpeg" class="catalogo-img">  
+
+    <img src="estrella.png" class="star s1">  
+    <img src="estrella.png" class="star s2">  
+    <img src="estrella.png" class="star s3">  
+    <img src="estrella.png" class="star s4">  
+
+</div>  
+
+<div class="catalogo-descripcion">  
+Enfocada en comprender esas conexiones profundas que sentimos con ciertas personas, ya sea desde la armonía (como un alma gemela) o desde el desafío (como una relación kármica). Para comprender el recorrido de sus almas en vidas pasadas y qué los une en esta vida, entregando una mirada superior, clara y llena de sentido.  
+</div>  
+
+<div class="catalogo-precio">$20.000 CLP | 26 USD</div>  
+
+<button class="catalogo-btn" onclick="agendarAlmas()">Agenda Aquí</button>
+
+</div>  </section>  <script>
+
+const servicios=[
+["Tarot Terapéutico","tarot.jpeg","Respuestas y guía para tu proceso."],
+["Lectura de Oráculo","oraculo.jpeg","Mensajes que tu alma necesita escuchar."],
+["Reiki","reiki.jpeg","Sanación energética para cuerpo, mente y espíritu."],
+["Radiestesia","radiestesia.jpeg","Dirección y equilibrio desde la vibración correcta."],
+["Limpiezas con Cruz de Ankh","cruzankh.jpeg","Protección y limpieza para tu alma y tu espacio."],
+["Rituales Energéticos","ritual.jpeg","Rituales guiados para acompañar tus procesos."]
+];
+
+const carousel=document.getElementById("carousel");
+
+servicios.forEach(s=>{
+carousel.innerHTML+=`
+
+<div class="card">    
+<h3>${s[0]}</h3>    
+<div class="image-frame">    
+<img src="${s[1]}" class="main">    
+<img src="estrella.png" class="star s1">    
+<img src="estrella.png" class="star s2">    
+<img src="estrella.png" class="star s3">    
+<img src="estrella.png" class="star s4">    
+</div>    
+<p>${s[2]}</p>    
+<button  
+onclick="irASeccion('{s[1]}')">Ver Todo</button>    
+</div>`;    
+});    function enviarWhatsApp(){
+const numero="56928055904";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar un servicio¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
+
+function agendarEspecificas(){
+const numero="56928055904";
+const mensaje="Hola ,Scar 🦋🌙. Quisiera agendar este servicio de Preguntas Específicas¡!";
+const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
+window.open(url,"_blank");
+}
 
 function agendarGeneral1(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura General I*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Lectura General I¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarGeneral2(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura General II*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Lectura General II¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarGuias(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensajes de tus Guías*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Mensajes de tus Guías¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarGuias2(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensajes de tus Guías 2*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Mensajes de tus Guías 2¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarBloqueos(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada para Bloqueos*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Tirada para Bloqueos¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarSerSuperior(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensaje de tu Ser Superior*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Mensaje de tu Ser Superior¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarAutoconocimiento(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada de Autoconocimiento*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Tirada de Autoconocimiento¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarSanacion(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura de Sanación Interna*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Lectura de Sanación Interna¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarCarta(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Mensaje de Una Sola Carta*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Mensaje de Una Sola Carta¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarVidasPasadas(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *¿Qué sigo trayendo Conmigo?*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de ¿Qué sigo trayendo Conmigo?¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
 function agendarAlmas(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Conexión de Almas*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de Conexión de Almas¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
-}        
+}
 function irASeccion(nombre){
 
 if(nombre === "Tarot Terapéutico"){
 document.getElementById("tarot-terapeutico")
 .scrollIntoView({ behavior: "smooth" });
-return;
 }
 
 if(nombre === "Lectura de Oráculo"){
 document.getElementById("lectura-oraculo")
 .scrollIntoView({ behavior: "smooth" });
-return;
 }
 
 }
-    </script>  </body>  
+window.addEventListener("load", function(){
+history.replaceState(null, null, window.location.pathname);
+window.scrollTo(0,0);
+});
+</script>  </body>
+
 </html>
- 
