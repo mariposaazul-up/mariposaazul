@@ -890,7 +890,9 @@ carousel.innerHTML+=`
 </div>  
 <p>${s[2]}</p>  
 <button
-onclick="irASeccion('{s[0]}')">Ver Todo</button>  
+${s[0] === "Tarot Terapéutico" 
+? <button onclick="document.getElementById('tarot-terapeutico').scrollIntoView({behavior:'smooth'})">Ver Todo</button> 
+: <button>Ver Todo</button>} 
 </div>`;  
 });  
   
