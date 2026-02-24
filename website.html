@@ -31,7 +31,9 @@ background-size:cover;
 background-position:center;    
 background-attachment:fixed;    
 }    
-    
+html {
+    scroll-behavior:smooth;
+}
 /* ================= HERO ================= */    
     
 .hero{    
@@ -525,7 +527,7 @@ padding:0 20px;
 <p>Las demás terapias holísticas pueden realizarse en menores hasta los 14 años.</p>  
 <p>Si son menores de esa edad, deberán contar con autorización de sus padres.</p>  
 </div>  
-</div>  </section>  <h2 class="catalogo-titulo">  
+</div>  </section>  <h2 id="tarot-terapeutico" class="catalogo-titulo">  
 Tarot Terapéutico <span class="brillo">✨</span>  
 </h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo222.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-frame">
 <div class="indicador-scroll">
@@ -678,7 +680,8 @@ carousel.innerHTML+=`
 <img src="estrella.png" class="star s4">  
 </div>  
 <p>${s[2]}</p>  
-<button>Ver Todo</button>  
+<button
+onclick="location.href='#tarot-terapeutico'">Ver Todo</button>  
 </div>`;  
 });  
   
