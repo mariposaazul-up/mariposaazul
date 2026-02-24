@@ -890,7 +890,7 @@ carousel.innerHTML+=`
 </div>  
 <p>${s[2]}</p>  
 <button
-onclick="irASeccion('{s[1]}')">Ver Todo</button>  
+onclick="irASeccion('{s[0]}')">Ver Todo</button>  
 </div>`;  
 });  
   
@@ -997,6 +997,10 @@ document.getElementById("lectura-oraculo")
 }
 
 }
+window.addEventListener("load", function(){
+history.replaceState(null, null, window.location.pathname);
+window.scrollTo(0,0);
+});
     </script>  </body>  
 </html>
  
