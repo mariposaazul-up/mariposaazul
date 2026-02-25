@@ -238,6 +238,35 @@ text-shadow:
 height:clamp(55px,6vw,85px);
 }
 
+/* ================= SOBRE MI ================= */
+
+.sobre-mi-section{
+  padding:40px 20px 10px 20px;
+  text-align:center;
+}
+
+.sobre-mi-title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+.sobre-mi-title h2{
+  font-family:'Halja';
+  font-size:clamp(70px,7vw,100px);
+  font-weight:300;
+  margin:0;
+  color:#39548C;
+  text-shadow:
+    2px 3px 6px rgba(0,0,0,0.35),
+    4px 8px 18px rgba(0,0,0,0.22);
+}
+
+.sobre-img{
+  height:clamp(55px,6vw,85px);
+}
+
 @keyframes heartLeftMove{
 0%{ transform:rotate(-18deg) translateX(0); }
 50%{ transform:rotate(-18deg) translateX(-16px); }
@@ -1483,7 +1512,16 @@ Rituales Energéticos <span class="brillo">🕯</span>
   <div class="separador-catalogo-linea"></div>
 </div>
    </section>
+<section class="sobre-mi-section">
 
+  <div class="sobre-mi-title">
+    <img src="izquierda.png" class="sobre-img sobre-left">
+    <h2>Sobre Mí</h2>
+    <img src="derecha.png" class="sobre-img sobre-right">
+  </div>
+
+</section>
+  
     <script>
 
 const servicios=[
