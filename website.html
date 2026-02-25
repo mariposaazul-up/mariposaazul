@@ -711,8 +711,6 @@ font-size:22px;
   gap:0px;
   padding:0px 25px 30px 25px;
 }
-  .sobre-mi-section{
-    padding-top:0;
 
 .sobre-mi-derecha{
   font-size:16px;
@@ -731,14 +729,7 @@ font-size:22px;
   width: 104%;
   max-width: 104%;
 }
-  .sobre-mi-derecha{
-    flex:none;
-  }
-  .sobre-mi-nombre{
-    margin-top:15px;
-  }
 }
-
 
 @media (max-width: 768px){
   .manifiesto-scar{
@@ -760,37 +751,17 @@ font-size:22px;
 .cta-mariposa{
   gap:25px;
 }
-  .sobre-mi-contenedor{
-  padding:20px 20px 30px 20px;
-}
-  
-}
-  @media (max-width:768px){
-
-  .sobre-mi-nombre{
-    margin-top:15px;
-    margin-bottom:10px;
-  }
-
-  .sobre-mi-derecha{
-    margin-top:0px;
-  }
-
 }
   /* ================= SOBRE MI CONTENIDO ================= */
 
 .sobre-mi-contenedor{
   max-width:1200px;
-  margin:60px auto;
+  margin:0 auto;
   display:flex;
   gap:80px;
   align-items:center;
   justify-content:center;
-  padding:50px 40px;
-
-  background: transparent;
-  border-radius:0px;
-
+  padding:40px 20px 80px 20px;
 }
 
 /* ===== IZQUIERDA ===== */
@@ -809,22 +780,20 @@ font-size:22px;
   position:relative;
   width:300px;
   aspect-ratio:3/4;
-
-  background:white;                 /* marco blanco */
-  padding:20px 20px 60px 20px;      /* base más gruesa abajo tipo Polaroid */
-
-  border-radius:0;                  /* esquinas cuadradas */
-
-  box-shadow:-15px 18px 35px rgba(0,0,0,0.20); /* sombra abajo izquierda */
-
+  border:2px solid #9ea4b3;
+  border-radius:22px;
   display:flex;
   justify-content:center;
-  align-items:flex-start;
+  align-items:center;
+  box-shadow:
+    0 0 10px #c5c9d3,
+    0 0 25px #9ea4b3;
+  overflow:visible;
 }
 
 .foto-scar{
-  width:100%;
-  height:auto;
+  width:88%;
+  height:88%;
   object-fit:cover;
   border-radius:18px;
 }
@@ -880,7 +849,7 @@ font-weight:500;
 }
 
 .sobre-mi-derecha p{
-  margin-top:0px;
+  margin-top:0px
   margin-bottom:10px;
 }
 
@@ -1960,4 +1929,4 @@ window.scrollTo(0,0);
 });
 </script>  </body>
 
-</html> 
+</html>
