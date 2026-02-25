@@ -783,6 +783,15 @@ font-size:22px;
 .principios-texto strong{
   font-size:14px !important;
 }
+
+.confesion-contenedor{
+  width:90%;
+}
+
+.confesion-frase{
+  font-size:15px;   /* un poquito más pequeño en móvil */
+  max-width:85%;   /* importante */
+}
 }
   /* ================= SOBRE MI CONTENIDO ================= */
 
@@ -949,6 +958,48 @@ font-weight:500;
 
 .m1{ bottom:-35px; left:15%; }
 .m2{ top:40%; left:-45px; }
+  /* ================= CONFESIÓN VIDEO ================= */
+
+.confesion-section{
+  margin:100px 0 80px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.confesion-contenedor{
+  width:70%;
+  max-width:750px;
+  text-align:left;
+}
+
+.confesion-frase{
+  font-family:'Lobster';
+  font-size:17px;
+  color:#39548C;
+  line-height:1.3;
+  margin-bottom:16px;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.25);
+  max-width: 500px;
+}
+
+.video-wrapper{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%; /* formato 16:9 */
+  height:0;
+  overflow:hidden;
+  border-radius:18px;
+  box-shadow:-12px 16px 35px rgba(0,0,0,0.35);
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
 </style>  </head>  <body>  <section class="hero">
 
 <h1 class="hero-title">Mariposa Azul</h1>    
@@ -1826,7 +1877,29 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
 </div>
 
 </div>
-  
+
+</section>
+  <section class="confesion-section">
+
+  <div class="confesion-contenedor">
+
+    <div class="confesion-frase">
+      Una confesión loca:
+     <span class="pausa"></span>
+      Siempre que escucho esta canción, pienso en el Ser que será el Amor de mi vida.
+    </div>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/-KGG25i38hw"
+        title="YouTube video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
 
 </section>
     <script>
