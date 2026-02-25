@@ -99,7 +99,7 @@ box-shadow:
 font-family:'NotoEthiopic',serif;
   opacity:0;
 animation:aparecerSuave 0.9s ease forwards;
-animation-delay:0.6s;
+animation-delay:0.2s;
 }
 
 @keyframes aparecerSuave{
@@ -134,7 +134,7 @@ color:#39548C;
 text-shadow:3px 4px 8px rgba(0,0,0,0.35);
   opacity:0;
 animation:subirSuave 1s ease forwards;
-animation-delay:0.3s;
+animation-delay:0.6s;
 }
 
 @keyframes subirSuave{
@@ -310,15 +310,18 @@ height:clamp(55px,6vw,85px);
   animation:giroSuave 4s ease-in-out infinite;
 }
 
-/* ================= EFECTO ESCRITURA ================= */
+/* ===== EFECTO ESCRITURA CONTROLADO ===== */
 
-.escribir span{
+.animar-enfin span{
 display:inline-block;
 overflow:hidden;
 white-space:nowrap;
 border-right:2px solid #A28329;
 width:0;
-animation:escribirTexto 3s steps(10,end) forwards,
+}
+
+.animar-enfin.visible span{
+animation:escribirTexto 3.5s steps(10,end) forwards,
 parpadeo 0.8s infinite;
 }
 
@@ -2130,7 +2133,7 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
 </section>
 
  <section class="cierre-en-fin">
-<div class="cierre-en-fin escribir">
+<div class="cierre-en-fin animar-enfin">
 <span>En fin...</span>
 </div>
 </section>
@@ -2410,6 +2413,11 @@ titulos.forEach(titulo=>{
 observer.observe(titulo);
 });
 
+const enfin = document.querySelector('.animar-enfin');
+
+if(enfin){
+observer.observe(enfin);
+}
 </script>  </body>
 
 </html>
