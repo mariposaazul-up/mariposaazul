@@ -97,6 +97,20 @@ box-shadow:
 0 0 12px rgba(255,255,255,0.35),
 0 6px 18px rgba(0,0,0,0.45);
 font-family:'NotoEthiopic',serif;
+  opacity:0;
+animation:aparecerSuave 0.9s ease forwards;
+animation-delay:0.6s;
+}
+
+@keyframes aparecerSuave{
+0%{
+opacity:0;
+transform:translateY(15px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* ================= SERVICIOS ================= */
@@ -118,6 +132,20 @@ font-weight:300;
 margin:20px 0 25px 0;
 color:#39548C;
 text-shadow:3px 4px 8px rgba(0,0,0,0.35);
+  opacity:0;
+animation:subirSuave 1s ease forwards;
+animation-delay:0.3s;
+}
+
+@keyframes subirSuave{
+0%{
+opacity:0;
+transform:translateY(25px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* ================= CARRUSEL ================= */
@@ -280,6 +308,29 @@ height:clamp(55px,6vw,85px);
 .sobre-img{
   height:clamp(55px,6vw,85px);
   animation:giroSuave 4s ease-in-out infinite;
+}
+
+/* ================= EFECTO ESCRITURA ================= */
+
+.escribir span{
+display:inline-block;
+overflow:hidden;
+white-space:nowrap;
+border-right:2px solid #A28329;
+width:0;
+animation:escribirTexto 3s steps(10,end) forwards,
+parpadeo 0.8s infinite;
+}
+
+@keyframes escribirTexto{
+from{ width:0; }
+to{ width:100%; }
+}
+
+@keyframes parpadeo{
+0%{ border-color:transparent; }
+50%{ border-color:#A28329; }
+100%{ border-color:transparent; }
 }
   
 @keyframes heartLeftMove{
@@ -1073,6 +1124,18 @@ text-align:left;
 font-weight:normal;
 margin:0;
 }
+
+.animar-titulo{
+opacity:0;
+transform:translateY(25px);
+transition:all 0.9s ease;
+}
+
+.animar-titulo.visible{
+opacity:1;
+transform:translateY(0);
+}
+  
 @media (max-width:768px){
 
 .cierre-final{
@@ -1139,6 +1202,10 @@ color:#444444; /* gris oscuro elegante */
 
 .footer-linea img{
 width:16px;
+}
+
+.icono-whatsapp{
+width:14px;
 }
 
 @media (max-width:768px){
@@ -1231,7 +1298,7 @@ font-size:15px;
   Catálogo
   <div class="separador-catalogo-linea"></div>
 </div>
-  <h2 id="tarot-terapeutico" class="catalogo-titulo">    
+<h2 id="tarot-terapeutico" class="catalogo-titulo animar-titulo">   
 Tarot Terapéutico <span class="brillo">✨</span>    
 </h2>  <section class="catalogo-grid">  <div class="catalogo-card" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Preguntas Específicas</div>  <div class="catalogo-frame">  
 <div class="indicador-scroll">  
@@ -1342,7 +1409,7 @@ Enfocado en encontrar una guía sobre tu vida en general o sobre algún tema en 
 
 <button class="catalogo-btn" onclick="agendarGuias2()">Agenda Aquí</button>
 
-</div>  </section>   <h2 id="lectura-oraculo" class="catalogo-titulo">  
+</div>  </section>   <h2 id="lectura-oraculo" class="catalogo-titulo animar-titulo">
 Lectura de Oráculo <span class="brillo">🌙</span>  
 </h2>  
 <section class="catalogo-grid">  
@@ -1527,7 +1594,7 @@ Enfocada en comprender esas conexiones profundas que sentimos con ciertas person
 
 </div>  
 </section>  
-<h2 id="reiki" class="catalogo-titulo">
+<h2 id="reiki" class="catalogo-titulo animar-titulo">
 Reiki <span class="brillo">🌱</span>
 </h2>
     <section class="catalogo-grid">
@@ -1574,7 +1641,7 @@ Reiki <span class="brillo">🌱</span>
 
 </div>
   </section>      
-<h2 id="radiestesia" class="catalogo-titulo">
+<h2 id="radiestesia" class="catalogo-titulo animar-titulo">
 Radiestesia <span class="brillo">🍓</span>
 </h2>
  <section class="catalogo-grid"> 
@@ -1640,7 +1707,7 @@ Radiestesia <span class="brillo">🍓</span>
 </div>
 </section>
 
-<h2 id="limpiezas-ankh" class="catalogo-titulo">
+<h2 id="limpiezas-ankh" class="catalogo-titulo animar-titulo">
 Limpiezas con Ankh <span class="brillo">🪬</span>
 </h2>
 
@@ -1729,7 +1796,7 @@ Limpiezas con Ankh <span class="brillo">🪬</span>
 
 </div>
 </section>
-  <h2 id="rituales-energeticos" class="catalogo-titulo">
+<h2 id="rituales-energeticos" class="catalogo-titulo animar-titulo">
 Rituales Energéticos <span class="brillo">🕯</span>
 </h2>
 
@@ -2001,7 +2068,7 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
 </div> </section>
   <section class="principios-section">
 
-  <h2 class="catalogo-titulo titulo-principios">
+  <h2 class="catalogo-titulo titulo-principios animar-titulo">
     Mis Principios<br>
     <span class="sub-principios">reflejados en Mariposa Azul</span>
   </h2>
@@ -2063,8 +2130,8 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
 </section>
 
  <section class="cierre-en-fin">
-<div class="cierre-en-fin">
-En fin...
+<div class="cierre-en-fin escribir">
+<span>En fin...</span>
 </div>
 </section>
 
@@ -2095,7 +2162,7 @@ En fin...
       </div>
 
       <div class="footer-linea">
-        <img src="whatsapp.png" alt="WhatsApp">
+<img src="whatsapp.png" class="icono-whatsapp" alt="WhatsApp">
         <span>+56 9 2805 5904</span>
       </div>
 
@@ -2320,10 +2387,29 @@ document.getElementById("lectura-oraculo")
 .scrollIntoView({ behavior: "smooth" });
 }
 }
+// lo último que ya tienes
+
 window.addEventListener("load", function(){
 history.replaceState(null, null, window.location.pathname);
 window.scrollTo(0,0);
 });
+
+// 👇 AQUÍ PEGAS ESTO 👇
+
+const titulos = document.querySelectorAll('.animar-titulo');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},{ threshold:0.2 });
+
+titulos.forEach(titulo=>{
+observer.observe(titulo);
+});
+
 </script>  </body>
 
 </html>
