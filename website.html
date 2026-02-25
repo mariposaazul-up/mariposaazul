@@ -788,10 +788,9 @@ font-size:22px;
   justify-content:center;
   padding:50px 40px;
 
-  background: white;
+  background: transparent;
   border-radius:0px;
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.15);
+
 }
 
 /* ===== IZQUIERDA ===== */
@@ -810,20 +809,22 @@ font-size:22px;
   position:relative;
   width:300px;
   aspect-ratio:3/4;
-  border:2px solid #9ea4b3;
-  border-radius:22px;
+
+  background:white;                 /* marco blanco */
+  padding:20px 20px 60px 20px;      /* base más gruesa abajo tipo Polaroid */
+
+  border-radius:0;                  /* esquinas cuadradas */
+
+  box-shadow:-15px 18px 35px rgba(0,0,0,0.20); /* sombra abajo izquierda */
+
   display:flex;
   justify-content:center;
-  align-items:center;
-  box-shadow:
-    0 0 10px #c5c9d3,
-    0 0 25px #9ea4b3;
-  overflow:visible;
+  align-items:flex-start;
 }
 
 .foto-scar{
-  width:88%;
-  height:88%;
+  width:100%;
+  height:auto;
   object-fit:cover;
   border-radius:18px;
 }
