@@ -1035,6 +1035,61 @@ text-shadow:
 0 0 8px rgba(162,131,41,0.5);       /* halo más suave */
 }
 
+.cierre-final{
+background-image:url('estrellas.jpg'); /* misma imagen que usas */
+background-size:cover;
+background-position:center;
+padding:20px 0px;
+margin-top:40px;
+  border-radius:0;
+}
+
+.cierre-contenido{
+max-width:800px;
+margin:0 auto;
+}
+
+.sanemos{
+font-family:'TuFuenteGotica'; /* la misma que usas en títulos góticos */
+font-size:38px;
+color:#cfd3da; /* plateado */
+text-align:left;
+margin-bottom:10px;
+}
+
+.encaminemos{
+font-family:'Noto Serif Ethiopic';
+font-size:18px;
+color:#e2e5ea; /* plateado suave */
+text-align:left;
+font-weight:normal;
+margin:0;
+}
+@media (max-width:768px){
+
+.cierre-final{
+width:100%;
+padding:12px 0;           /* controla lo delgado en móvil */
+background-size:cover;    /* mantiene la franja completa */
+background-position:center;
+}
+
+.cierre-contenido{
+width:100%;
+padding-left:20px;        /* margen interno para que el texto no pegue al borde */
+padding-right:20px;
+box-sizing:border-box;
+}
+
+.sanemos{
+font-size:clamp(24px,6vw,38px);   /* se adapta al ancho */
+}
+
+.encaminemos{
+font-size:clamp(14px,4vw,18px);   /* más pequeño que el título */
+}
+
+}
 </style>  </head>  <body>  <section class="hero">
 
 <h1 class="hero-title">Mariposa Azul</h1>    
@@ -1946,6 +2001,14 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
 En fin...
 </div>
 </section>
+
+  <section class="cierre-final">
+  <div class="cierre-contenido">
+    <h2 class="sanemos">¿Sanemos Juntxs?</h2>
+    <p class="encaminemos">Encaminemos tu proceso</p>
+  </div>
+</section>
+  
     <script>
 
 const servicios=[
