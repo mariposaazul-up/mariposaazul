@@ -706,6 +706,16 @@ font-size:15px;
 .descripcion-mas-grande{
 font-size:22px;
 }
+.sobre-mi-contenedor{
+  flex-direction:column;
+  gap:40px;
+  padding:20px 25px 60px 25px;
+}
+
+.sobre-mi-derecha{
+  font-size:16px;
+  text-align:center;
+}
 }
 @media (max-width: 768px){
   .descripcion-grande,
@@ -735,7 +745,102 @@ font-size:22px;
   gap:25px;
 }
 }
-  
+  /* ================= SOBRE MI CONTENIDO ================= */
+
+.sobre-mi-contenedor{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  gap:80px;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px 80px 20px;
+}
+
+/* ===== IZQUIERDA ===== */
+
+.sobre-mi-izquierda{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* Marco estilo catálogo */
+
+.foto-marco{
+  position:relative;
+  width:300px;
+  aspect-ratio:3/4;
+  border:2px solid #9ea4b3;
+  border-radius:22px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:
+    0 0 10px #c5c9d3,
+    0 0 25px #9ea4b3;
+  overflow:visible;
+}
+
+.foto-scar{
+  width:88%;
+  height:88%;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+/* Mariposas */
+
+.mariposa{
+  position:absolute;
+  width:65px;
+  filter:
+    drop-shadow(0 0 6px rgba(57,84,140,0.5))
+    drop-shadow(0 0 14px rgba(57,84,140,0.3));
+  animation:giroMariposa 6s ease-in-out infinite;
+}
+
+.m1{ top:-20px; left:12%; }
+.m2{ bottom:-25px; right:15%; }
+.m3{ top:45%; left:-30px; width:50px; }
+
+@keyframes giroMariposa{
+  0%{ transform:rotate(-3deg); }
+  50%{ transform:rotate(3deg); }
+  100%{ transform:rotate(-3deg); }
+}
+
+/* Nombre */
+
+.sobre-mi-nombre{
+  margin-top:25px;
+  font-family:'Lobster';
+  font-size:28px;
+  color:#39548C;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.35),
+    0 0 8px rgba(57,84,140,0.25);
+}
+
+/* ===== DERECHA ===== */
+
+.sobre-mi-derecha{
+  flex:1.4;
+  font-family:'NotoEthiopic';
+  font-size:17px;
+  color:#39548C;
+  line-height:1.7;
+
+  text-shadow:
+    0 1px 3px rgba(0,0,0,0.25);
+}
+
+.sobre-mi-derecha p{
+  margin-bottom:18px;
+}
 </style>  </head>  <body>  <section class="hero">
 
 <h1 class="hero-title">Mariposa Azul</h1>    
@@ -1536,8 +1641,70 @@ Rituales Energéticos <span class="brillo">🕯</span>
     <img src="derecha.png" class="sobre-img sobre-right">
   </div>
 
-</section>
-  
+
+  <div class="sobre-mi-contenedor">
+
+  <!-- LADO IZQUIERDO -->
+  <div class="sobre-mi-izquierda">
+
+    <div class="foto-marco">
+
+      <img src="yo.jpeg" class="foto-scar">
+
+      <img src="mariposa.png" class="mariposa m1">
+      <img src="mariposa.png" class="mariposa m2">
+      <img src="mariposa.png" class="mariposa m3">
+
+    </div>
+
+    <div class="sobre-mi-nombre">
+      Hola, Soy Escarlet <br> 💜✨️
+    </div>
+
+  </div>
+
+  <!-- LADO DERECHO -->
+  <div class="sobre-mi-derecha">
+
+    <p>
+    Desde pequeña pareciera que mi camino fue el de cuidar y sostener a otros. Viví situaciones que me llevaron a asumir ese rol, e incluso antes de comprenderlo ya lo hacía desde y por amor.
+    </p>
+
+    <p>
+    Por muchos años evadí mi verdadera yo 🧙🏻‍♀️, tanto por los prejuicios como por el miedo a lo desconocido y las experiencias espirituales que no sabía cómo explicar. Pero mientras más lo negaba, más fuerte se hacía el puente que quería que estuviera conectada con lo Divino, con Dios.
+    </p>
+
+    <p>
+    Hasta que un día me di cuenta de que estaba viviendo limitada y, en realidad, no era nada externo lo que me atemorizaba; era esa parte profunda de mí que pedía ser aceptada y que, al final, no era tan terrible como pensaba.
+    </p>
+
+    <p>
+    Mi proceso no ha sido lineal. Ha tenido subidas y bajadas, me cuestione el mundo espiritual y la "matrix" donde vivía haciéndome romper patrones generacionales. He sido puesta a prueba para recordar quién soy. He aprendido a transmutar, alquimizar y a renacer desde el dolor y mis propias heridas. Porque, como en la carta de La Torre (tarot), del caos también podemos reconstruirnos.
+    </p>
+
+    <p>
+    Al final, la sanación parte de reconciliarnos con esas partes donde quizá aún no ha llegado luz.
+    </p>
+
+    <p>
+    Hoy acepto mi camino de sanadora con la responsabilidad y el respeto que conlleva. Todo desde el amor incondicional que Dios puso en mi corazón para entregarlo al mundo, con la intención de acompañarte en TU PROCESO de encontrar claridad y herramientas reales que te ayuden a transformar TU VIDA.
+    </p>
+
+    <p>
+    Ya que, si no estamos bien con nuestra fuente interna, difícilmente podremos construir una realidad plena afuera.
+    </p>
+
+    <p>
+    Yo te acompaño, te guio, te comprendo y te abrazo para que seas tu verdad, tu versión más consciente y, al mismo tiempo, más auténtica.
+    </p>
+
+    <p>
+    No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en coherencia con quien realmente eres.
+    </p>
+
+  </div>
+
+</div> </section>
     <script>
 
 const servicios=[
