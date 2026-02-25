@@ -338,14 +338,24 @@ to{ width:6%; }
 @media (max-width:768px){
 
   .animar-enfin span{
-    animation:none !important;
+    animation: aparecerDegradado 1.2s ease forwards;
     border-right:none !important;
     width:auto !important;
     clip-path:none !important;
-    opacity:1;
     background:linear-gradient(90deg,#A28329,#e2c77a,#A28329);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+  }
+
+  @keyframes aparecerDegradado{
+    from{
+      opacity:0;
+      transform:translateY(15px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
   }
 
 }
