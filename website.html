@@ -377,7 +377,7 @@ margin-bottom:40px;
 .titulo-principios{
   text-align:center;
   margin-left:0;
-  margin-top:55px;
+  margin-top:30px;
 }
 
 .sub-principios{
@@ -879,7 +879,59 @@ font-weight:500;
   display:block;
   height:8px;
 }
-  
+
+.principios-texto p{
+  margin-bottom:22px;
+}
+
+.principios-texto strong{
+  font-weight:700;
+  display:block;
+  margin-bottom:6px;
+  font-size:17px;
+}
+  /* ===== STICKER PRINCIPIOS ===== */
+
+.principios-sticker{
+  position:relative;
+  max-width:900px;
+  margin:40px auto;
+  padding:55px 45px;
+
+  background:rgba(30,55,110,0.85); /* mismo azul que pagos */
+  color:white;
+  text-align:center;
+
+  border-radius:0; /* puntas rectas */
+
+  box-shadow:-18px 20px 40px rgba(0,0,0,0.35); /* sombra abajo izquierda */
+}
+
+.principios-texto{
+  font-family:'NotoEthiopic';
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* Decoraciones */
+
+.decor{
+  position:absolute;
+  width:80px;
+  filter:
+    drop-shadow(0 0 6px rgba(255,255,255,0.6))
+    drop-shadow(0 0 14px rgba(255,255,255,0.3));
+}
+
+/* Posiciones alrededor del borde */
+
+.e1{ top:-30px; left:-30px; }
+.e2{ top:-35px; right:15%; }
+.e3{ bottom:-35px; right:-30px; }
+
+.m1{ bottom:-35px; left:15%; }
+.m2{ top:40%; left:-45px; }
+.m3{ bottom:40%; right:-45px; }
 </style>  </head>  <body>  <section class="hero">
 
 <h1 class="hero-title">Mariposa Azul</h1>    
@@ -1728,7 +1780,36 @@ No hay nada más poderoso que habitar tu esencia con libertad, con disfrute y en
     Mis Principios<br>
     <span class="sub-principios">reflejados en Mariposa Azul</span>
   </h2>
+<div class="principios-sticker">
 
+  <!-- Decoraciones -->
+  <img src="estrella.png" class="decor e1">
+  <img src="estrella.png" class="decor e2">
+  <img src="estrella.png" class="decor e3">
+  <img src="mariposa.png" class="decor m1">
+  <img src="mariposa.png" class="decor m2">
+  <img src="mariposa.png" class="decor m3">
+
+  <!-- Contenido -->
+ <div class="principios-texto">
+
+  <p>
+    <strong>1. Enfoque terapéutico</strong><br>
+    Las terapias ofrecidas son complementarias y no sustituyen tratamiento médico, psicológico o psiquiátrico. Pueden integrar a otros procesos de salud para mayor armonización y sanación.
+ <span class="pausa"></span>
+    <strong>2. Responsabilidad individual</strong><br>
+    Cada proceso es único e individual. Los resultados pueden variar según la apertura, disposición y compromiso del consultante. Yo te guío y te acompaño en el proceso, pero es fundamental que realices tu trabajo interno y utilices las herramientas entregadas durante las sesiones.
+ <span class="pausa"></span>
+    <strong>3. Ética energética</strong><br>
+    No se realizan trabajos destinados a dañar, manipular o interferir en la voluntad de terceros.
+  <span class="pausa"></span>
+    <strong>4. Autonomía y conciencia</strong><br>
+    No se fomentan dependencias energéticas. El acompañamiento está orientado a fortalecer la autonomía, el autoconocimiento y el poder personal de cada persona.
+  </p>
+
+</div>
+
+</div>
   
 
 </section>
