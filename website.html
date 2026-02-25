@@ -339,22 +339,13 @@ to{ width:6%; }
 
   .animar-enfin span{
     animation:none !important;
-    width:auto !important;
     border-right:none !important;
+    width:auto !important;
     clip-path:none !important;
-    opacity:0;
-    transform:translateY(15px);
-  }
-
-  .animar-enfin.visible span{
-    animation: aparecerSuave 1.6s ease forwards;
-  }
-
-  @keyframes aparecerSuave{
-    to{
-      opacity:1;
-      transform:translateY(0);
-    }
+    opacity:1;
+    background:linear-gradient(90deg,#A28329,#e2c77a,#A28329);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
   }
 
 }
