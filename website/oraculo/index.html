@@ -420,23 +420,26 @@ padding:0 20px;
 /* ================= CARD ================= */
 
 .catalogo-card{
-background-size:cover;
-background-position:center;
+background:rgba(14, 42, 71, 0.75);
+backdrop-filter:blur(8px);
+
 padding:30px;
-border-radius:20px;
+border-radius:0;
+
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
 min-height:650px;
-box-shadow:-8px 12px 28px rgba(0,0,0,0.25);
-text-align:center;
 
 box-shadow:
 0 10px 30px rgba(0,0,0,0.25),
 inset 0 0 40px rgba(255,255,255,0.15);
-}
 
+border:1px solid rgba(255,255,255,0.15);
+
+text-align:center;
+}
 /* ================= TITULO ================= */
 
 .catalogo-titulo-card{
@@ -1032,7 +1035,7 @@ font-size:15px;
 </section>
   
  <section class="catalogo-grid">  
- <div class="catalogo-card" id="una carta" style="background-image:url('catalogo333.jpeg');">  <div class="catalogo-titulo-card">Mensaje de Una Sola Carta</div>  
+ <div class="catalogo-card" id="una carta">  <div class="catalogo-titulo-card">Mensaje de Una Sola Carta</div>  
 
 <div class="catalogo-frame">  
 
