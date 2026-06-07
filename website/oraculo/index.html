@@ -14,6 +14,11 @@
   font-family: 'Halja';
   src: url('HALJA-Regular.otf') format('opentype');
 }
+ 
+@font-face {
+  font-family: 'Sunday';
+  src: url('Sunday-Regular.otf') format('opentype');
+}
 
 @font-face {
   font-family: 'NotoEthiopic';
@@ -1034,6 +1039,38 @@ font-size:15px;
   width:50%;
 }
 
+.akasha-derecha{
+  width:50%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+
+.titulo-akasha{
+  font-family:'Sunday';
+  font-size:70px;
+  font-weight:normal;
+  text-align:left;
+  line-height:1.1;
+  margin:0;
+
+  color:#072d52;
+
+  text-shadow:
+  0 0 6px rgba(180,220,255,0.8),
+  0 0 12px rgba(180,220,255,0.7),
+  0 0 20px rgba(120,170,220,0.9),
+  0 0 30px rgba(120,170,220,0.8),
+  0 0 45px rgba(120,170,220,0.7),
+
+  0.2px 0 #072d52,
+  -0.2px 0 #072d52,
+  0 0.2px #072d52,
+  0 -0.2px #072d52;
+
+  animation:titileoSuavee 2s ease-in-out infinite alternate;
+}
+ 
 </style>
 </head>
 
@@ -1053,6 +1090,9 @@ font-size:15px;
   </div>
 
   <div class="akasha-derecha">
+   <h2 class="titulo-akasha">
+  Canalización con Registros Akáshicos
+</h2>
   </div>
 
 </section> 
