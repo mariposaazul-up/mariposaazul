@@ -1103,29 +1103,25 @@ margin-top:15px;
 @media (max-width:768px){
 
   .akasha-seccion{
-    flex-direction:column-reverse;
-    align-items:center;
+    display:grid;
+    grid-template-columns:40% 60%;
+    gap:15px;
   }
 
   .akasha-derecha{
-    width:100%;
-    margin-left:0;
+    display:contents;
   }
-
-  .akasha-izquierda{
-    width:100%;
-    display:flex;
-    justify-content:center;
-  }
-
 
   .titulo-akasha{
-    font-size:42px;
+    grid-column:2;
+    grid-row:1;
   }
 
- .texto-lado1{
+  .texto-lado1{
+    grid-column:1 / 3;
+    grid-row:2;
     text-align:center;
-    font-size:21px;
+    margin-top:20px;
   }
 
 }
