@@ -1022,7 +1022,7 @@ font-size:15px;
   padding:0 30px;
 
   display:flex;
-  align-items:center;
+  align-items:flex-start;
 }
 
 .akasha-izquierda{
@@ -1048,7 +1048,7 @@ font-size:15px;
 
 .titulo-akasha{
   font-family:'Sunday';
-  font-size:70px;
+  font-size:60px;
   font-weight:normal;
   text-align:left;
   line-height:1.1;
@@ -1069,6 +1069,32 @@ font-size:15px;
   0 -0.2px #072d52;
 
   animation:titileoSuavee 2s ease-in-out infinite alternate;
+}
+
+@keyframes titileoSuavee{
+0%{
+text-shadow:
+0 0 4px rgba(255,210,220,0.6),
+0 0 10px rgba(255,180,200,0.5),
+0 0 20px rgba(224,168,183,0.4),
+0 0 40px rgba(224,168,183,0.3);
+}
+
+50%{
+text-shadow:
+0 0 4px rgba(255,210,220,1),
+0 0 10px rgba(255,180,200,1),
+0 0 20px rgba(224,168,183,0.9),
+0 0 40px rgba(224,168,183,0.7);
+}
+
+100%{
+text-shadow:
+0 0 4px rgba(255,210,220,0.6),
+0 0 10px rgba(255,180,200,0.5),
+0 0 20px rgba(224,168,183,0.4),
+0 0 40px rgba(224,168,183,0.3);
+}
 }
  
 </style>
