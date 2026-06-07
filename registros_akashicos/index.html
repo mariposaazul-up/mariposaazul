@@ -1128,7 +1128,79 @@ El Akasha es el espacio de conciencia donde habita la memoria de todas las exper
   </div>
 
 </section> 
+ <section class="catalogo-grid">
 
+<div class="catalogo-card" id="registro1" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">
+    Lectura de Registros Akashicos
+    </div>
+
+    <div class="catalogo-frame">
+
+        <div class="catalogo-imagenes">
+            <img src="registro1.png" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+  Dura de 20 a 30 min. aproximadamente y se puede realizar hasta 4 preguntas.
+    <br><br>
+    <strong>La información es entregada vía CHAT+AUDIOS.</strong>
+    </div>
+
+    <div class="catalogo-precio">
+    $15.555 CLP | 20 USD
+    </div>
+
+    <button class="catalogo-btn" onclick="agendarRegistro1()">
+    Agenda Aquí
+    </button>
+
+</div>
+
+ <div class="catalogo-card" id="registro2" style="background-image:url('catalogo333.jpeg');">
+
+    <div class="catalogo-titulo-card">
+    Una Sola Pregunta a los Registros Akashicos
+    </div>
+
+    <div class="catalogo-frame">
+
+        <div class="catalogo-imagenes">
+            <img src="registro2.png" class="catalogo-img">
+        </div>
+
+        <img src="estrella.png" class="star s1">
+        <img src="estrella.png" class="star s2">
+        <img src="estrella.png" class="star s3">
+        <img src="estrella.png" class="star s4">
+
+    </div>
+
+    <div class="catalogo-descripcion">
+  Enfocado en preguntar y recibir guia y consejo en algo puntual. 
+    <br><br>
+    <strong>La información es entregada vía CHAT+AUDIOS.</strong>
+    </div>
+
+    <div class="catalogo-precio">
+    $6.666 CLP | 11 USD
+    </div>
+
+    <button class="catalogo-btn" onclick="agendarRegistro2()">
+    Agenda Aquí
+    </button>
+
+</div>
+  
+  </section>     
 <!-- CARRUSEL LO MÁS PEDIDO -->
 <div class="carrusel-wrapper">
 
@@ -1216,16 +1288,16 @@ El Akasha es el espacio de conciencia donde habita la memoria de todas las exper
 </section>
    <script>
 
-function agendarChamuel(){
+function agendarRegistro1(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Consejo de Chamuel*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Lectura de Registros Akashicos*¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
 
-function agendarBloqueos(){
+function agendarRegistro2(){
 const numero="56928055904";
-const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Tirada para Bloqueos*¡!";
+const mensaje="Hola, Scar 🦋🌙. Quisiera agendar el servicio de *Una Sola Pregunta a los Registros Akashicos*¡!";
 const url="https://api.whatsapp.com/send?phone="+numero+"&text="+encodeURIComponent(mensaje);
 window.open(url,"_blank");
 }
