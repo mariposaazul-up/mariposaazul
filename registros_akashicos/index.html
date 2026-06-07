@@ -1099,7 +1099,44 @@ margin-top:15px;
 
   margin:0;
 }
- 
+
+@media (max-width:768px){
+
+  .akasha-seccion{
+    display:grid;
+    grid-template-columns:40% 60%;
+    gap:15px;
+
+    padding:0 15px;
+    margin:20px auto;
+  }
+
+  .akasha-izquierda{
+    width:100%;
+  }
+
+  .akasha-izquierda img{
+    width:100%;
+    max-width:none;
+  }
+
+  .akasha-derecha{
+    width:100%;
+    margin-left:0;
+  }
+
+  .titulo-akasha{
+    font-size:38px;
+    line-height:0.95;
+  }
+
+  .texto-lado1{
+    grid-column:1 / -1;
+    margin-top:20px;
+    font-size:22px;
+  }
+
+}
 </style>
 </head>
 
