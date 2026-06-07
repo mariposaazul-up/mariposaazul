@@ -1103,37 +1103,28 @@ margin-top:15px;
 @media (max-width:768px){
 
   .akasha-seccion{
-    display:grid;
-    grid-template-columns:40% 60%;
-    gap:15px;
-
-    padding:0 15px;
-    margin:20px auto;
+    flex-direction:column;
+    align-items:center;
   }
 
   .akasha-izquierda{
     width:100%;
-  }
-
-  .akasha-izquierda img{
-    width:100%;
-    max-width:none;
+    display:flex;
+    justify-content:center;
   }
 
   .akasha-derecha{
     width:100%;
     margin-left:0;
+    text-align:center;
   }
 
   .titulo-akasha{
-    font-size:38px;
-    line-height:0.95;
+    text-align:center;
   }
 
   .texto-lado1{
-    grid-column:1 / -1;
-    margin-top:20px;
-    font-size:22px;
+    text-align:center;
   }
 
 }
