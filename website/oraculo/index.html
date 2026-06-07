@@ -1010,7 +1010,30 @@ font-size:15px;
     transform: scale(1);
   }
 }
-  
+
+.akasha-seccion{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 30px;
+
+  display:flex;
+  align-items:center;
+}
+
+.akasha-izquierda{
+  width:50%;
+}
+
+.akasha-izquierda img{
+  width:100%;
+  max-width:500px;
+  display:block;
+}
+
+.akasha-derecha{
+  width:50%;
+}
+
 </style>
 </head>
 
@@ -1023,39 +1046,16 @@ font-size:15px;
   <span class="mini-title">Mariposa Azul</span>
 </div>
 
-<section class="fondo-celeste">
-  <div class="contenido-celeste">
-     <div class="titulo-simple">
-  <h2>Canalización</h2>
-  <img src="gatoderecha.png">
-  
-</div>
-    
-     </div>
-</section>
-  
- <section class="catalogo-grid">  
- <div class="catalogo-card" id="una carta">  <div class="catalogo-titulo-card">Mensaje de Una Sola Carta</div>  
+<section class="akasha-seccion">
 
-<div class="catalogo-frame">  
+  <div class="akasha-izquierda">
+    <img src="akasha.png" alt="Akasha">
+  </div>
 
-    <img src="carta.jpeg" class="catalogo-img">  
+  <div class="akasha-derecha">
+  </div>
 
-    <img src="estrella.png" class="star s1">  
-    <img src="estrella.png" class="star s2">  
-    <img src="estrella.png" class="star s3">  
-    <img src="estrella.png" class="star s4">  
-
-</div>  
-
-<div class="catalogo-descripcion">  
-    <strong>Se realiza vía CHAT+AUDIO y tiene una durabilidad de 15 a 30 min.</strong>
-</div>    
-
-<button class="catalogo-btn" onclick="agendarCarta()">Agenda Aquí</button>
-
-</div> 
-</section>  
+</section> 
 
 <!-- CARRUSEL LO MÁS PEDIDO -->
 <div class="carrusel-wrapper">
