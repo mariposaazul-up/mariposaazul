@@ -1045,6 +1045,30 @@ margin-left:0;
 width:100%;
 }
 
+.limpiezas-contenedor{
+flex-direction:column;
+gap:25px;
+padding:0 20px;
+}
+  
+}
+
+.limpiezas-contenedor{
+max-width:1200px;
+margin:40px auto 0 auto;
+
+display:flex;
+gap:40px;
+
+align-items:flex-start;
+}
+
+.limpiezas-izquierda{
+flex:1;
+}
+
+.limpiezas-derecha{
+flex:1;
 }
   
 </style>
@@ -1075,7 +1099,17 @@ width:100%;
   <h2 class="titulo-limpiezas">
     Pack de Limpiezas
   </h2>
+ <div class="limpiezas-contenedor">
 
+    <div class="limpiezas-izquierda">
+      Contenido izquierda
+    </div>
+
+    <div class="limpiezas-derecha">
+      Contenido derecha
+    </div>
+
+  </div>
 </section>
 <!-- CARRUSEL LO MÁS PEDIDO -->
 <div class="carrusel-wrapper">
