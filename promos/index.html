@@ -1044,7 +1044,7 @@ animation:titileoSuave 2s ease-in-out infinite alternate;
 @media (max-width:1024px){
 
 .titulo-limpiezas{
-  font-size:28px;
+  font-size:clamp(28px, 5vw, 35px);
   text-align:center;
   margin-left:0;
   width:100%;
@@ -1095,7 +1095,7 @@ animation:titileoSuave 2s ease-in-out infinite alternate;
 /* TARJETAS RESPONSIVAS */
 
 .frame-pack{
-  width:clamp(80px, 35vw, 200px);
+  width:clamp(80px, 35vw, 200px) !important;
   aspect-ratio:1/1;
   min-width:0;
 }
@@ -1111,13 +1111,13 @@ animation:titileoSuave 2s ease-in-out infinite alternate;
 /* SIGNO + */
 
 .signo-mas{
-  font-size:clamp(10px, 5vw, 28px);
+  font-size:clamp(10px, 5vw, 28px) !important;
 }
 
 /* TEXTO */
 
 .texto-limpieza{
-  font-size:clamp(18px, 5vw, 28px);
+  font-size:clamp(18px, 5vw, 28px) !important;
   text-align:center;
   padding:0;
 }
